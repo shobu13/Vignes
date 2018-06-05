@@ -47,7 +47,12 @@ class SousCategorie(models.Model):
 class TypesProduit(models.Model):
     nom = models.CharField(max_length=30)
 
+    def __str__(self):
+        return self.nom
+
 
 class Marque(models.Model):
     nom = models.CharField(max_length=30)
 
+    def __str__(self):
+        return self.nom
