@@ -1,5 +1,15 @@
 var reponse;
 $(document).ready(function () {
+
+    if ($('#id_est_promo').prop('checked')) {
+        $("label[for='id_debut_promo']").addClass('required');
+        $("label[for='id_fin_promo']").addClass('required');
+    }
+    else {
+        $("label[for='id_debut_promo']").removeClass('required');
+        $("label[for='id_fin_promo']").removeClass('required');
+    }
+
     var categorie_select = document.getElementById('id_categorie');
     var sous_categorie_select = document.getElementById('id_sous_categorie');
     console.log(categorie_select.options[categorie_select.selectedIndex].innerText);
@@ -38,5 +48,16 @@ $(document).ready(function () {
             }
         });
     });
+
+    $('#id_est_promo').change(function () {
+        if ($(this).prop('checked')) {
+            $("label[for='id_debut_promo']").addClass('required');
+            $("label[for='id_fin_promo']").addClass('required');
+        }
+        else {
+            $("label[for='id_debut_promo']").removeClass('required');
+            $("label[for='id_fin_promo']").removeClass('required');
+        }
+    })
 
 });

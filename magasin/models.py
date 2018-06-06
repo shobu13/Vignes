@@ -9,7 +9,7 @@ class Produit(models.Model):
     cepage = models.TextField(blank=True, null=True)
     notes_degustation = models.TextField(blank=True, null=True)
     accords = models.TextField(blank=True, null=True)
-    temperature = models.FloatField()
+    temperature = models.FloatField(blank=True, null=True)
     date_ajout = models.DateField(default=timezone.now)
 
     categorie = models.ForeignKey('Categorie', on_delete=models.PROTECT)
