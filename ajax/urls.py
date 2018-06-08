@@ -19,4 +19,7 @@ from ajax import views
 
 urlpatterns = [
     path('get_sous_cat', views.get_sous_cat),
+    path('add_cart', views.add_cart),
+    path('clear_cart', views.clear_cart),
+    path('supr_cart/<id>', views.supr_cart, name='supr_cart'),
 ]

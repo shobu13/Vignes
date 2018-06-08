@@ -18,5 +18,10 @@ from django.urls import path
 from website import views
 
 urlpatterns = [
-    path('', views.home),
+    path('', views.home, name='website_home'),
+    path('panier', views.panier, name='website_panier'),
+    path('resume_commande', views.resume_commande, name='resume_commande'),
+    path('payement_commande', views.payement_commande, name='payement_commande'),
+    # path('paymill_confirm', views.view1, name='paymill_confirm'),
+
 ]

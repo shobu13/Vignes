@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'paypal.standard.ipn',
+
     'website',
     'magasin',
     'ajax',
@@ -129,3 +131,6 @@ STATICFILES_DIRS = (
 )
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = '/media/'
+
+PAYPAL_RECEIVER_EMAIL = 'lelu.awen@hacari.org'
+PAYPAL_TEST = True

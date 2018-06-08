@@ -1,24 +1,32 @@
-{% load static %}<!doctype html>
+{% load static %}
+<!doctype html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
-    <title>{% block title %}Default Title{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
-    {% block stylesheet %}{% endblock %}
-  </head>
-  <body>
-    <header>
-      ...
-    </header>
-    <main>
-      {% block content %}
-      {% endblock %}
-    </main>
-    <footer>
-      ...
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-    <script src="{% static 'js/app.js' %}"></script>
-    {% block javascript %}{% endblock %}
-  </body>
+</head>
+<body>
+nombre de produit dans panier : <span id="nb_prod">{{ request.session.total }}</span><br/>
+<button id="bouton_panier_reset">Reset panier</button>
+<br/>
+<h3>Ajout produits : </h3><br/><br/>
+{% for produit in liste_produit %}
+    {{ produit.nom }}<br/>
+    {{ produit.prix }}<br/>
+    <button id="bouton_panier" value="{{ produit.id }}">Ajouter au panier</button>
+    <hr/>
+{% endfor %}
+<h3>Supression produits : </h3><br/><br/>
+{% for produit in liste_produit %}
+    {{ produit.nom }}<br/>
+    {{ produit.prix }}<br/>
+    <button id="bouton_panier_supr" value="{{ produit.id }}">Supprimer du panier</button>
+    <hr/>
+{% endfor %}
+<br/>
+<br/>
+<a href="{% url 'website_panier' %}">Panier !</a>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="{% static 'js/app.js' %}"></script>
+</body>
 </html>
