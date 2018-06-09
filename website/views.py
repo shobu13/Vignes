@@ -2,4 +2,4 @@ from django.shortcuts import render, HttpResponse
 
 
 def home(request):
-    return HttpResponse('Lound and clear')
+    return render(request, 'website/website_home.html')

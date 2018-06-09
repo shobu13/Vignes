@@ -24,7 +24,7 @@ SECRET_KEY = '0=%2@&2p7ob&@j+1ohumw%kqz-z1flo@-cg-%nhof#^(8*wkao'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -129,7 +129,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+STATIC_ROOT = os.path.join("/var/www/website", "static")
+
+MEDIA_ROOT = os.path.join("/var/www/website", "media")
 MEDIA_URL = '/media/'
 
 PAYPAL_RECEIVER_EMAIL = 'lelu.awen@hacari.org'
