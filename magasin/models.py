@@ -65,6 +65,7 @@ class Commande(models.Model):
     envoie = models.BooleanField(default=True)
     est_envoyee = models.BooleanField(default=False)
     est_archivee = models.BooleanField(default=False)
+    est_payee = models.BooleanField(default=False)
 
     client = models.ForeignKey('Client', on_delete=models.PROTECT)
 

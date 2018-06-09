@@ -5,7 +5,7 @@ from magasin.models import SousCategorie, Categorie
 
 
 def get_sous_cat(request):
-    # return render(request, 'website/website_home.html')
+    # return render(request, 'magasin/magasin_home.html')
     sous_categories = []
     # json data est maintenant au format JSON et pret à etre envoyé au client
     try:
@@ -46,6 +46,7 @@ def add_cart(request):
 def clear_cart(request):
     request.session['produits'] = {}
     request.session['total'] = 0
+    request.session['id_commande'] = None
     return JsonResponse({"HTTPRESPONSE": 'ok'}, content_type="application/json")
 
 
@@ -56,4 +57,4 @@ def supr_cart(request, id):
     request.session['produits'] = produits
     total_produit = len(produits)
     request.session['total'] = total_produit
-    return redirect('website_panier')
+    return redirect('magasinPanier')

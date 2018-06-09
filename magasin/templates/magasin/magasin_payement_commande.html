@@ -6,7 +6,7 @@
     <title>Payement</title>
 </head>
 <body>
-<form method="post" action="{% url 'paymill_confirm' %}" id="payment-form">
+{% comment %}<form method="post" action="{% url 'paymill_confirm' %}" id="payment-form">
     Credit card number: <input type="text" id="card-number"/>
     <br/>
     Holder name: <input type="text" id="card-holdername"/>
@@ -16,7 +16,9 @@
     Expiration date (MM/YYYY): <input type="text" id="card-expiry-month"/><input type="text" id="card-expiry-year"/>
     <br/>
     <input type="submit" id="submit-btn"/>
-</form>
+</form>{% endcomment %}
+<h1>payer en utilisant paypal</h1>
+{{ form.render }}
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </body>
 </html>
