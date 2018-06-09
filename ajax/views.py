@@ -22,13 +22,11 @@ def get_sous_cat(request):
 
 def add_cart(request):
     id_produit = request.GET['id']
-    print(id_produit)
     try:
         produits = request.session['produits']
-        print("type produits= ", type(produits))
         print("le dictionnaire existe")
     except KeyError:
-        print("création du dictionnaire")
+        print("creation du dictionnaire")
         request.session['produits'] = {}
         produits = request.session['produits']
 
@@ -38,10 +36,8 @@ def add_cart(request):
         produits[id_produit] = 1
 
     total_produit = len(produits)
-    print("dico= ", produits)
     request.session['produits'] = produits
     request.session['total'] = total_produit
-    print("session_dict= ", request.session['produits'])
     return JsonResponse({"HTTPRESPONSE": 'ok', "total": total_produit}, content_type="application/json")
 
 

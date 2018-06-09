@@ -11,9 +11,7 @@ from paypal.standard.forms import PayPalPaymentsForm
 
 
 def home(request):
-    print('session= ', request.session.keys())
     liste_produit = Produit.objects.all()
-    print(liste_produit)
     return render(request, 'magasin/magasin_home.html', locals())
 
 
@@ -23,7 +21,6 @@ def panier(request):
     for commande in user_cart.items():
         produit = Produit.objects.get(id=commande[0])
         user_cart_final.append((produit, commande[1], commande[1] * produit.prix))
-    print(user_cart_final)
     return render(request, 'magasin/magasin_panier.html', locals())
 
 
