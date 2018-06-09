@@ -9,7 +9,7 @@ class Produit(models.Model):
     cepage = models.TextField(blank=True, null=True)
     notes_degustation = models.TextField(blank=True, null=True)
     accords = models.TextField(blank=True, null=True)
-    temperature = models.FloatField()
+    temperature = models.FloatField(blank=True, null=True)
     date_ajout = models.DateField(default=timezone.now)
 
     categorie = models.ForeignKey('Categorie', on_delete=models.PROTECT)
@@ -56,3 +56,41 @@ class Marque(models.Model):
 
     def __str__(self):
         return self.nom
+
+
+class Commande(models.Model):
+    date = models.DateTimeField(default=timezone.now())
+    montant = models.FloatField()
+    est_panier = models.BooleanField(default=False)
+    envoie = models.BooleanField(default=True)
+    est_envoyee = models.BooleanField(default=False)
+    est_archivee = models.BooleanField(default=False)
+    est_payee = models.BooleanField(default=False)
+
+    client = models.ForeignKey('Client', on_delete=models.PROTECT)
+
+    def __str__(self):
+        return "Commande n°" + str(self.id) + " de " + str(self.client.nom)
+
+
+class ContenuCommande(models.Model):
+    commande = models.ForeignKey('Commande', on_delete=models.PROTECT)
+    produit = models.ForeignKey('Produit', on_delete=models.PROTECT)
+
+    quantite = models.IntegerField()
+
+    def __str__(self):
+        return self.produit.nom + " de commande n°" + str(self.commande.id)
+
+
+class Client(models.Model):
+    nom = models.CharField(max_length=100)
+    prenom = models.CharField(max_length=100)
+    adresse = models.CharField(max_length=200)
+    ville = models.CharField(max_length=100)
+    code_postal = models.CharField(max_length=5)
+    tel = models.CharField(max_length=10)
+    mail = models.EmailField()
+
+    def __str__(self):
+        return self.nom + " " + self.prenom

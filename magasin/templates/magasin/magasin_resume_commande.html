@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Résumé</title>
+</head>
+<body>
+<h2>Vous avez commander : </h2>
+{% for produit in user_cart_final %}
+    nom : {{ produit.0.nom }} <br/>
+    quantité : {{ produit.1 }} <br/>
+    prix unitaire : {{ produit.0.prix }}<br/>
+    total : {{ produit.2 }}<br/>
+    <hr/>
+{% endfor %}
+<h3>Pour un total de : {{ total }} euros</h3>
+<a href="{% url 'payementCommande' %}"><button>Payer !</button></a>
+</body>
+</html>

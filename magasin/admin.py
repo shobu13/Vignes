@@ -30,7 +30,7 @@ class ProduitAdmin(admin.ModelAdmin):
     class Media:
         js = (
             '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',  # jquery
-            'js/test.js',  # project static folder
+            'js/admin_produit_gestion.js',  # project static folder
         )
 
 
@@ -65,3 +65,6 @@ admin.site.register(TypesProduit, TypesProduitAdmin)
 admin.site.register(Categorie, CategorieAdmin)
 admin.site.register(SousCategorie, SousCategorieAdmin)
 admin.site.register(Marque, MarqueAdmin)
+admin.site.register(Commande)
+admin.site.register(ContenuCommande)
+admin.site.register(Client)

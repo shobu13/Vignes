@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Panier</title>
+</head>
+<body>
+{% for produit in user_cart_final %}
+    nom : {{ produit.0.nom }} <br/>
+    quantité : {{ produit.1 }} <br/>
+    prix unitaire : {{ produit.0.prix }}<br/>
+    total : {{ produit.2 }}<br/>
+    <a href="{% url 'supr_cart' produit.0.id %}"><button id="bouton_panier_supr" value="{{ produit.0.id }}">Supprimer du panier</button></a>
+    <hr/>
+{% empty %}
+    Pas de produit
+{% endfor %}
+<br/>
+<br/>
+<a href="{% url 'magasinHome' %}"><button>retour au magasin</button></a>
+<br/>
+<a href="{% url 'resumeCommande' %}"><button>passer commande</button></a>
+</body>
+</html>

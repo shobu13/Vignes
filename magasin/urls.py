@@ -15,11 +15,14 @@ Including another URLconf
 """
 from django.urls import path
 
-from ajax import views
+from magasin import views
 
 urlpatterns = [
-    path('get_sous_cat', views.get_sous_cat),
-    path('add_cart', views.add_cart),
-    path('clear_cart', views.clear_cart, name='clear_cart'),
-    path('supr_cart/<id>', views.supr_cart, name='supr_cart'),
+    path('', views.home, name='magasinHome'),
+    path('panier', views.panier, name='magasinPanier'),
+    path('resume_commande', views.resume_commande, name='resumeCommande'),
+    path('payement_commande', views.payement_commande, name='payementCommande'),
+    path('payement_commande_ok', views.payement_commande_ok, name='payementCommandeOk'),
+    path('payement_commande_error', views.payement_commande_error, name='payementCommandeError'),
+
 ]
