@@ -6,7 +6,7 @@ $('button#bouton_panier').click(function () {
         })
     })
 
-    $('button#bouton_panier_reset').click(function () {
+    $('#bouton_panier_reset').click(function () {
         $.get('/ajax/clear_cart', {}, function (data) {
             document.getElementById('nb_prod').innerText = 0;
             console.log(data['HTTPRESPONSE']);

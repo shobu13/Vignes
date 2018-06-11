@@ -19,7 +19,7 @@ from django.urls import path
 from magasin import views
 
 urlpatterns = [
-    path('', views.home, name='magasinHome'),
+    path('/<int:id_cat_produit>', views.home, name='magasinHome'),
     path('panier', views.panier, name='magasinPanier'),
     path('resume_commande', views.resume_commande, name='resumeCommande'),
     path('payement_commande', views.payement_commande, name='payementCommande'),

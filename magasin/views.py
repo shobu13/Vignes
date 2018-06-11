@@ -4,14 +4,15 @@ from django.views.decorators.csrf import csrf_exempt
 
 from magasin.models import Produit
 from vignes import settings
-from magasin.models import Commande, ContenuCommande, Client
+from magasin.models import Commande, ContenuCommande, Client, Categorie
 from ajax.views import clear_cart
 
 from paypal.standard.forms import PayPalPaymentsForm
 
 
-def home(request):
-    liste_produit = Produit.objects.all()
+def home(request, id_cat_produit):
+    cat_produit = Categorie.objects.get(id=id_cat_produit)
+    liste_produit = Produit.objects.filter(categorie=cat_produit)
     return render(request, 'magasin/magasin_home.html', locals())
 
 
