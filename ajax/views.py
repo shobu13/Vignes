@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 from django.shortcuts import render, HttpResponse, redirect
 from django.http import JsonResponse
@@ -15,7 +15,8 @@ def get_sous_cat(request):
             categorie=Categorie.objects.get(nom=request.GET['categorie']))
         for i in sous_categories_raw:
             sous_categories.append([i.id, i.nom])
-        return JsonResponse({"HTTPRESPONSE": 'ok', 'sous_categorie': sous_categories}, content_type="application/json")
+        return JsonResponse({"HTTPRESPONSE": 'ok', 'sous_categorie': sous_categories},
+                            content_type="application/json")
     except:
         return JsonResponse({"HTTPRESPONSE": 'erreur'}, content_type="application/json")
 
@@ -38,7 +39,8 @@ def add_cart(request):
     total_produit = len(produits)
     request.session['produits'] = produits
     request.session['total'] = total_produit
-    return JsonResponse({"HTTPRESPONSE": 'ok', "total": total_produit}, content_type="application/json")
+    return JsonResponse({"HTTPRESPONSE": 'ok', "total": total_produit},
+                        content_type="application/json")
 
 
 def clear_cart(request):
@@ -51,8 +53,17 @@ def clear_cart(request):
 # non ajax view
 def supr_cart(request, id):
     produits = request.session['produits']
-    del(produits[id])
+    del (produits[id])
     request.session['produits'] = produits
     total_produit = len(produits)
     request.session['total'] = total_produit
     return redirect('magasinPanier')
+
+
+def get_cat(request):
+    cat_produit_liste = []
+    cat_produit_liste_raw = Categorie.objects.all()
+    for cat_produit in cat_produit_liste_raw:
+        cat_produit_liste.append((cat_produit.id, cat_produit.nom))
+    return JsonResponse({"HTTPRESPONSE": 'ok', "liste_cat": cat_produit_liste},
+                        content_type="application/json")
