@@ -20,17 +20,14 @@
 <body>
 <nav>
     <div class="nav-wrapper red darken-2">
-        <a href="#!" class="brand-logo white-text hide-on-med-and-down">Vignes & gourmandises</a>
-        <a href="#!" class="brand-logo white-text show-on-medium-and-down hide-on-large-only hide-on-extra-large-only"
-           style="font-size: medium">Vignes & gourmandises</a>
-        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons white-text">menu</i></a>
+        <a href="#!" class="brand-logo white-text">Vignes & gourmandises</a>
         <ul class="right hide-on-med-and-down">
             <li><a href="{% url 'website_home' %}" class="white-text red darken-3">Acceuil</a></li>
             <li><a href="badges.html" class="white-text">Evenement</a></li>
 
             <!-- Dropdown Trigger -->
             <li><a class="dropdown-trigger white-text red darken-3" href="#!"
-                   data-target="dropdown_classic">Boutique<i
+                   data-target="dropdown1">Boutique<i
                     class="material-icons right">arrow_drop_down</i></a>
             </li>
             <li><a class="dropdown-trigger white-text" href="#!" data-target="dropdown_cart">Panier
@@ -40,24 +37,8 @@
     </div>
 </nav>
 
-<ul id="slide-out" class="sidenav">
-    <li><a href="#!">Acceuil</a></li>
-    <li><a href="#!">Evenement</a></li>
-    <li class="no-padding">
-        <ul class="collapsible popout">
-            <li>
-                <a class="collapsible-header">Boutique<i class="material-icons">arrow_drop_down</i></a>
-                <div class="collapsible-body">
-                    <ul id="dropdown_mobile">
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </li>
-</ul>
-
 <!-- Dropdown Structure -->
-<ul id="dropdown_classic" class='dropdown-content'>
+<ul id='dropdown1' class='dropdown-content'>
 </ul>
 
 <ul id='dropdown_cart' class='dropdown-content'>
