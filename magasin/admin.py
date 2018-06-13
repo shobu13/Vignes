@@ -35,10 +35,11 @@ class ProduitAdmin(admin.ModelAdmin):
 
 
 class CategorieAdmin(admin.ModelAdmin):
+    pass
     list_display = ('nom',)
     list_filter = ('sous_cats',)
     filter_horizontal = ("sous_cats",)
-    ordering = ('sous_cats', 'nom',)
+    ordering = ('nom',)
     search_fields = ('nom',)
 
 
