@@ -23,4 +23,5 @@ urlpatterns = [
     path('clear_cart', views.clear_cart, name='clear_cart'),
     path('supr_cart/<id>', views.supr_cart, name='supr_cart'),
     path('get_cat', views.get_cat, name='get_cat'),
+    path('call_checker', views.call_checker, name='call_checker')
 ]

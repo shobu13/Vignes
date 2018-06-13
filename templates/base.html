@@ -28,7 +28,8 @@
 
         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons white-text">menu</i></a>
         <ul class="right hide-on-large-only hide-on-extra-large-only">
-            <li><a href="{% url 'magasinPanier' %}"><span class="new badge" data-badge-caption="Produits" id="nb_prod_mobile">
+            <li><a href="{% url 'magasinPanier' %}"><span class="new badge" data-badge-caption="Produits"
+                                                          id="nb_prod_mobile">
                 {{ request.session.total | default:0 }}
             </span></a></li>
         </ul>
@@ -103,6 +104,9 @@
 <script src="{% static 'js/materialize.js' %}"></script>
 <script src="{% static 'js/init.js' %}"></script>
 <script src="{% static 'js/categorie_dropdown.js' %}"></script>
+<script>
+    $.get('/ajax/call_checker', {}, function (data) {})
+</script>
 {% block javascript_addon %}{% endblock %}
 
 </body>

@@ -4,6 +4,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.http import JsonResponse
 
 from magasin.models import SousCategorie, Categorie
+from utility import checker
 
 
 def get_sous_cat(request):
@@ -67,3 +68,8 @@ def get_cat(request):
         cat_produit_liste.append((cat_produit.id, cat_produit.nom))
     return JsonResponse({"HTTPRESPONSE": 'ok', "liste_cat": cat_produit_liste},
                         content_type="application/json")
+
+
+def call_checker(request):
+    checker.session_variable_check(request)
+    return JsonResponse({"HTTPRESPONSE": 'ok', }, content_type="application/json")
