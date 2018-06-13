@@ -19,7 +19,6 @@ def home(request, id_cat_produit):
         baked_liste_produit += [liste_produit[i:i + 4]]
     liste_produit_pagifier = Paginator(baked_liste_produit, 20)
     liste_produit = liste_produit_pagifier.page(1)
-    print('liste_produit= ', liste_produit.object_list)
     return render(request, 'magasin/magasin_home.html', locals())
 
 
