@@ -1,6 +1,7 @@
 # coding: utf-8
 from django.shortcuts import render, HttpResponse, reverse
 from django.views.decorators.csrf import csrf_exempt
+from django.core.paginator import Paginator
 
 from magasin.models import Produit
 from vignes import settings
@@ -11,8 +12,14 @@ from paypal.standard.forms import PayPalPaymentsForm
 
 
 def home(request, id_cat_produit):
+    baked_liste_produit = []
     cat_produit = Categorie.objects.get(id=id_cat_produit)
     liste_produit = Produit.objects.filter(categorie=cat_produit)
+    for i in range(0, len(liste_produit), 4):
+        baked_liste_produit += [liste_produit[i:i + 4]]
+    liste_produit_pagifier = Paginator(baked_liste_produit, 20)
+    liste_produit = liste_produit_pagifier.page(1)
+    print('liste_produit= ', liste_produit.object_list)
     return render(request, 'magasin/magasin_home.html', locals())
 
 

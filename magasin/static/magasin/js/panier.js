@@ -1,4 +1,4 @@
-$('button#bouton_panier').click(function () {
+$('#bouton_panier').click(function () {
         console.log($(this).val());
         $.get('/ajax/add_cart', {'id': $(this).val()}, function (data) {
             document.getElementById('nb_prod').innerText = data['total'];
@@ -7,7 +7,7 @@ $('button#bouton_panier').click(function () {
         })
     });
 
-    $('button#bouton_panier_reset').click(function () {
+    $('#bouton_panier_reset').click(function () {
         $.get('/ajax/clear_cart', {}, function (data) {
             document.getElementById('nb_prod').innerText = 0;
             console.log(data['HTTPRESPONSE']);
