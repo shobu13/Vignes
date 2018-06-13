@@ -5,5 +5,3 @@
 *.pyc
 
 venv/
-
-db\.sqlite3
