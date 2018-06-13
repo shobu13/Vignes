@@ -30,7 +30,7 @@ class ProduitAdmin(admin.ModelAdmin):
     class Media:
         js = (
             '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',  # jquery
-            'js/admin_produit_gestion.js',  # project static folder
+            'magasin/js/admin_produit_gestion.js',  # project static folder
         )
 
 

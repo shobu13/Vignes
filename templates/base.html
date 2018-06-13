@@ -21,10 +21,18 @@
 <nav>
     <div class="nav-wrapper red darken-2">
         <a href="#!" class="brand-logo white-text hide-on-med-and-down">Vignes & gourmandises</a>
-        <a href="#!" class="brand-logo white-text show-on-medium-and-down hide-on-large-only hide-on-extra-large-only"
+        <a href="#!"
+           class="brand-logo white-text show-on-medium-and-down show-on-medium-and-down hide-on-large-only hide-on-extra-large-only"
            style="font-size: medium">Vignes & gourmandises</a>
+
+
         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons white-text">menu</i></a>
-        <ul class="right hide-on-med-and-down">
+        <ul class="right hide-on-large-only hide-on-extra-large-only">
+            <li><a href="{% url 'magasinPanier' %}"><span class="new badge" data-badge-caption="Produits" id="nb_prod_mobile">
+                {{ request.session.total | default:0 }}
+            </span></a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down ">
             <li><a href="{% url 'website_home' %}" class="white-text red darken-3">Acceuil</a></li>
             <li><a href="badges.html" class="white-text">Evenement</a></li>
 
@@ -33,15 +41,15 @@
                    data-target="dropdown_classic">Boutique<i
                     class="material-icons right">arrow_drop_down</i></a>
             </li>
-            <li><a class="dropdown-trigger white-text" href="#!" data-target="dropdown_cart">Panier
-                : <span id="nb_prod">{{ request.session.total | default:0 }}</span><i
+            <li><a class="dropdown-trigger white-text" href="#!" data-target="dropdown_cart">Panier :
+                <span id="nb_prod">{{ request.session.total | default:0 }}</span><i
                         class="material-icons right">arrow_drop_down</i></a>
         </ul>
     </div>
 </nav>
 
 <ul id="slide-out" class="sidenav">
-    <li><a href="#!">Acceuil</a></li>
+    <li><a href="{% url 'website_home' %}">Acceuil</a></li>
     <li><a href="#!">Evenement</a></li>
     <li class="no-padding">
         <ul class="collapsible collapse-toggle">
