@@ -1,5 +1,4 @@
 def session_variable_check(request):
-    print(request.session.keys())
     try:
         print('produit ok')
         request.session['produits']

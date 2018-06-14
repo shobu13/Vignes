@@ -7,9 +7,7 @@
         quantité : {{ produit.1 }} <br/>
         prix unitaire : {{ produit.0.prix }}<br/>
         total : {{ produit.2 }}<br/>
-        <a href="{% url 'supr_cart' produit.0.id %}">
-            <button id="bouton_panier_supr" value="{{ produit.0.id }}">Supprimer du panier</button>
-        </a>
+        <button id="bouton_panier_supr" value="{{ produit.0.id }}">Supprimer du panier</button>
         <hr/>
     {% empty %}
         Pas de produit

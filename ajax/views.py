@@ -3,7 +3,7 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.http import JsonResponse
 
-from magasin.models import SousCategorie, Categorie
+from magasin.models import SousCategorie, Categorie, Produit
 from utility import checker
 
 
@@ -52,13 +52,16 @@ def clear_cart(request):
 
 
 # non ajax view
-def supr_cart(request, id):
+def supr_cart(request):
     produits = request.session['produits']
+    id = request.GET['id']
     del (produits[id])
     request.session['produits'] = produits
     total_produit = len(produits)
     request.session['total'] = total_produit
-    return redirect('magasinPanier')
+    print('total=', total_produit)
+    return JsonResponse({"HTTPRESPONSE": 'ok', 'total': total_produit}, content_type="application/json")
+    # return redirect('magasinPanier')
 
 
 def get_cat(request):
@@ -73,3 +76,10 @@ def get_cat(request):
 def call_checker(request):
     checker.session_variable_check(request)
     return JsonResponse({"HTTPRESPONSE": 'ok', }, content_type="application/json")
+
+
+def get_product_name_by_id(request):
+    id_produit = request.GET.get('id_produit')
+    produit = Produit.objects.get(id=id_produit)
+    print('prdouit_nom= ', produit.nom)
+    return JsonResponse({"HTTPRESPONSE": 'ok', 'produit_nom': produit.nom}, content_type="application/json")

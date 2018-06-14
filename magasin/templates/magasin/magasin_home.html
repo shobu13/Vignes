@@ -2,66 +2,132 @@
 {% load static %}
 {% block title %}Home{% endblock %}
 {% block contenu %}
-    <div class="container">
-        {% for ligne_produit in liste_produit %}
-            <div class="row">
-                {% for produit in ligne_produit %}
-                    <div class="col m3 show-on-medium-and-down">
-                        <div class="card">
-                            <div class="card-image">
-                                <img class="activator"
-                                     src="{% static 'img/6-bouteilles-75cl-Chinien-Bergeron-dont-2-offertes0.JPG' %}">
-                            </div>
-                            <div class="card-content">
-                                nom : {{ produit.nom }}
-                                <hr/>
-                                prix : {{ produit.prix }}
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">{{ produit.nom }}<i class="material-icons right">close</i></span>
-                                <p>Here is some more information about this product that is
-                                    only revealed once clicked
-                                    on.</p>
-                            </div>
-                            <div class="card-action">
-                                <button class="btn" id="bouton_panier" value="{{ produit.id }}">Ajouter au panier</button>
-                                <button class="activator btn green ">plus</button>
-                            </div>
-                        </div>
-                    </div>
+    {% comment %}<style>
+        [class*="col"], footer {
+            background-color: lightgreen;
+            border: 2px solid black;
+            border-radius: 6px;
+            line-height: 40px;
+            text-align: center;
+        }
 
-                    <div class="col s12 hide-on-large-only hide-on-extra-large-only">
-                        <div class="card">
-                            <div class="card-image">
-                                <img class="activator"
-                                     src="{% static 'img/6-bouteilles-75cl-Chinien-Bergeron-dont-2-offertes0.JPG' %}">
+        [class*="row"], footer {
+            background-color: blue;
+            border: 2px solid black;
+            border-radius: 6px;
+            line-height: 40px;
+            text-align: center;
+        }
+    </style>{% endcomment %}
+    <div class="container">
+        <div class="row">
+            <div class="col m9">
+                {% for ligne_produit in liste_produit %}
+                    <div class="row hide-on-medium-and-down">
+                        {% for produit in ligne_produit %}
+                            <div class="col m4 ">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img class="activator"
+                                             src="{% static 'img/6-bouteilles-75cl-Chinien-Bergeron-dont-2-offertes0.JPG' %}">
+                                    </div>
+                                    <div class="card-content">
+                                        {{ produit.nom }}
+                                        <hr/>
+                                        {{ produit.prix|stringformat:"2.2f" }} €
+                                    </div>
+                                    <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">{{ produit.nom }}<i
+                                        class="material-icons right">close</i></span>
+                                        <p>Here is some more information about this product that is
+                                            only revealed once clicked
+                                            on.</p>
+                                    </div>
+                                    <div class="card-action">
+                                        <button class="btn" id="bouton_panier" value="{{ produit.id }}">Ajouter au
+                                            panier
+                                        </button>
+                                        <button class="activator btn green ">plus</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card-content">
-                                nom : {{ produit.nom }}
-                                <hr/>
-                                prix : {{ produit.prix }}
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">{{ produit.nom }}<i class="material-icons right">close</i></span>
-                                <p>Here is some more information about this product that is
-                                    only revealed once clicked
-                                    on.</p>
-                            </div>
-                            <div class="card-action">
-                                <button class="btn" id="bouton_panier" value="{{ produit.id }}">Ajouter au panier</button>
-                                <button class="activator btn green ">plus</button>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
+                    {% comment %}<div class="col s12 hide-on-large-only hide-on-extra-large-only">
+                <div class="card">
+                    <div class="card-image">
+                        <img class="activator"
+                             src="{% static 'img/6-bouteilles-75cl-Chinien-Bergeron-dont-2-offertes0.JPG' %}">
+                    </div>
+                    <div class="card-content">
+                        nom : {{ produit.nom }}
+                        <hr/>
+                        prix : {{ produit.prix }}
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{ produit.nom }}<i
+                                class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is
+                            only revealed once clicked
+                            on.</p>
+                    </div>
+                    <div class="card-action">
+                        <button class="btn" id="bouton_panier" value="{{ produit.id }}">Ajouter au panier</button>
+                        <button class="activator btn green ">plus</button>
+                    </div>
+                </div>
+            </div>{% endcomment %}
                 {% endfor %}
             </div>
-        {% endfor %}
+            <div class="col m3">
+                <div class="row">
+                    <div class="col m12">
+                        <div class="card blue-grey lighten-2">
+                            <div class="card-content white-text">
+                                <span class="card-title">Sous Categories</span>
+                                <hr/>
+                                {% for sous_cat in sous_categorie_liste %}
+                                    <p>{{ sous_cat.nom }}</p>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m12">
+                        <div class="card blue-grey lighten-2">
+                            <div class="card-content white-text">
+                                <span class="card-title">Marque</span>
+                                <hr/>
+                                {% for marque in marque_liste %}
+                                    <p>{{ marque.nom }}</p>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m12">
+                        <div class="card blue-grey lighten-2">
+                            <div class="card-content white-text">
+                                <span class="card-title">Prix Maximum</span>
+                                <hr/>
+                                <input type="range" id="test5" min="0" max="100"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 
 {% endblock %}
 
 {% block javascript_addon %}
     <script src="{% static 'magasin/js/panier.js' %}"></script>
+    <script src="{% static 'magasin/js/toast.js' %}"></script>
+    <script src="{% static 'magasin/js/init.js' %}"></script>
 {% endblock %}
 
 
