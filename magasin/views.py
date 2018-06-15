@@ -30,7 +30,6 @@ def home(request, id_cat_produit):
         liste_produit = liste_produit.filter(prix__lte=filtre_prix)
     for i in range(0, len(liste_produit), 3):
         baked_liste_produit += [liste_produit[i:i + 3]]
-    print(baked_liste_produit)
     liste_produit_pagifier = Paginator(baked_liste_produit, 20)
     liste_produit = liste_produit_pagifier.page(1)
     return render(request, 'magasin/magasin_home.html', locals())
