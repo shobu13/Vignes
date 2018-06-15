@@ -80,43 +80,57 @@
                 {% endfor %}
             </div>
             <div class="col m3">
-                <div class="row">
-                    <div class="col m12">
-                        <div class="card blue-grey lighten-2">
-                            <div class="card-content white-text">
-                                <span class="card-title">Sous Categories</span>
-                                <hr/>
-                                {% for sous_cat in sous_categorie_liste %}
-                                    <p>{{ sous_cat.nom }}</p>
-                                {% endfor %}
+                <form action="{% url 'magasinHome' id_cat_produit %}" method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col m12">
+                            <div class="card lighten-3">
+                                <div class="card-content">
+                                    <span class="card-title">Sous Categories</span>
+                                    <hr/>
+                                    <select name="filtre_sous_cat">
+                                        <option value="-1">tout</option>
+                                        {% for sous_cat in sous_categorie_liste %}
+                                            <option value="{{ sous_cat.id }}">{{ sous_cat.nom }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col m12">
-                        <div class="card blue-grey lighten-2">
-                            <div class="card-content white-text">
-                                <span class="card-title">Marque</span>
-                                <hr/>
-                                {% for marque in marque_liste %}
-                                    <p>{{ marque.nom }}</p>
-                                {% endfor %}
+                    <div class="row">
+                        <div class="col m12">
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">Marque</span>
+                                    <hr/>
+                                    <select name="filtre_marque">
+                                        <option value="-1">tout</option>
+                                        {% for marque in marque_liste %}
+                                            <option value="{{ marque.id }}">{{ marque.nom }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col m12">
-                        <div class="card blue-grey lighten-2">
-                            <div class="card-content white-text">
-                                <span class="card-title">Prix Maximum</span>
-                                <hr/>
-                                <input type="range" id="test5" min="0" max="100"/>
+                    <div class="row">
+                        <div class="col m12">
+                            <div class="card blue-grey lighten-2">
+                                <div class="card-content white-text">
+                                    <span class="card-title">Prix Maximum</span>
+                                    <hr/>
+                                    <input type="range" id="test5" min="0" max="100" value="100" name="filtre_prix"/>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="row">
+                        <div class="col m12">
+                            <input type="submit" class="btn" value="appliquer filtres"/>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
