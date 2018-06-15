@@ -5,7 +5,7 @@ from django.core.paginator import Paginator
 
 from magasin.models import Produit
 from vignes import settings
-from magasin.models import Commande, ContenuCommande, Client, Categorie, Marque
+from magasin.models import Commande, ContenuCommande, Client, Categorie, Marque, SousCategorie
 from ajax.views import clear_cart
 
 from paypal.standard.forms import PayPalPaymentsForm
@@ -17,9 +17,19 @@ def home(request, id_cat_produit):
     sous_categorie_liste = cat_produit.sous_cats.all()
     marque_liste = Marque.objects.all()
     liste_produit = Produit.objects.filter(categorie=cat_produit)
+    if request.method == 'POST':
+        filtre_sous_cat_id = int(request.POST.get('filtre_sous_cat'))
+        filtre_marque_id = int(request.POST.get('filtre_marque'))
+        filtre_prix = int(request.POST.get('filtre_prix'))
+        if filtre_sous_cat_id != -1:
+            filtre_sous_cat = SousCategorie.objects.get(id=filtre_sous_cat_id)
+            liste_produit = liste_produit.filter(sous_categorie=filtre_sous_cat)
+        if filtre_marque_id != -1:
+            filtre_marque = Marque.objects.get(id=filtre_marque_id)
+            liste_produit = liste_produit.filter(marque=filtre_marque)
+        liste_produit = liste_produit.filter(prix__lte=filtre_prix)
     for i in range(0, len(liste_produit), 3):
         baked_liste_produit += [liste_produit[i:i + 3]]
-    print(baked_liste_produit)
     liste_produit_pagifier = Paginator(baked_liste_produit, 20)
     liste_produit = liste_produit_pagifier.page(1)
     return render(request, 'magasin/magasin_home.html', locals())
