@@ -13,12 +13,22 @@
     <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet"
           media="screen,projection"/>
 
-    <style>
+    {% comment %}<style>
+        [class*="col"], footer {
+            background-color: lightgreen;
+            border: 2px solid black;
+            border-radius: 6px;
+        }
 
-    </style>
+        [class*="row"], footer {
+            background-color: blue;
+            border: 2px solid black;
+            border-radius: 6px;
+        }
+    </style>{% endcomment %}
 </head>
 <body>
-<nav>
+<nav style="margin-bottom: 10px">
     <div class="nav-wrapper red darken-2">
         <a href="#!" class="brand-logo white-text hide-on-med-and-down">Vignes & gourmandises</a>
         <a href="#!"
@@ -75,7 +85,7 @@
 
 {% block contenu %}{% endblock %}
 
-<footer class="page-footer teal">
+<footer class="page-footer teal" style="margin-top: 10px">
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
@@ -105,7 +115,8 @@
 <script src="{% static 'js/init.js' %}"></script>
 <script src="{% static 'js/categorie_dropdown.js' %}"></script>
 <script>
-    $.get('/ajax/call_checker', {}, function (data) {})
+    $.get('/ajax/call_checker', {}, function (data) {
+    })
 </script>
 {% block javascript_addon %}{% endblock %}
 

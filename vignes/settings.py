@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'website',
     'magasin',
     'ajax',
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -138,3 +139,6 @@ MEDIA_URL = '/media/'
 
 PAYPAL_RECEIVER_EMAIL = 'lelu.awen@hacari.org'
 PAYPAL_TEST = True
+
+# custom user model
+AUTH_USER_MODEL = 'user.User'
