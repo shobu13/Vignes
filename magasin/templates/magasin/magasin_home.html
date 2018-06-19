@@ -21,18 +21,48 @@
     </style>{% endcomment %}
 
 
-    <ul id="slide-out-filter" class="sidenav sidenav-filter sidenav-fixed">
-      <li><a href="#!">First Sidebar Link</a></li>
-      <li><a href="#!">Second Sidebar Link</a></li>
+    <ul id="slide-out-filter" class="sidenav sidenav-filter sidenav-fixed hide-on-med-and-up">
+        <div class="container">
+            <form action="{% url 'magasinHome' id_cat_produit %}" method="POST">
+                {% csrf_token %}
+                <li>
+                <u>sous categorie :</u> <br/>
+                    <select name="filtre_sous_cat">
+                        <option value="-1">tout</option>
+                        {% for sous_cat in sous_categorie_liste %}
+                            <option value="{{ sous_cat.id }}">{{ sous_cat.nom }}</option>
+                        {% endfor %}
+                    </select>
+                </li>
+                <li>
+                <u>marque :</u> <br/>
+                    <select name="filtre_marque">
+                        <option value="-1">tout</option>
+                        {% for marque in marque_liste %}
+                            <option value="{{ marque.id }}">{{ marque.nom }}</option>
+                        {% endfor %}
+                    </select>
+                </li>
+                <li>
+                    <u>prix max :</u> <br/>
+                    <div>
+                        <input type="number" id="test5" min="0" max="100" value="100" name="filtre_prix"/>
+                    </div>
+                </li>
+                <li>
+                    <input type="submit" class="btn" value="appliquer filtres"/>
+                </li>
+            </form>
+        </div>
     </ul>
 
 
 
     <div class="container">
 
-        <div class="fixed-action-btn">
+        <div class="fixed-action-btn hide hide-on-med-and-up">
             <a class="btn-floating btn-large red sidenav-trigger" href="#" data-target="slide-out-filter">
-                <i class="large material-icons">mode_edit</i>
+                <i class="large material-icons">sort</i>
             </a>
         </div>
 
@@ -71,7 +101,7 @@
                     </div>
                 {% endfor %}
             </div>
-            <div class="col m3">
+            <div class="col m3 hide-on-small-and-down">
                 <form action="{% url 'magasinHome' id_cat_produit %}" method="POST">
                     {% csrf_token %}
                     <div class="row">
@@ -108,11 +138,11 @@
                     </div>
                     <div class="row">
                         <div class="col m12">
-                            <div class="card blue-grey lighten-2">
-                                <div class="card-content white-text">
+                            <div class="card">
+                                <div class="card-content">
                                     <span class="card-title">Prix Maximum</span>
                                     <hr/>
-                                    <input type="range" id="test5" min="0" max="100" value="100" name="filtre_prix"/>
+                                    <input type="range" min="0" max="100" value="100" name="filtre_prix"/>
                                 </div>
                             </div>
                         </div>
