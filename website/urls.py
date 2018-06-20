@@ -19,5 +19,5 @@ from website import views
 
 urlpatterns = [
     path('', views.home, name='website_home'),
-    path('inscription', views.inscription)
+    path('inscription', views.inscription, name='website_inscription')
 ]

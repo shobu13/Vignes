@@ -2,7 +2,13 @@
 {% load static %}
 {% block title %}Home{% endblock %}
 {% block contenu %}
-    {{ form.as_p }}
+    <div class="container">
+        <form method="post" action="{% url 'website_inscription' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn"/>
+        </form>
+    </div>
 {% endblock %}
 
 {% block javascript_addon %}
