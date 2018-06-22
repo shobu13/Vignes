@@ -4,4 +4,5 @@ $(document).ready(function () {
     });
     $('.sidenav').sidenav({'draggable': true, });
     $('.collapsible').collapsible();
+    $('.modal').modal();
 });

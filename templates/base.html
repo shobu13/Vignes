@@ -52,9 +52,15 @@
                    data-target="dropdown_classic">Boutique<i
                     class="material-icons right">arrow_drop_down</i></a>
             </li>
-            <li><a class="dropdown-trigger white-text" href="#!" data-target="dropdown_cart">Panier :
-                <span id="nb_prod">{{ request.session.total | default:0 }}</span><i
-                        class="material-icons right">arrow_drop_down</i></a>
+            {% if user.is_authenticated %}
+                <li><a class="dropdown-trigger white-text" href="#!" data-target="dropdown_cart">Panier :
+                    <span id="nb_prod">{{ request.session.total | default:0 }}</span><i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="{% url 'website_deco' %}" class="white-text red darken-3">deconnexion</a></li>
+            {% else %}
+                <li><a href="{% url 'website_login' %}" class="white-text">Connexion</a></li>
+                <li><a href="{% url 'website_inscription' %}" class="white-text red darken-3">Enregistrement</a></li>
+            {% endif %}
         </ul>
     </div>
 </nav>
@@ -108,7 +114,6 @@
     </div>
 </footer>
 
-
 <!--  Scripts-->
 <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
 <script src="{% static 'js/materialize.js' %}"></script>
@@ -118,6 +123,45 @@
     $.get('/ajax/call_checker', {}, function (data) {
     })
 </script>
+
+<!-- Modaux -->
+{% if statut == 'sucess' %}
+    <script>
+        $(document).ready(function () {
+            $('#sucess').modal('open');
+        });
+    </script>
+    <div id="sucess" class="modal">
+        <div class="modal-content">
+            <h4>Félicitation</h4>
+            <p>Votre compte à bien été créer</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok !</a>
+        </div>
+    </div>
+{% endif %}
+
+<!-- Modaux -->
+{% if statut == 'error' %}
+    <script>
+        $(document).ready(function () {
+            $('#error').modal('open');
+        });
+    </script>
+    <div id="error" class="modal">
+        <div class="modal-content">
+            <h4>Un problème est survenu !</h4>
+            {% for message in error %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok !</a>
+        </div>
+    </div>
+{% endif %}
+
 {% block javascript_addon %}{% endblock %}
 
 </body>

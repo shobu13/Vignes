@@ -3,5 +3,7 @@ from django.db import models
 
 
 class User(AbstractUser):
-    confirm_password = models.TextField(verbose_name='Confirmer Mot de Passe')
+    rue = models.TextField()
+    ville = models.TextField()
     code_postal = models.CharField(max_length=5, default='')
+    phone_number = models.CharField(max_length=12)
