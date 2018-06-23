@@ -19,7 +19,7 @@ from django.urls import path
 from magasin import views
 
 urlpatterns = [
-    path('/<int:id_cat_produit>', views.home, name='magasinHome'),
+    path('<int:id_cat_produit>', views.home, name='magasinHome'),
     # path('/<int:id_cat_produit>/<str:filtre>/<int:filtre_id>', views.home, name='magasinHomeFilter'),
     path('panier', views.panier, name='magasinPanier'),
     path('resume_commande', views.resume_commande, name='resumeCommande'),
