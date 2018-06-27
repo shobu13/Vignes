@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block contenu %}
+    <div class="container">
+        <div class="row">
+            <div class="col m2">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{% static 'img/6-bouteilles-75cl-Chinien-Bergeron-dont-2-offertes0.JPG' %}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m10">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">{{ produit.nom }}</span>
+                        {% if produit.description|length > 1 %}
+                            <hr/>
+                            <span class="card-title">Description</span>
+                            {{ produit.description }}
+                        {% endif %}
+                        {% if produit.cepage|length > 1 %}
+                            <hr/>
+                            <span class="card-title">Cepages</span>
+                            {{ produit.cepage }}
+                        {% endif %}
+                        {% if produit.notes_degustation|length > 1 %}
+                            <hr/>
+                            <span class="card-title">Notes de Dégustation</span>
+                            {{ produit.notes_degustation }}
+                        {% endif %}
+                        {% if produit.accords|length > 1 %}
+                            <hr/>
+                            <span class="card-title">Accords</span>
+                            {{ produit.accords }}
+                        {% endif %}
+                        {% if produit.temperature > 1 %}
+                            <hr/>
+                            <span class="card-title">Température de Consommation</span>
+                            {{ produit.temperature }} °C
+                        {% endif %}
+                    </div>
+                    <div class="card-action">
+                        <button class="btn" id="bouton_panier" value="{{ produit.id }}">Ajouter au panier</button>
+                        <span class="right btn red btn"><b>{{ produit.prix|stringformat:"2.2f" }} €</b></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript_addon %}
+    <script src="{% static 'magasin/js/panier.js' %}"></script>
+{% endblock %}
+
+
+
+
+
+
+
+

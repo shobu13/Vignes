@@ -67,14 +67,15 @@ class Commande(models.Model):
     est_archivee = models.BooleanField(default=False)
     est_payee = models.BooleanField(default=False)
 
-    client = models.ForeignKey('Client', on_delete=models.PROTECT)
+    client = models.ForeignKey('user.User', on_delete=models.CASCADE)
+    frais_port = models.ForeignKey('FraisDePort', on_delete=models.PROTECT)
 
     def __str__(self):
-        return "Commande n°" + str(self.id) + " de " + str(self.client.nom)
+        return "Commande n°" + str(self.id) + " de " + str(self.client.last_name)
 
 
 class ContenuCommande(models.Model):
-    commande = models.ForeignKey('Commande', on_delete=models.PROTECT)
+    commande = models.ForeignKey('Commande', on_delete=models.CASCADE)
     produit = models.ForeignKey('Produit', on_delete=models.PROTECT)
 
     quantite = models.IntegerField()
@@ -83,14 +84,10 @@ class ContenuCommande(models.Model):
         return self.produit.nom + " de commande n°" + str(self.commande.id)
 
 
-class Client(models.Model):
-    nom = models.CharField(max_length=100)
-    prenom = models.CharField(max_length=100)
-    adresse = models.CharField(max_length=200)
-    ville = models.CharField(max_length=100)
-    code_postal = models.CharField(max_length=5)
-    tel = models.CharField(max_length=10)
-    mail = models.EmailField()
+class FraisDePort(models.Model):
+    poid_min = models.FloatField()
+    poid_max = models.FloatField()
+    tarification = models.FloatField()
 
     def __str__(self):
-        return self.nom + " " + self.prenom
+        return "entre {} et {} : {} €".format(self.poid_min, self.poid_max, self.tarification)

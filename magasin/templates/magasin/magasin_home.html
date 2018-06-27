@@ -9,7 +9,7 @@
             <form action="{% url 'magasinHome' id_cat_produit %}" method="POST">
                 {% csrf_token %}
                 <li>
-                <u>sous categorie :</u> <br/>
+                    <u>sous categorie :</u> <br/>
                     <select name="filtre_sous_cat">
                         <option value="-1">tout</option>
                         {% for sous_cat in sous_categorie_liste %}
@@ -18,7 +18,7 @@
                     </select>
                 </li>
                 <li>
-                <u>marque :</u> <br/>
+                    <u>marque :</u> <br/>
                     <select name="filtre_marque">
                         <option value="-1">tout</option>
                         {% for marque in marque_liste %}
@@ -57,26 +57,20 @@
                             <div class="col m4 ">
                                 <div class="card">
                                     <div class="card-image">
-                                        <img class="activator"
-                                             src="{% static 'img/6-bouteilles-75cl-Chinien-Bergeron-dont-2-offertes0.JPG' %}">
+                                        <img src="{% static 'img/6-bouteilles-75cl-Chinien-Bergeron-dont-2-offertes0.JPG' %}">
                                     </div>
                                     <div class="card-content">
                                         {{ produit.nom }}
                                         <hr/>
                                         {{ produit.prix|stringformat:"2.2f" }} €
                                     </div>
-                                    <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">{{ produit.nom }}<i
-                                        class="material-icons right">close</i></span>
-                                        <p>Here is some more information about this product that is
-                                            only revealed once clicked
-                                            on.</p>
-                                    </div>
                                     <div class="card-action">
                                         <button class="btn" id="bouton_panier" value="{{ produit.id }}">Ajouter au
                                             panier
                                         </button>
-                                        <button class="activator btn green ">plus</button>
+                                        <a href="{% url 'magasinDetailProduit' produit.id %}">
+                                            <button class="activator btn green ">plus</button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

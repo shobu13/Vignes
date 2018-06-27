@@ -1,24 +1,16 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Payement</title>
-</head>
-<body>
-{% comment %}<form method="post" action="{% url 'paymill_confirm' %}" id="payment-form">
-    Credit card number: <input type="text" id="card-number"/>
-    <br/>
-    Holder name: <input type="text" id="card-holdername"/>
-    <br/>
-    Validation code: <input type="text" id="card-cvc"/>
-    <br/>
-    Expiration date (MM/YYYY): <input type="text" id="card-expiry-month"/><input type="text" id="card-expiry-year"/>
-    <br/>
-    <input type="submit" id="submit-btn"/>
-</form>{% endcomment %}
-<h1>payer en utilisant paypal</h1>
-{{ form.render }}
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-</body>
-</html>
+{% block title %}Home{% endblock %}
+{% block contenu %}
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">payer en utilisant paypal</span>
+                {{ form.render }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript_addon %}
+{% endblock %}

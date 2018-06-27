@@ -1,11 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Payement Ok !</title>
-</head>
-<body>
-<h1>Le payement à été valider !</h1>
-<a href="{% url 'magasinHome' %}"><button>retour au magasin</button></a>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Payement Ok !{% endblock %}
+{% block contenu %}
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <h1>Le payement à été valider !</h1>
+                <a href="{% url 'website_home' %}">
+                    <button class="btn green center">retour à l'acceuil</button>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript_addon %}
+{% endblock %}

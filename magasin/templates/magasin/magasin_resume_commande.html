@@ -2,18 +2,39 @@
 {% load static %}
 {% block title %}Home{% endblock %}
 {% block contenu %}
-    <h2>Vous avez commander : </h2>
-    {% for produit in user_cart_final %}
-        nom : {{ produit.0.nom }} <br/>
-        quantité : {{ produit.1 }} <br/>
-        prix unitaire : {{ produit.0.prix }}<br/>
-        total : {{ produit.2 }}<br/>
-        <hr/>
-    {% endfor %}
-    <h3>Pour un total de : {{ total }} euros</h3>
-    <a href="{% url 'payementCommande' %}">
-        <button>Payer !</button>
-    </a>
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                {% for produit in user_cart_final %}
+                    <div class="row">
+                        <div class="col m1">
+                            <img class="responsive-img z-depth-2"
+                                 src="{% static 'img/6-bouteilles-75cl-Chinien-Bergeron-dont-2-offertes0.JPG' %}">
+                        </div>
+                        <div class="col m5" style="border-left: 1px solid grey">
+                            <b style="font-size: large"
+                               class="blue-text text-darken-3">{{ produit.0.nom }}</b><br/>
+                            quantité : {{ produit.1 }}
+                            <br/><br/><br/><br/>
+                        </div>
+                        <div class="col m5">
+                            <br/><br/>
+                            <b style="font-size: large" class="red-text text-darken-4">prix unitaire
+                                : {{ produit.0.prix|stringformat:"2.2f" }}<br/></b>
+                            <b style="font-size: x-large" class="red-text text-darken-4">total
+                                : {{ produit.2|stringformat:"2.2f" }}<br/></b>
+                        </div>
+                    </div>
+                    <hr/>
+                {% endfor %}
+                <h5>Frais de port : {{ tarification.tarification|stringformat:"2.2f" }} euros</h5>
+                <h3>Pour un total de : {{ total|stringformat:"2.2f" }} euros</h3>
+                <a href="{% url 'payementCommande' %}">
+                    <button class="btn green">Payer !</button>
+                </a>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block javascript_addon %}

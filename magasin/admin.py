@@ -1,4 +1,3 @@
-
 from django.contrib import admin
 
 from magasin.models import *
@@ -62,6 +61,10 @@ class MarqueAdmin(admin.ModelAdmin):
     search_fields = ('nom',)
 
 
+class FraisDePortAdmin(admin.ModelAdmin):
+    ordering = ('tarification',)
+
+
 admin.site.register(Produit, ProduitAdmin)
 admin.site.register(TypesProduit, TypesProduitAdmin)
 admin.site.register(Categorie, CategorieAdmin)
@@ -69,4 +72,4 @@ admin.site.register(SousCategorie, SousCategorieAdmin)
 admin.site.register(Marque, MarqueAdmin)
 admin.site.register(Commande)
 admin.site.register(ContenuCommande)
-admin.site.register(Client)
+admin.site.register(FraisDePort, FraisDePortAdmin)

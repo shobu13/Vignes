@@ -5,7 +5,7 @@ from django.core.paginator import Paginator
 
 from magasin.models import Produit
 from vignes import settings
-from magasin.models import Commande, ContenuCommande, Client, Categorie, Marque, SousCategorie
+from magasin.models import Commande, ContenuCommande, Categorie, Marque, SousCategorie, FraisDePort
 from ajax.views import clear_cart
 
 from paypal.standard.forms import PayPalPaymentsForm
@@ -48,15 +48,19 @@ def resume_commande(request):
     user_cart = request.session['produits']
     user_cart_final = []
     total = 0
+    poid = 0
     for commande in user_cart.items():
         produit = Produit.objects.get(id=commande[0])
         user_cart_final.append((produit, commande[1], commande[1] * produit.prix))
         total += commande[1] * produit.prix
-
+        poid += produit.poid * commande[1]
+    poid = poid/1000
+    tarification = FraisDePort.objects.get(poid_min__lte=poid, poid_max__gte=poid)
     commande = Commande()
     commande.montant = total
     commande.envoie = True
-    commande.client = Client.objects.get(nom='LELU')
+    commande.client = request.user
+    commande.frais_port = tarification
     commande.save()
 
     for produit in user_cart_final:
@@ -67,6 +71,7 @@ def resume_commande(request):
         contenu_commande.save()
     request.session['id_commande'] = commande.id
 
+    total += tarification.tarification
     return render(request, 'magasin/magasin_resume_commande.html', locals())
 
 
@@ -75,13 +80,14 @@ def payement_commande(request):
     user_cart = request.session['produits']
     total = 0
     nom_commande = ""
+    frais_port = Commande.objects.get(id=request.session['id_commande']).frais_port.tarification
     for commande in user_cart.items():
         produit = Produit.objects.get(id=commande[0])
         total += commande[1] * produit.prix
         nom_commande += produit.nom + "; "
     paypal_dict = {
         'business': settings.PAYPAL_RECEIVER_EMAIL,
-        'amount': total,
+        'amount': total + frais_port,
         'item_name': nom_commande,
         'invoice': str(request.session['id_commande']),
         'currency_code': 'EUR',
@@ -109,3 +115,8 @@ def payement_commande_error(request):
     contenu_commande_liste.delete()
     commande.delete()
     return render(request, 'magasin/magasin_payement_erreur.html')
+
+
+def details_produit(request, id_produit):
+    produit = Produit.objects.get(id=id_produit)
+    return render(request, 'magasin/magasin_detail_produit.html', locals())

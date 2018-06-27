@@ -1,11 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>payement refusé</title>
-</head>
-<body>
-<h1>un problème à eu lieu lors du payement</h1>
-<a href="{% url 'magasinPanier' %}"><button>retour au magasin</button></a>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}payement refusé{% endblock %}
+{% block contenu %}
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <h1>un problème à eu lieu lors du payement</h1>
+                <a href="{% url 'magasinPanier' %}">
+                    <button class="btn red">retour au panier</button>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript_addon %}
+{% endblock %}

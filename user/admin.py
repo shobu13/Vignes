@@ -6,7 +6,7 @@ from .models import User
 class UserAdminCustom(UserAdmin):
     UserAdmin.fieldsets += (
                                'Détails', {
-                                   'fields': ('code_postal', )
+                                   'fields': ('rue', 'ville', 'code_postal', 'phone_number', )
                                }),
 
 
