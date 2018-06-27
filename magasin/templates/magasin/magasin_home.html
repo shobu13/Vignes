@@ -48,7 +48,6 @@
                 <i class="large material-icons">sort</i>
             </a>
         </div>
-
         <div class="row">
             <div class="col m9">
                 {% for ligne_produit in liste_produit %}
@@ -130,6 +129,26 @@
                         </div>
                     </div>
                 </form>
+                <div class="row">
+                    <div class="col m12">
+                        <ul class="pagination">
+                            {% if has_previous %}
+                                <li class="waves-effect"><a
+                                        href="{% url 'magasinHomePage' id_cat_produit previous_page_number %}"><i
+                                        class="material-icons">chevron_left</i></a></li>
+                            {% else %}
+                                <li class="disabled"><a href="#"><i class="material-icons">chevron_left</i></a></li>
+                            {% endif %}
+                            {% if has_next %}
+                                <li class="waves-effect"><a
+                                        href="{% url 'magasinHomePage' id_cat_produit next_page_number %}"><i
+                                        class="material-icons">chevron_right</i></a></li>
+                            {% else %}
+                                <li class="disabled"><a href="#"><i class="material-icons">chevron_right</i></a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

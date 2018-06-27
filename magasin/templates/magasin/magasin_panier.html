@@ -3,47 +3,62 @@
 {% block title %}Home{% endblock %}
 {% block contenu %}
     <div class="container">
-                <div class="card">
-                    <div class="card-content">
-                        {% for produit in user_cart_final %}
-                            <div class="row">
-                                <div class="col m1">
-                                    <img class="responsive-img z-depth-2"
-                                         src="{% static 'img/6-bouteilles-75cl-Chinien-Bergeron-dont-2-offertes0.JPG' %}">
-                                </div>
-                                <div class="col m5" style="border-left: 1px solid grey">
-                                    <b style="font-size: large"
-                                       class="blue-text text-darken-3">{{ produit.0.nom }}</b><br/>
-                                    quantité : {{ produit.1 }}
-                                    <br/><br/><br/>
-                                    <button id="bouton_panier_supr" value="{{ produit.0.id }}"
-                                            class="btn red btn-small">Supprimer du
-                                        panier
-                                    </button>
-                                </div>
-                                <div class="col m5">
-                                    <br/><br/>
-                                    <b style="font-size: large" class="red-text text-darken-4">prix unitaire
-                                        : {{ produit.0.prix|stringformat:"2.2f" }}<br/></b>
-                                    <b style="font-size: x-large" class="red-text text-darken-4">total : {{ produit.2|stringformat:"2.2f" }}<br/></b>
-                                </div>
-                            </div>
-                            <hr/>
-                        {% empty %}
-                            Pas de produit
-                        {% endfor %}
-                        <br/>
-                        <br/>
-                        {% if user_cart_final %}
-                            <a href="{% url 'resumeCommande' %}">
-                                <button class="btn green">passer commande</button>
-                            </a>
-                        {% endif %}
-                        <button id="bouton_panier_reset" class="btn red">Reset panier</button>
-                        <br/>
+        <div class="card">
+            <div class="card-content">
+                {% for produit in user_cart_final %}
+                    <div class="row">
+                        <div class="col m2">
+                            <img class="responsive-img z-depth-2"
+                                 src="{% static 'img/6-bouteilles-75cl-Chinien-Bergeron-dont-2-offertes0.JPG' %}">
+                        </div>
+                        <div class="col m3">
+                            <b style="font-size: large"
+                               class="blue-text text-darken-3">{{ produit.0.nom }}</b><br/>
+                            quantité : {{ produit.1 }}
+                            <br/><br/><br/>
+                            <button id="bouton_panier_supr" value="{{ produit.0.id }}"
+                                    class="btn red btn-small">Supprimer du
+                                panier
+                            </button>
+                        </div>
+                        <div class="col m3">
+                            <br/><br/>
+                            <b style="font-size: large" class="red-text text-darken-4">prix unitaire
+                                : {{ produit.0.prix|stringformat:"2.2f" }}<br/></b>
+                            <b style="font-size: x-large" class="red-text text-darken-4">total
+                                : {{ produit.2|stringformat:"2.2f" }}<br/></b>
+                        </div>
+                        <div class="col m3">
+                            <br/><br/>
+                            {% if produit.1 > produit.0.stock %}
+                                <u><b style="font-size: large" class="red-text text-darken-4">/!\ Attention, le stock de
+                                    ce produit ({{ produit.0.stock }}) est inferieur à la quantité demandée
+                                    ({{ produit.1 }}).</b></u>
+                            {% endif %}
+                        </div>
                     </div>
-                </div>
+                    <hr/>
+                {% empty %}
+                    Pas de produit
+                {% endfor %}
+                <br/>
+                <br/>
+                {% if sous_stock %}
+                    {% if user_cart_final %}
+                        <button class="btn green disabled">passer commande</button>
+                    {% endif %}
+                {% else %}
+                    {% if user_cart_final %}
+                        <a href="{% url 'resumeCommande' %}">
+                            <button class="btn green">passer commande</button>
+                        </a>
+                    {% endif %}
+                {% endif %}
+                <button id="bouton_panier_reset" class="btn red">Reset panier</button>
+                <br/>
             </div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block javascript_addon %}

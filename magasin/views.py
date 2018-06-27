@@ -11,7 +11,7 @@ from ajax.views import clear_cart
 from paypal.standard.forms import PayPalPaymentsForm
 
 
-def home(request, id_cat_produit):
+def home(request, id_cat_produit, page=1):
     baked_liste_produit = []
     cat_produit = Categorie.objects.get(id=id_cat_produit)
     sous_categorie_liste = cat_produit.sous_cats.all()
@@ -30,17 +30,28 @@ def home(request, id_cat_produit):
         liste_produit = liste_produit.filter(prix__lte=filtre_prix)
     for i in range(0, len(liste_produit), 3):
         baked_liste_produit += [liste_produit[i:i + 3]]
-    liste_produit_pagifier = Paginator(baked_liste_produit, 20)
-    liste_produit = liste_produit_pagifier.page(1)
+    print(baked_liste_produit)
+    liste_produit_pagifier = Paginator(baked_liste_produit, 2)
+    liste_produit = liste_produit_pagifier.page(page)
+    has_previous = liste_produit.has_previous()
+    has_next = liste_produit.has_next()
+    if has_next:
+        next_page_number = liste_produit.next_page_number()
+    if has_previous:
+        previous_page_number = liste_produit.previous_page_number()
+    liste_produit = liste_produit.object_list
     return render(request, 'magasin/magasin_home.html', locals())
 
 
 def panier(request):
     user_cart = request.session['produits']
     user_cart_final = []
+    sous_stock = False
     for commande in user_cart.items():
         produit = Produit.objects.get(id=commande[0])
         user_cart_final.append((produit, commande[1], commande[1] * produit.prix))
+        if commande[1] > produit.stock:
+            sous_stock = True
     return render(request, 'magasin/magasin_panier.html', locals())
 
 
@@ -104,6 +115,11 @@ def payement_commande_ok(request):
     commande = Commande.objects.get(id=request.session['id_commande'])
     commande.est_payee = True
     commande.save()
+    user_cart = request.session['produits']
+    for commande in user_cart.items():
+        produit = Produit.objects.get(id=commande[0])
+        produit.stock -= commande[1]
+        produit.save()
     clear_cart(request)
     request.session['id_commande'] = None
     return render(request, 'magasin/magasin_payement_ok.html')

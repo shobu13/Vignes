@@ -20,6 +20,7 @@ from magasin import views
 
 urlpatterns = [
     path('<int:id_cat_produit>', views.home, name='magasinHome'),
+    path('<int:id_cat_produit>/<int:page>', views.home, name='magasinHomePage'),
     path('detail_produit/<int:id_produit>', views.details_produit, name='magasinDetailProduit'),
     path('panier', views.panier, name='magasinPanier'),
     path('resume_commande', views.resume_commande, name='resumeCommande'),
