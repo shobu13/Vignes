@@ -44,6 +44,12 @@
             </span></a></li>
         </ul>
         <ul class="right hide-on-med-and-down ">
+            {% if user.is_authenticated %}
+                <li><a class="dropdown-trigger white-text" href="#!"
+                       data-target="dropdown_user">{{ user.username }}<i
+                        class="material-icons right">arrow_drop_down</i></a>
+                </li>
+            {% endif %}
             <li><a href="{% url 'website_home' %}" class="white-text red darken-3">Acceuil</a></li>
             <li><a href="badges.html" class="white-text">Evenement</a></li>
 
@@ -82,6 +88,10 @@
 </ul>
 
 <!-- Dropdown Structure -->
+<ul id="dropdown_user" class='dropdown-content'>
+    <li><a href="{% url 'website_adresse' %}">Adresse</a></li>
+</ul>
+
 <ul id="dropdown_classic" class='dropdown-content'>
 </ul>
 
@@ -119,13 +129,14 @@
 <script src="{% static 'js/materialize.js' %}"></script>
 <script src="{% static 'js/init.js' %}"></script>
 <script src="{% static 'js/categorie_dropdown.js' %}"></script>
+<script src="{% static 'js/reset_filter.js' %}"></script>
 <script>
     $.get('/ajax/call_checker', {}, function (data) {
     })
 </script>
 
 <!-- Modaux -->
-{% if statut == 'sucess' %}
+{% if statut == 'sucess_account_create' %}
     <script>
         $(document).ready(function () {
             $('#sucess').modal('open');
@@ -135,6 +146,24 @@
         <div class="modal-content">
             <h4>Félicitation</h4>
             <p>Votre compte à bien été créer</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok !</a>
+        </div>
+    </div>
+{% endif %}
+
+<!-- Modaux -->
+{% if statut == 'sucess_adresse_modif' %}
+    <script>
+        $(document).ready(function () {
+            $('#sucess').modal('open');
+        });
+    </script>
+    <div id="sucess" class="modal">
+        <div class="modal-content">
+            <h4>Félicitation</h4>
+            <p>Votre adresse à bien été modifiée</p>
         </div>
         <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok !</a>

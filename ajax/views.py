@@ -83,3 +83,19 @@ def get_product_name_by_id(request):
     produit = Produit.objects.get(id=id_produit)
     print('prdouit_nom= ', produit.nom)
     return JsonResponse({"HTTPRESPONSE": 'ok', 'produit_nom': produit.nom}, content_type="application/json")
+
+
+def reset_filter(request):
+    try:
+        request.session['reset_filter']
+    except:
+        request.session['reset_filter'] = True
+    if request.session['reset_filter']:
+        print("RESET FILTER")
+        request.session['filtre_sous_cat_id'] = None
+        request.session['filtre_marque_id'] = None
+        request.session['filtre_prix'] = None
+        return JsonResponse({"HTTPRESPONSE": 'reset', }, content_type="application/json")
+    else:
+        request.session['reset_filter'] = True
+        return JsonResponse({"HTTPRESPONSE": 'no_reset', }, content_type="application/json")

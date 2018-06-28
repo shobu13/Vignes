@@ -3,8 +3,8 @@ from django.shortcuts import render, HttpResponse, reverse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.paginator import Paginator
 
-from magasin.models import Produit
 from vignes import settings
+from magasin.models import Produit
 from magasin.models import Commande, ContenuCommande, Categorie, Marque, SousCategorie, FraisDePort
 from ajax.views import clear_cart
 
@@ -12,26 +12,45 @@ from paypal.standard.forms import PayPalPaymentsForm
 
 
 def home(request, id_cat_produit, page=1):
+    request.session['reset_filter'] = False
+    nb_column = 3
+    nb_row = 1
+    nb_col_css = 4
     baked_liste_produit = []
+    prix_produit_liste = []
+    prix_max = None
+    prix_min = None
     cat_produit = Categorie.objects.get(id=id_cat_produit)
     sous_categorie_liste = cat_produit.sous_cats.all()
     marque_liste = Marque.objects.all()
     liste_produit = Produit.objects.filter(categorie=cat_produit)
+    for produit in liste_produit:
+        prix_produit_liste.append(produit.prix)
+    prix_max = int(max(prix_produit_liste))
+    prix_min = int(min(prix_produit_liste))
     if request.method == 'POST':
-        filtre_sous_cat_id = int(request.POST.get('filtre_sous_cat'))
-        filtre_marque_id = int(request.POST.get('filtre_marque'))
-        filtre_prix = int(request.POST.get('filtre_prix'))
-        if filtre_sous_cat_id != -1:
-            filtre_sous_cat = SousCategorie.objects.get(id=filtre_sous_cat_id)
+        request.session['filtre_sous_cat_id'] = int(request.POST.get('filtre_sous_cat'))
+        request.session['filtre_marque_id'] = int(request.POST.get('filtre_marque'))
+        request.session['filtre_prix'] = int(request.POST.get('filtre_prix'))
+        if request.POST.get('reset'):
+            request.session['filtre_sous_cat_id'] = -1
+            request.session['filtre_marque_id'] = -1
+            request.session['filtre_prix'] = -1
+    if request.session['filtre_sous_cat_id'] is not None and request.session['filtre_marque_id'] is not None and \
+            request.session['filtre_prix'] is not None:
+        if request.session['filtre_sous_cat_id'] != -1:
+            filtre_sous_cat = SousCategorie.objects.get(id=request.session['filtre_sous_cat_id'])
             liste_produit = liste_produit.filter(sous_categorie=filtre_sous_cat)
-        if filtre_marque_id != -1:
-            filtre_marque = Marque.objects.get(id=filtre_marque_id)
+        if request.session['filtre_marque_id'] != -1:
+            filtre_marque = Marque.objects.get(id=request.session['filtre_marque_id'])
             liste_produit = liste_produit.filter(marque=filtre_marque)
-        liste_produit = liste_produit.filter(prix__lte=filtre_prix)
-    for i in range(0, len(liste_produit), 3):
-        baked_liste_produit += [liste_produit[i:i + 3]]
-    print(baked_liste_produit)
-    liste_produit_pagifier = Paginator(baked_liste_produit, 2)
+        print("min, max=", prix_min, prix_max)
+        if request.POST.get('reset'):
+            request.session['filtre_prix'] = prix_max
+        liste_produit = liste_produit.filter(prix__lte=request.session['filtre_prix'])
+    for i in range(0, len(liste_produit), nb_column):
+        baked_liste_produit += [liste_produit[i:i + nb_column]]
+    liste_produit_pagifier = Paginator(baked_liste_produit, nb_row)
     liste_produit = liste_produit_pagifier.page(page)
     has_previous = liste_produit.has_previous()
     has_next = liste_produit.has_next()
@@ -65,7 +84,7 @@ def resume_commande(request):
         user_cart_final.append((produit, commande[1], commande[1] * produit.prix))
         total += commande[1] * produit.prix
         poid += produit.poid * commande[1]
-    poid = poid/1000
+    poid = poid / 1000
     tarification = FraisDePort.objects.get(poid_min__lte=poid, poid_max__gte=poid)
     commande = Commande()
     commande.montant = total

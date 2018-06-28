@@ -25,4 +25,5 @@ urlpatterns = [
     path('get_cat', views.get_cat, name='get_cat'),
     path('call_checker', views.call_checker, name='call_checker'),
     path('get_product_name_by_id', views.get_product_name_by_id, name='get_product_name_by_id'),
+    path('reset_filter', views.reset_filter, name='reset_filter'),
 ]
