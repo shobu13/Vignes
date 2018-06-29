@@ -59,7 +59,7 @@
                             <div class="col m{{ nb_col_css }}">
                                 <div class="card">
                                     <div class="card-image">
-                                        <img src="{% static 'img/6-bouteilles-75cl-Chinien-Bergeron-dont-2-offertes0.JPG' %}">
+                                        <img src="{{ produit.photo.url }}">
                                     </div>
                                     <div class="card-content">
                                         {{ produit.nom }}

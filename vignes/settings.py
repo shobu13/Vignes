@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'magasin',
     'ajax',
     'user',
+    'event',
 ]
 
 MIDDLEWARE = [

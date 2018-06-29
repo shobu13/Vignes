@@ -1,3 +1,4 @@
+# coding: utf-8
 """vignes.magasin URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -15,16 +16,9 @@ Including another URLconf
 """
 from django.urls import path
 
-from ajax import views
+from event import views
 
 urlpatterns = [
-    path('get_sous_cat', views.get_sous_cat),
-    path('add_cart', views.add_cart),
-    path('clear_cart', views.clear_cart, name='clear_cart'),
-    path('supr_cart', views.supr_cart, name='supr_cart'),
-    path('get_cat', views.get_cat, name='get_cat'),
-    path('call_checker', views.call_checker, name='call_checker'),
-    path('get_product_name_by_id', views.get_product_name_by_id, name='get_product_name_by_id'),
-    path('reset_filter', views.reset_filter, name='reset_filter'),
-    path('get_event_by_year', views.get_event_by_year, name='get_event_by_year'),
+    path('', views.home, name='event_home'),
+
 ]

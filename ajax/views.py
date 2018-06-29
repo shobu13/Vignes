@@ -5,6 +5,7 @@ from django.http import JsonResponse
 
 from magasin.models import SousCategorie, Categorie, Produit
 from utility import checker
+from event.models import Event
 
 
 def get_sous_cat(request):
@@ -99,3 +100,22 @@ def reset_filter(request):
     else:
         request.session['reset_filter'] = True
         return JsonResponse({"HTTPRESPONSE": 'no_reset', }, content_type="application/json")
+
+
+def get_event_by_year(request):
+    year = request.GET.get('year')
+    data = {"HTTPRESPONSE": 'ok', 'event_list': {}}
+    event_list = Event.objects.filter(date__year=year)
+    for event in event_list:
+        event_data = {
+            'id': event.id,
+            'nom': event.nom,
+            'description': event.description,
+            'lieu': event.lieu,
+            'date': event.date,
+            'heure': event.heure,
+            'type_nom': event.type.nom
+        }
+        data['event_list'][event.id] = event_data
+
+    return JsonResponse(data, content_type="application/json")

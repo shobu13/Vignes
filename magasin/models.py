@@ -11,6 +11,8 @@ class Produit(models.Model):
     accords = models.TextField(blank=True, null=True)
     temperature = models.FloatField(blank=True, null=True)
     date_ajout = models.DateField(default=timezone.now)
+    # file will be saved to MEDIA_ROOT/uploads/2015/01/30
+    photo = models.ImageField(upload_to='uploads/produit')
 
     categorie = models.ForeignKey('Categorie', on_delete=models.PROTECT)
     sous_categorie = models.ForeignKey('SousCategorie', on_delete=models.PROTECT)

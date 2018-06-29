@@ -14,7 +14,7 @@ class ProduitAdmin(admin.ModelAdmin):
 
     fieldsets = (
         ('Base', {
-            'fields': ('nom', 'categorie', 'sous_categorie', 'type', 'marque',)
+            'fields': ('nom', 'categorie', 'sous_categorie', 'type', 'marque', 'photo')
         }),
         ('Général', {
             'classes': ['collapse', ],

@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $('.dropdown-trigger').dropdown({
-        hover: true
+        hover: false
     });
     $('.sidenav').sidenav({'draggable': true, });
     $('.collapsible').collapsible();
