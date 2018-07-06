@@ -7,8 +7,13 @@ from django.core.exceptions import ValidationError
 from user.forms import UserForm, ConnexionForm, AdressForm
 from user.models import User
 
+from website.models import AcceuilCard, Diver, BoutiqueImage
+
 
 def home(request):
+    cards = AcceuilCard.objects.all()
+    num_tel = Diver.objects.get(nom='num_tel').data
+    images = BoutiqueImage.objects.all()
     return render(request, 'website/website_home.html', locals())
 
 
@@ -32,7 +37,8 @@ def inscription(request):
             try:
                 validate_password(password)
                 if password == confirm_password:
-                    user = User(username=username, first_name=first_name, last_name=last_name, email=email, rue=rue,
+                    user = User(username=username, first_name=first_name, last_name=last_name,
+                                email=email, rue=rue,
                                 ville=ville, code_postal=code_postal, phone_number=phone_number)
                     user.set_password(password)
                     user.save()
@@ -120,3 +126,129 @@ def adressse(request):
         form = AdressForm(data)
         # form.fields['last_name'] = request.user.last_name
     return render(request, 'website/website_adresse.html', locals())
+
+
+def BDD(request):
+    import pymysql
+    import os
+    from magasin.models import Categorie, SousCategorie, TypesProduit, Produit, Marque
+    from event.models import Event, EventImage
+    from django.core.files import File
+    text = ''
+    db = pymysql.connect('localhost', 'root', '', 'vignes')
+    cursor = db.cursor()
+
+    text += '<h1>Catégorie</h1>'
+    cursor.execute('SELECT * FROM categorie')
+    data = cursor.fetchall()
+    for row in data:
+        text += '{}<br/>'.format(row)
+        Categorie(id=row[0], nom=row[1]).save()
+
+    text += '<h1>Sous Catégorie</h1>'
+    cursor.execute('SELECT * FROM souscategorie')
+    data = cursor.fetchall()
+    for row in data:
+        text += '{}<br/>'.format(row)
+        categorie = Categorie.objects.get(id=row[1])
+        SousCategorie(id=row[0], categorie=categorie, nom=row[2]).save()
+
+    text += '<h1>Type</h1>'
+    cursor.execute('SELECT * FROM produit')
+    data = cursor.fetchall()
+    types = []
+    for row in data:
+        if row[2] not in types:
+            types.append(row[2])
+            text += '{}<br/>'.format(row[2])
+    for index, type in enumerate(types):
+        TypesProduit(id=index, nom=type).save()
+
+    text += '<h1>Marque</h1>'
+    cursor.execute('SELECT * FROM produit')
+    data = cursor.fetchall()
+    marques = []
+    for row in data:
+        if row[9] not in marques and row[9] != "":
+            marques.append(row[9])
+            text += '{}<br/>'.format(row[9])
+    for index, marque in enumerate(marques):
+        Marque(id=index, nom=marque).save()
+
+    text += '<h1>Produit</h1>'
+    cursor.execute('SELECT * FROM produit')
+    data = cursor.fetchall()
+    for row in data:
+        text += '{}<hr/>'.format(row)
+        type = TypesProduit.objects.get(nom=row[2])
+        poid = float(row[5]) * 100
+        try:
+            categorie = Categorie.objects.get(id=row[6])
+        except:
+            categorie = Categorie.objects.get(nom='ERROR')
+        try:
+            sous_categorie = SousCategorie.objects.get(id=row[7])
+        except:
+            sous_categorie = SousCategorie.objects.get(nom='ERROR_SOUS')
+        try:
+            marque = Marque.objects.get(nom=row[9])
+        except:
+            marque = None
+        print(row)
+        try:
+            Produit(id=row[0], nom=row[1], type=type, prix=row[3], stock=row[4], poid=poid,
+                    categorie=categorie, sous_categorie=sous_categorie, marque=marque,
+                    description=row[12]).save()
+        except:
+            pass
+    text += '<h1>Produit Image</h1>'
+    cursor.execute(
+        'SELECT idProduit, nomPhoto FROM link_photo_produit, photo WHERE photo.idPhoto = link_photo_produit.idPhoto')
+    data = cursor.fetchall()
+    for row in data:
+        text += '{}<hr/>'.format(row)
+        print(row)
+        directory = os.getcwd()
+        try:
+            produit = Produit.objects.get(id=row[0])
+            os.chdir('C:/Users/Shobu/Desktop/www/images/Produit/')
+            image = File(open('{}'.format(row[1]), 'rb'))
+            os.chdir(directory)
+            produit.photo = image
+            produit.save()
+        except:
+            print('fail')
+    for produit in Produit.objects.all():
+        if produit.photo.name == '':
+            directory = os.getcwd()
+            os.chdir('C:/Users/Shobu/Desktop/www/images/Produit/')
+            image = File(open('none.JPG', 'rb'))
+            os.chdir(directory)
+            produit.photo = image
+            produit.save()
+    text += '<h1>Event</h1>'
+    cursor.execute('SELECT * FROM evenement')
+    data = cursor.fetchall()
+    for row in data:
+        text += '{}<hr/>'.format(row)
+        print(row)
+        Event(id=row[0], nom=row[1], description=row[2], lieu=row[3], date=str(row[4]),
+              heure=str(row[5])).save()
+
+    text += '<h1>Event Image</h1>'
+    cursor.execute(
+        'SELECT idEvenement, nomPhoto FROM link_photo_evenement, photo WHERE photo.idPhoto = link_photo_evenement.idPhoto')
+    data = cursor.fetchall()
+    for row in data:
+        text += '{}<hr/>'.format(row)
+        print(row)
+        directory = os.getcwd()
+        try:
+            event = Event.objects.get(id=row[0])
+            os.chdir('C:/Users/Shobu/Desktop/www/images/evenements/')
+            image = File(open('{}'.format(row[1]), 'rb'))
+            os.chdir(directory)
+            EventImage(image=image, event=event).save()
+        except:
+            print('fail')
+    return HttpResponse(text)
