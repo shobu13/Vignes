@@ -26,5 +26,5 @@ urlpatterns = [
     path('call_checker', views.call_checker, name='call_checker'),
     path('get_product_name_by_id', views.get_product_name_by_id, name='get_product_name_by_id'),
     path('reset_filter', views.reset_filter, name='reset_filter'),
-    path('get_event_by_year', views.get_event_by_year, name='get_event_by_year'),
+    path('get_event_by_year_and_month', views.get_event_by_year_and_month, name='get_event_by_year_and_month'),
 ]

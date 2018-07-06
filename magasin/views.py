@@ -21,7 +21,7 @@ def home(request, id_cat_produit, page=1):
     prix_max = None
     prix_min = None
     cat_produit = Categorie.objects.get(id=id_cat_produit)
-    sous_categorie_liste = cat_produit.sous_cats.all()
+    sous_categorie_liste = SousCategorie.objects.filter(categorie=cat_produit)
     marque_liste = Marque.objects.all()
     liste_produit = Produit.objects.filter(categorie=cat_produit)
     for produit in liste_produit:

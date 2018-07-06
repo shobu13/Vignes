@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static days_to_litteral dict_get %}
 {% block title %}Évènement - acceuil{% endblock %}
 {% block contenu %}
     <div class="container">
@@ -14,11 +14,27 @@
             </a>
         {% endfor %}{% endcomment %}
         <ul class="collapsible">
-            {% for year in year_liste %}
+            {% for year in date_liste|reverse_dict %}
                 <li>
                     <div class="collapsible-header">{{ year }}</div>
-                    <div class="collapsible-body"><span id="data-{{ year }}"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="collapsible">
+                            {% for month in date_liste|get_element:year %}
+                                <li id="event_list">
+                                    <div class="collapsible-header">{{ month|month_to_litteral }}</div>
+                                    <div class="collapsible-body">
+                                        <span id="data-{{ year }}-{{ month }}">
+                                            <div class="progress">
+                                              <div class="indeterminate"></div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </li>
+
             {% endfor %}
         </ul>
     </div>

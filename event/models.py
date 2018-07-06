@@ -15,7 +15,7 @@ class Event(models.Model):
     date = models.DateField()
     heure = models.TimeField()
 
-    type = models.ForeignKey('EventType', on_delete=models.PROTECT)
+    type = models.ForeignKey('EventType', on_delete=models.PROTECT, default=EventType.objects.get(nom='default'))
 
     def __str__(self):
         return "{} à {}".format(self.nom, self.lieu)
@@ -23,4 +23,10 @@ class Event(models.Model):
 
 class EventImage(models.Model):
     event = models.ForeignKey('Event', on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='uploads/')
+    image = models.ImageField(upload_to='uploads/event')
+
+    def __str__(self):
+        return '{} de {}'.format(self.image.name[0:100], self.event.nom)
+
+
+

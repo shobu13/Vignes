@@ -3,7 +3,7 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.http import JsonResponse
 
-from magasin.models import SousCategorie, Categorie, Produit
+from magasin.models import SousCategorie, Categorie, Produit, TypesProduit
 from utility import checker
 from event.models import Event
 
@@ -67,9 +67,14 @@ def supr_cart(request):
 
 def get_cat(request):
     cat_produit_liste = []
-    cat_produit_liste_raw = Categorie.objects.all()
+    type = request.GET.get('type')
+    cat_produit_liste_raw = TypesProduit.objects.get(nom__contains=type).categories.all()
     for cat_produit in cat_produit_liste_raw:
-        cat_produit_liste.append((cat_produit.id, cat_produit.nom))
+        try:
+            cat_produit.produit_set.all()[0]
+            cat_produit_liste.append((cat_produit.id, cat_produit.nom))
+        except:
+            pass
     return JsonResponse({"HTTPRESPONSE": 'ok', "liste_cat": cat_produit_liste},
                         content_type="application/json")
 
@@ -102,20 +107,26 @@ def reset_filter(request):
         return JsonResponse({"HTTPRESPONSE": 'no_reset', }, content_type="application/json")
 
 
-def get_event_by_year(request):
+def get_event_by_year_and_month(request):
     year = request.GET.get('year')
+    month = request.GET.get('month')
     data = {"HTTPRESPONSE": 'ok', 'event_list': {}}
-    event_list = Event.objects.filter(date__year=year)
+    event_list = Event.objects.filter(date__year=year, date__month=month)
     for event in event_list:
+        if len(event.description.split(" ")) > 100:
+            description = event.description.split(" ")[0:100]+"..."
+        else:
+            description = event.description
         event_data = {
             'id': event.id,
             'nom': event.nom,
-            'description': event.description,
+            'description': description,
             'lieu': event.lieu,
-            'date': event.date,
-            'heure': event.heure,
+            'date': event.date.strftime('%d/%m/%Y'),
+            'heure': event.heure.strftime('%H:%M'),
             'type_nom': event.type.nom
         }
         data['event_list'][event.id] = event_data
+    print(data['event_list'])
 
     return JsonResponse(data, content_type="application/json")

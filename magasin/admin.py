@@ -4,8 +4,10 @@ from magasin.models import *
 
 
 class ProduitAdmin(admin.ModelAdmin):
-    list_display = ('nom', 'temperature', 'date_ajout', 'categorie', 'sous_categorie', 'prix', 'est_promo', 'stock')
-    list_filter = ('temperature', 'categorie', 'sous_categorie', 'prix', 'est_promo')
+    list_display = (
+        'nom', 'temperature', 'date_ajout', 'categorie', 'sous_categorie', 'prix', 'est_promo',
+        'stock', 'photo')
+    list_filter = ('temperature', 'categorie', 'sous_categorie', 'prix', 'est_promo', )
     date_hierarchy = 'date_ajout'
     ordering = ('categorie', 'sous_categorie', 'date_ajout',)
     search_fields = ('nom', 'description', 'cepage',)
@@ -34,11 +36,14 @@ class ProduitAdmin(admin.ModelAdmin):
         )
 
 
+class SousCategorieInline(admin.TabularInline):
+    model = SousCategorie
+    extra = 1
+
+
 class CategorieAdmin(admin.ModelAdmin):
-    pass
     list_display = ('nom',)
-    list_filter = ('sous_cats',)
-    filter_horizontal = ("sous_cats",)
+    inlines = (SousCategorieInline,)
     ordering = ('nom',)
     search_fields = ('nom',)
 
@@ -50,6 +55,7 @@ class SousCategorieAdmin(admin.ModelAdmin):
 
 
 class TypesProduitAdmin(admin.ModelAdmin):
+    filter_horizontal = ('categories', )
     list_display = ('nom',)
     ordering = ('nom',)
     search_fields = ('nom',)
@@ -68,7 +74,6 @@ class FraisDePortAdmin(admin.ModelAdmin):
 admin.site.register(Produit, ProduitAdmin)
 admin.site.register(TypesProduit, TypesProduitAdmin)
 admin.site.register(Categorie, CategorieAdmin)
-admin.site.register(SousCategorie, SousCategorieAdmin)
 admin.site.register(Marque, MarqueAdmin)
 admin.site.register(Commande)
 admin.site.register(ContenuCommande)

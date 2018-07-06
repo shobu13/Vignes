@@ -33,7 +33,6 @@ class Produit(models.Model):
 
 class Categorie(models.Model):
     nom = models.CharField(max_length=30, null=False, blank=False, unique=True)
-    sous_cats = models.ManyToManyField('SousCategorie')
 
     def __str__(self):
         return self.nom
@@ -41,6 +40,7 @@ class Categorie(models.Model):
 
 class SousCategorie(models.Model):
     nom = models.CharField(max_length=30, null=False, blank=False, unique=True)
+    categorie = models.ForeignKey('Categorie', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.nom
@@ -48,6 +48,7 @@ class SousCategorie(models.Model):
 
 class TypesProduit(models.Model):
     nom = models.CharField(max_length=30)
+    categories = models.ManyToManyField('Categorie')
 
     def __str__(self):
         return self.nom

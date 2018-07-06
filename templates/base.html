@@ -8,10 +8,13 @@
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet"
           media="screen,projection"/>
     <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet"
           media="screen,projection"/>
+    <link rel="stylesheet" href="{% static 'css/materialize-social.css' %}">
 
     {% comment %}<style>
         [class*="col"], footer {
@@ -27,7 +30,7 @@
         }
     </style>{% endcomment %}
 </head>
-<body>
+<body style="overflow-y: scroll">
 <nav style="margin-bottom: 10px">
     <div class="nav-wrapper red darken-2">
         <a href="#!" class="brand-logo white-text hide-on-med-and-down">Vignes & gourmandises</a>
@@ -36,9 +39,11 @@
            style="font-size: medium">Vignes & gourmandises</a>
 
 
-        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons white-text">menu</i></a>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i
+                class="material-icons white-text">menu</i></a>
         <ul class="right hide-on-large-only hide-on-extra-large-only">
-            <li><a href="{% url 'magasinPanier' %}"><span class="new badge" data-badge-caption="Produits"
+            <li><a href="{% url 'magasinPanier' %}"><span class="new badge"
+                                                          data-badge-caption="Produits"
                                                           id="nb_prod_mobile">
                 {{ request.session.total | default:0 }}
             </span></a></li>
@@ -55,17 +60,25 @@
 
             <!-- Dropdown Trigger -->
             <li><a class="dropdown-trigger white-text red darken-3" href="#!"
-                   data-target="dropdown_classic">Boutique<i
+                   data-target="dropdown_classic_alcool">Alcool<i
+                    class="material-icons right">arrow_drop_down</i></a>
+            </li>
+            <li><a class="dropdown-trigger white-text" href="#!"
+                   data-target="dropdown_classic_epicerie_fine">Epicerie Fine<i
                     class="material-icons right">arrow_drop_down</i></a>
             </li>
             {% if user.is_authenticated %}
-                <li><a class="dropdown-trigger white-text" href="#!" data-target="dropdown_cart">Panier :
+                <li><a class="dropdown-trigger white-text red darken-3" href="#!"
+                       data-target="dropdown_cart">Panier
+                    :
                     <span id="nb_prod">{{ request.session.total | default:0 }}</span><i
                             class="material-icons right">arrow_drop_down</i></a></li>
-                <li><a href="{% url 'website_deco' %}" class="white-text red darken-3">deconnexion</a></li>
+                <li><a href="{% url 'website_deco' %}"
+                       class="white-text">deconnexion</a></li>
             {% else %}
                 <li><a href="{% url 'website_login' %}" class="white-text">Connexion</a></li>
-                <li><a href="{% url 'website_inscription' %}" class="white-text red darken-3">Enregistrement</a></li>
+                <li><a href="{% url 'website_inscription' %}" class="white-text red darken-3">Enregistrement</a>
+                </li>
             {% endif %}
         </ul>
     </div>
@@ -73,17 +86,47 @@
 
 <ul id="slide-out" class="sidenav">
     <li><a href="{% url 'website_home' %}">Acceuil</a></li>
-    <li><a href="#!">Evenement</a></li>
+    <li><a href="{% url 'event_home' %}">Evenement</a></li>
     <li class="no-padding">
         <ul class="collapsible collapse-toggle">
             <li>
-                <a class="collapsible-header">Boutique<i class="material-icons">arrow_drop_down</i></a>
+                <a class="collapsible-header">Alcool<i
+                        class="material-icons">arrow_drop_down</i></a>
                 <div class="collapsible-body">
-                    <ul id="dropdown_mobile">
+                    <ul id="dropdown_mobile_alcool">
                     </ul>
                 </div>
             </li>
         </ul>
+        <ul class="collapsible collapse-toggle">
+            <li>
+                <a class="collapsible-header">Epicerie Fine<i
+                        class="material-icons">arrow_drop_down</i></a>
+                <div class="collapsible-body">
+                    <ul id="dropdown_mobile_epicerie_fine">
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        {% if user.is_authenticated %}
+            <ul class="collapsible collapse-toggle">
+                <li>
+                    <a class="collapsible-header">Panier : <span
+                            id="nb_prod">{{ request.session.total | default:0 }}</span><i
+                            class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="{% url 'magasinPanier' %}">Voir</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <li><a href="{% url 'website_deco' %}">deconnexion</a></li>
+        {% else %}
+            <li><a href="{% url 'website_login' %}">Connexion</a></li>
+            <li><a href="{% url 'website_inscription' %}">Enregistrement</a>
+            </li>
+        {% endif %}
     </li>
 </ul>
 
@@ -92,7 +135,9 @@
     <li><a href="{% url 'website_adresse' %}">Adresse</a></li>
 </ul>
 
-<ul id="dropdown_classic" class='dropdown-content'>
+<ul id="dropdown_classic_alcool" class='dropdown-content'>
+</ul>
+<ul id="dropdown_classic_epicerie_fine" class='dropdown-content'>
 </ul>
 
 <ul id='dropdown_cart' class='dropdown-content'>

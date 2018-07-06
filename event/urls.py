@@ -20,5 +20,6 @@ from event import views
 
 urlpatterns = [
     path('', views.home, name='event_home'),
+    path('detail/<int:event_id>', views.detail, name='event_detail'),
 
 ]
