@@ -1,2 +1,0 @@
-"id";"password";"last_login";"is_superuser";"username";"first_name";"last_name";"email";"is_staff";"is_active";"date_joined";"rue";"ville";"code_postal";"phone_number"
-1;"pbkdf2_sha256$100000$7J33nQQ5ZrWp$VZ5MzCbzT6sITmrjNS9yhl/AaMt6TLhDQlfPAMv2p3Y=";06/07/2018 13:17;True;"admin";"";"";"";True;True;04/07/2018 16:04;"";"";"";""
