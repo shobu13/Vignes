@@ -1,3 +1,9 @@
+CREATE TABLE magasin_marque (
+  id   integer,
+  nom  varchar(30)
+);
+
+
 INSERT INTO `magasin_marque` (`id`, `nom`) VALUES
   (0, 'Skumen'),
   (1, 'Tri Martolod'),

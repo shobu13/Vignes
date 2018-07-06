@@ -1,3 +1,15 @@
+CREATE TABLE django_admin_log (
+  id               integer,
+  object_id        text,
+  object_repr      varchar(200),
+  action_flag      smallint unsigned,
+  change_message   text,
+  content_type_id  integer,
+  user_id          integer,
+  action_time      datetime
+);
+
+
 INSERT INTO `django_admin_log` (`id`, `object_id`, `object_repr`, `action_flag`, `change_message`, `content_type_id`, `user_id`, `action_time`) VALUES
   (1, '1', 'test', '1', '[{\"added\": {}}, {\"added\": {\"name\": \"sous categorie\", \"object\": \"blu de test\"}}, {\"added\": {\"name\": \"sous categorie\", \"object\": \"bles de test\"}}]', 11, 1, '2018-07-04 16:04:48'),
   (2, '1', 'test', '2', '[]', 11, 1, '2018-07-04 16:04:58'),

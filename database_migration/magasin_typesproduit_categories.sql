@@ -1,3 +1,10 @@
+CREATE TABLE magasin_typesproduit_categories (
+  id               integer,
+  typesproduit_id  integer,
+  categorie_id     integer
+);
+
+
 INSERT INTO `magasin_typesproduit_categories` (`id`, `typesproduit_id`, `categorie_id`) VALUES
   (1, 0, 1),
   (2, 0, 2),

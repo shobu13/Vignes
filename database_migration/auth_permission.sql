@@ -1,3 +1,11 @@
+CREATE TABLE auth_permission (
+  id               integer,
+  content_type_id  integer,
+  codename         varchar(100),
+  name             varchar(255)
+);
+
+
 INSERT INTO `auth_permission` (`id`, `content_type_id`, `codename`, `name`) VALUES
   (1, 1, 'add_logentry', 'Can add log entry'),
   (2, 1, 'change_logentry', 'Can change log entry'),

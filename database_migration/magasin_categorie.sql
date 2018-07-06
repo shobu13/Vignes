@@ -1,3 +1,9 @@
+CREATE TABLE magasin_categorie (
+  id   integer,
+  nom  varchar(30)
+);
+
+
 INSERT INTO `magasin_categorie` (`id`, `nom`) VALUES
   (1, 'Spiritueux'),
   (2, 'Effervescent'),

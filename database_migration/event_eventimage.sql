@@ -1,3 +1,10 @@
+CREATE TABLE event_eventimage (
+  id        integer,
+  event_id  integer,
+  image     varchar(100)
+);
+
+
 INSERT INTO `event_eventimage` (`id`, `event_id`, `image`) VALUES
   (1, 1, 'uploads/event/Soiree-degustation-rhum-avec-chants-marins0.JPG'),
   (2, 1, 'uploads/event/Soiree-degustation-rhum-avec-chants-marins1.JPG'),

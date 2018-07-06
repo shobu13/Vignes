@@ -1,3 +1,10 @@
+CREATE TABLE magasin_souscategorie (
+  id            integer,
+  nom           varchar(30),
+  categorie_id  integer
+);
+
+
 INSERT INTO `magasin_souscategorie` (`id`, `nom`, `categorie_id`) VALUES
   (1, 'Bière ambrée', 5),
   (2, 'Bière blanche', 5),

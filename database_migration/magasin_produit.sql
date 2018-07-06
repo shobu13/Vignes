@@ -1,3 +1,26 @@
+CREATE TABLE magasin_produit (
+  id                 integer,
+  nom                varchar(100),
+  description        text,
+  cepage             text,
+  notes_degustation  text,
+  accords            text,
+  temperature        real,
+  date_ajout         date,
+  prix               real,
+  est_promo          bool,
+  debut_promo        date,
+  fin_promo          date,
+  stock              integer,
+  poid               real,
+  categorie_id       integer,
+  marque_id          integer,
+  sous_categorie_id  integer,
+  type_id            integer,
+  photo              varchar(100)
+);
+
+
 INSERT INTO `magasin_produit` (`id`, `nom`, `description`, `cepage`, `notes_degustation`, `accords`, `temperature`, `date_ajout`, `prix`, `est_promo`, `debut_promo`, `fin_promo`, `stock`, `poid`, `categorie_id`, `marque_id`, `sous_categorie_id`, `type_id`, `photo`) VALUES
   (5, 'Skumen Rye indiapale ale issu de la culture biologique 75cl', 'Issu de la culture biologique', NULL, NULL, NULL, NULL, '2018-07-05', 5.5, '0', NULL, NULL, 0, 132, 5, 0, 3, 0, 'uploads/produit/Skumen-Rye-india-pale-al0_vH5vjx3.JPG'),
   (6, 'Bière Tri martolod 33cl', 'Brassée à  concarneau (29).', NULL, NULL, NULL, NULL, '2018-07-05', 2.4, '0', NULL, NULL, 8, 55, 5, 1, 4, 0, 'uploads/produit/Biere_Tri_Martolod_QDZfrzt.JPG'),

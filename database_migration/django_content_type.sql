@@ -1,3 +1,10 @@
+CREATE TABLE django_content_type (
+  id         integer,
+  app_label  varchar(100),
+  model      varchar(100)
+);
+
+
 INSERT INTO `django_content_type` (`id`, `app_label`, `model`) VALUES
   (1, 'admin', 'logentry'),
   (2, 'auth', 'permission'),

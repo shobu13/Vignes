@@ -1,3 +1,14 @@
+CREATE TABLE event_event (
+  id           integer,
+  nom          varchar(200),
+  description  text,
+  lieu         varchar(100),
+  "date"       date,
+  heure        time,
+  type_id      integer
+);
+
+
 INSERT INTO `event_event` (`id`, `nom`, `description`, `lieu`, `date`, `heure`, `type_id`) VALUES
   (1, 'Soirée dégustation rhum avec chants marins', 'Une soirée pour découvrir notre gamme de rhum accompagné par des chants marins', 'Laillé', '2017-03-02', '20:00:00', 1),
   (2, 'Visite chateauneuf du pape', 'Visite domaine alain jaume', 'CHATEAUNEUF DU PAPE', '2016-08-13', '15:00:00', 1),

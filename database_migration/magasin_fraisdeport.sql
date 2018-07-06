@@ -1,3 +1,11 @@
+CREATE TABLE magasin_fraisdeport (
+  id            integer,
+  poid_min      real,
+  poid_max      real,
+  tarification  real
+);
+
+
 INSERT INTO `magasin_fraisdeport` (`id`, `poid_min`, `poid_max`, `tarification`) VALUES
   (1, 0, 0.99, 7.5),
   (2, 1, 1.99, 8.5),

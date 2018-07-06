@@ -1,3 +1,11 @@
+CREATE TABLE django_migrations (
+  id       integer,
+  app      varchar(255),
+  name     varchar(255),
+  applied  datetime
+);
+
+
 INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
   (1, 'contenttypes', '0001_initial', '2018-07-04 16:03:13'),
   (2, 'contenttypes', '0002_remove_content_type_name', '2018-07-04 16:03:14'),
