@@ -15,7 +15,7 @@ class Event(models.Model):
     date = models.DateField()
     heure = models.TimeField()
 
-    type = models.ForeignKey('EventType', on_delete=models.PROTECT, default=EventType.objects.get(nom='default'))
+    type = models.ForeignKey('EventType', on_delete=models.PROTECT,)
 
     def __str__(self):
         return "{} à {}".format(self.nom, self.lieu)
