@@ -1,0 +1,2 @@
+INSERT INTO `user_user` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`, `rue`, `ville`, `code_postal`, `phone_number`) VALUES
+  (1, 'pbkdf2_sha256$100000$7J33nQQ5ZrWp$VZ5MzCbzT6sITmrjNS9yhl/AaMt6TLhDQlfPAMv2p3Y=', '2018-07-06 13:17:45', '1', 'admin', '', '', '', '1', '1', '2018-07-04 16:04:16', '', '', '', '');
