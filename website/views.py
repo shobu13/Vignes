@@ -132,7 +132,7 @@ def BDD(request):
     import pymysql
     import os
     from magasin.models import Categorie, SousCategorie, TypesProduit, Produit, Marque
-    from event.models import Event, EventImage
+    from event.models import Event, EventImage, EventType
     from django.core.files import File
     text = ''
     db = pymysql.connect('localhost', 'root', '', 'vignes')
@@ -233,7 +233,7 @@ def BDD(request):
         text += '{}<hr/>'.format(row)
         print(row)
         Event(id=row[0], nom=row[1], description=row[2], lieu=row[3], date=str(row[4]),
-              heure=str(row[5])).save()
+              type=EventType.objects.get(nom='default'), heure=str(row[5])).save()
 
     text += '<h1>Event Image</h1>'
     cursor.execute(
