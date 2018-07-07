@@ -87,7 +87,6 @@ def call_checker(request):
 def get_product_name_by_id(request):
     id_produit = request.GET.get('id_produit')
     produit = Produit.objects.get(id=id_produit)
-    print('prdouit_nom= ', produit.nom)
     return JsonResponse({"HTTPRESPONSE": 'ok', 'produit_nom': produit.nom}, content_type="application/json")
 
 
@@ -127,6 +126,5 @@ def get_event_by_year_and_month(request):
             'type_nom': event.type.nom
         }
         data['event_list'][event.id] = event_data
-    print(data['event_list'])
 
     return JsonResponse(data, content_type="application/json")

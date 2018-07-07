@@ -11,7 +11,6 @@ def home(request):
     for event in event_liste:
         if event.date.month not in date_liste[event.date.year]:
             date_liste[event.date.year].append(event.date.month)
-    print(date_liste)
     return render(request, 'event/event_home.html', locals())
 
 
