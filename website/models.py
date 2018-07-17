@@ -1,17 +1,10 @@
 from django.db import models
 
 
-class CardImage(models.Model):
-    card = models.ForeignKey('AcceuilCard', on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='uploads/panier_image')
-
-    def __str__(self):
-        return '{} de {}'.format(self.image.name[0:100], self.card.nom)
-
-
 class AcceuilCard(models.Model):
     nom = models.CharField(max_length=100)
-    desc = models.TextField(max_length=300)
+    desc = models.TextField()
+    image = models.ImageField(upload_to='uploads/card_images')
 
     def __str__(self):
         return self.nom
