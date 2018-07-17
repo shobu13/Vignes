@@ -43,25 +43,16 @@
                                 {{ card.nom }}
                             </h1>
                         </div>
+                        <div class="row center">
+                            <h5 class="header col s12 light teal-text text-lighten-2">
+                                {{ card.desc }}
+                            </h5>
+                        </div>
                     </div>
                 </div>
                 <div class="parallax">
                     <img src="{{ card.image.url }}"
                          alt="Unsplashed background img 3">
-                </div>
-            </div>
-            <div class="container">
-                <div class="section">
-
-                    <div class="row">
-                        <div class="col s12 center">
-                            <h3><i class="mdi-content-send brown-text"></i></h3>
-                            <p class="left-align light">
-                                {{ card.desc }}
-                            </p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         {% endfor %}
