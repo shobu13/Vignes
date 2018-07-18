@@ -34,42 +34,43 @@
         {% endfor %}
     </div>{% endcomment %}
     <div class="row" id="scroll_1">
-        <div class="carousel carousel-slider center">>
-            {% for card in cards %}
-                <div class="carousel-item" href="#!">
-                    <div class="parallax-container presentation valign-wrapper">
-                        <div class="section no-pad-bot">
-                            <div class="container">
-                                <div class="row center">
-                                    <h1 class="header center teal-text text-lighten-2">
-                                        {{ card.nom }}
-                                    </h1>
-                                </div>
-                                <div class="row center">
-                                    <h5 class="header col s12 light teal-text text-lighten-2">
-                                        {{ card.desc }}
-                                    </h5>
-                                </div>
+        <div class="container">
+            <div class="owl-carousel owl-theme">
+                {% for card in cards %}
+                    <div>
+                        <div class="parallax-container valign-wrapper">
+                            <div class="parallax">
+                                <img src="{{ card.image.url }}"
+                                     alt="Unsplashed background img 3">
                             </div>
                         </div>
-                        <div class="parallax">
-                            <img src="{{ card.image.url }}"
-                                 alt="Unsplashed background img 3">
+                        <div class="section no-pad-bot">
+                            <div class="row center">
+                                <h1 class="header center teal-text text-lighten-2">
+                                    {{ card.nom }}
+                                </h1>
+                            </div>
+                            <div class="row center">
+                                <h5 class="header col s12 light teal-text text-lighten-2">
+                                    {{ card.desc }}
+                                </h5>
+                            </div>
                         </div>
                     </div>
+                {% endfor %}
+                <div class="item-video">
+                    <div class="video-container">
+                        <iframe width="853" height="480"
+                                src="//www.youtube.com/embed/nuIFlYBFM_Y?rel=0"
+                                frameborder="0"
+                                allowfullscreen></iframe>
+                    </div>
                 </div>
-            {% endfor %}
+            </div>
         </div>
-
     </div>
     <div class="row">
-        <div class="video-container">
-            <iframe width="853" height="480" src="//www.youtube.com/embed/nuIFlYBFM_Y?rel=0"
-                    frameborder="0"
-                    allowfullscreen></iframe>
-        </div>
     </div>
-
 
 
     <div class="parallax-container valign-wrapper">
@@ -83,7 +84,6 @@
             <img src="{% static 'website/img/boutique2.JPG' %}" alt="Unsplashed background img 3">
         </div>
     </div>
-
     <div class="fixed-action-btn">
         <a class="btn-floating btn-large social facebook"
            href="https://www.facebook.com/VignesGourmandises-1436371816674477/">
