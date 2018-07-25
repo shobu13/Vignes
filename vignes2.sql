@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS `auth_group`;
+ÔªøDROP TABLE IF EXISTS `auth_group`;
 CREATE TABLE IF NOT EXISTS `auth_group` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(80) NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `auth_permission` (
 ) ENGINE=MyISAM AUTO_INCREMENT=67 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `auth_permission`
+-- D√©chargement des donn√©es de la table `auth_permission`
 --
 
 INSERT INTO `auth_permission` (`id`, `name`, `content_type_id`, `codename`) VALUES
@@ -134,7 +134,7 @@ CREATE TABLE IF NOT EXISTS `django_admin_log` (
 ) ENGINE=MyISAM AUTO_INCREMENT=162 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `django_admin_log`
+-- D√©chargement des donn√©es de la table `django_admin_log`
 --
 
 INSERT INTO `django_admin_log` (`id`, `action_time`, `object_id`, `object_repr`, `action_flag`, `change_message`, `content_type_id`, `user_id`) VALUES
@@ -245,56 +245,56 @@ INSERT INTO `django_admin_log` (`id`, `action_time`, `object_id`, `object_repr`,
 (105, '2018-07-04 16:54:48.000000', '17', 'ERROR', 1, '[{\"added\": {}}, {\"added\": {\"name\": \"sous categorie\", \"object\": \"ERROR_SOUS de ERROR\"}}]', 11, 1),
 (106, '2018-07-05 14:45:18.000000', '300', 'Rhum Naga', 2, '[{\"changed\": {\"fields\": [\"categorie\", \"sous_categorie\"]}}]', 15, 1),
 (107, '2018-07-05 14:45:52.000000', '285', 'Terrine De pintade aux girolles', 2, '[{\"changed\": {\"fields\": [\"categorie\", \"sous_categorie\"]}}]', 15, 1),
-(108, '2018-07-05 14:49:33.000000', '1', 'entre 0.0 et 0.99 : 7.5 Ä', 1, '[{\"added\": {}}]', 18, 1),
-(109, '2018-07-05 14:49:42.000000', '2', 'entre 1.0 et 1.99 : 8.5 Ä', 1, '[{\"added\": {}}]', 18, 1),
-(110, '2018-07-05 14:49:54.000000', '3', 'entre 2.0 et 4.99 : 12.9 Ä', 1, '[{\"added\": {}}]', 18, 1),
-(111, '2018-07-05 14:50:21.000000', '4', 'entre 5.0 et 9.99 : 18.9 Ä', 1, '[{\"added\": {}}]', 18, 1),
-(112, '2018-07-05 14:50:45.000000', '5', 'entre 10.0 et 300.0 : 26.9 Ä', 1, '[{\"added\": {}}]', 18, 1),
-(113, '2018-07-05 14:57:56.000000', '3', 'Commande n∞3 de ', 3, '', 12, 1),
+(108, '2018-07-05 14:49:33.000000', '1', 'entre 0.0 et 0.99 : 7.5 ‚Ç¨', 1, '[{\"added\": {}}]', 18, 1),
+(109, '2018-07-05 14:49:42.000000', '2', 'entre 1.0 et 1.99 : 8.5 ‚Ç¨', 1, '[{\"added\": {}}]', 18, 1),
+(110, '2018-07-05 14:49:54.000000', '3', 'entre 2.0 et 4.99 : 12.9 ‚Ç¨', 1, '[{\"added\": {}}]', 18, 1),
+(111, '2018-07-05 14:50:21.000000', '4', 'entre 5.0 et 9.99 : 18.9 ‚Ç¨', 1, '[{\"added\": {}}]', 18, 1),
+(112, '2018-07-05 14:50:45.000000', '5', 'entre 10.0 et 300.0 : 26.9 ‚Ç¨', 1, '[{\"added\": {}}]', 18, 1),
+(113, '2018-07-05 14:57:56.000000', '3', 'Commande n¬∞3 de ', 3, '', 12, 1),
 (114, '2018-07-05 14:59:43.000000', '333', 'Roussanne Blanc', 2, '[{\"changed\": {\"fields\": [\"sous_categorie\"]}}]', 15, 1),
-(115, '2018-07-05 14:59:51.000000', '134', 'Saint-VÈran', 2, '[{\"changed\": {\"fields\": [\"sous_categorie\"]}}]', 15, 1),
+(115, '2018-07-05 14:59:51.000000', '134', 'Saint-V√©ran', 2, '[{\"changed\": {\"fields\": [\"sous_categorie\"]}}]', 15, 1),
 (116, '2018-07-05 15:01:35.000000', '3', 'Vin', 2, '[{\"added\": {\"name\": \"sous categorie\", \"object\": \"Sud-ouest\"}}]', 11, 1),
 (117, '2018-07-05 15:01:48.000000', '102', 'Domaine Les barthes 2015', 2, '[{\"changed\": {\"fields\": [\"sous_categorie\"]}}]', 15, 1),
 (118, '2018-07-05 15:02:31.000000', '4', 'Cidre', 2, '[{\"added\": {\"name\": \"sous categorie\", \"object\": \"artisanal\"}}]', 11, 1),
 (119, '2018-07-05 15:02:36.000000', '13', 'Cidre coat-Albret brut', 2, '[{\"changed\": {\"fields\": [\"sous_categorie\"]}}]', 15, 1),
-(120, '2018-07-05 15:03:03.000000', '49', 'Pack BiËre philomenn', 2, '[{\"changed\": {\"fields\": [\"nom\", \"sous_categorie\"]}}]', 15, 1),
-(121, '2018-07-05 15:03:20.000000', '33', 'BiËre Sainte colombe dorÈe', 3, '', 15, 1),
+(120, '2018-07-05 15:03:03.000000', '49', 'Pack Bi√®re philomenn', 2, '[{\"changed\": {\"fields\": [\"nom\", \"sous_categorie\"]}}]', 15, 1),
+(121, '2018-07-05 15:03:20.000000', '33', 'Bi√®re Sainte colombe dor√©e', 3, '', 15, 1),
 (122, '2018-07-05 15:12:25.000000', '1', 'num_tel : test', 2, '[]', 9, 1),
 (123, '2018-07-05 17:26:12.000000', '1', 'default', 1, '[{\"added\": {}}]', 22, 1),
-(124, '2018-07-05 17:40:33.000000', '25', 'DÈgustation de biËres artisanales brasserie du ton ‡ LaillÈ', 3, '', 20, 1),
-(125, '2018-07-05 17:40:33.000000', '24', 'DÈgustation de rhums-Et whiskys chateau d\\\'apignÈ ‡ le Rheu', 3, '', 20, 1),
-(126, '2018-07-05 17:40:33.000000', '23', 'Salon de la biËres rennes 2018 ‡ Rennes', 3, '', 20, 1),
-(127, '2018-07-05 17:40:34.000000', '22', 'Salon de la biËres artisanale saint-Malo ‡ Saint-Malo', 3, '', 20, 1),
-(128, '2018-07-05 17:40:34.000000', '21', 'Salon vignocaves rennes 2018 ‡ Rennes', 3, '', 20, 1),
-(129, '2018-07-05 17:40:34.000000', '20', 'Le salon des vins de loire 2018 ‡ Angers', 3, '', 20, 1),
-(130, '2018-07-05 17:40:34.000000', '19', 'Salon des vignerons indÈpendants rennes ‡ Rennes', 3, '', 20, 1),
-(131, '2018-07-05 17:40:34.000000', '18', 'Salon des vignerons indÈpendants rennes ‡ Rennes', 3, '', 20, 1),
-(132, '2018-07-05 17:40:34.000000', '17', 'Salon des vignerons indÈpendants rennes ‡ Rennes', 3, '', 20, 1),
-(133, '2018-07-05 17:40:34.000000', '16', 'Salon des vignerons indÈpendants rennes ‡ Rennes', 3, '', 20, 1),
-(134, '2018-07-05 17:40:34.000000', '15', 'Salon des vignerons indÈpendants rennes ‡ Rennes', 3, '', 20, 1),
-(135, '2018-07-05 17:40:35.000000', '14', 'Salon des vignerons indÈpendants rennes ‡ Rennes', 3, '', 20, 1),
-(136, '2018-07-05 17:40:35.000000', '13', 'Salon des vignerons indÈpendants rennes ‡ Rennes', 3, '', 20, 1),
-(137, '2018-07-05 17:40:35.000000', '12', 'SoirÈe domaine rety ‡ LaillÈ', 3, '', 20, 1),
-(138, '2018-07-05 17:40:35.000000', '10', 'SoirÈe champagnes jean despret ‡ LaillÈ', 3, '', 20, 1),
-(139, '2018-07-05 17:40:35.000000', '9', 'Rencontre avec monsieur rety  ‡ Melesse', 3, '', 20, 1),
-(140, '2018-07-05 17:40:35.000000', '8', 'Salon vignes et vilaine ‡ LaillÈ', 3, '', 20, 1),
-(141, '2018-07-05 17:40:35.000000', '7', 'Salon de paris ‡ Paris', 3, '', 20, 1),
-(142, '2018-07-05 17:40:35.000000', '6', 'Visite pichon longueville bordeaux ‡ Bordeaux', 3, '', 20, 1),
-(143, '2018-07-05 17:40:36.000000', '5', 'SoirÈe avec pascal pochon chocolatier st malo ‡ LaillÈ', 3, '', 20, 1),
-(144, '2018-07-05 17:40:36.000000', '4', 'SoirÈe avec guillaume joubin ancien sommelier de l ‡ LaillÈ', 3, '', 20, 1),
-(145, '2018-07-05 17:40:36.000000', '3', 'Du vin et des gourmandises ‡ Laille', 3, '', 20, 1),
-(146, '2018-07-05 17:40:36.000000', '2', 'Visite chateauneuf du pape ‡ CHATEAUNEUF DU PAPE', 3, '', 20, 1),
-(147, '2018-07-05 17:40:36.000000', '1', 'SoirÈe dÈgustation rhum avec chants marins ‡ LaillÈ', 3, '', 20, 1),
-(148, '2018-07-05 17:44:12.000000', '19', 'Salon des vignerons indÈpendants rennes ‡ Rennes', 3, '', 20, 1),
-(149, '2018-07-05 17:44:12.000000', '18', 'Salon des vignerons indÈpendants rennes ‡ Rennes', 3, '', 20, 1),
-(150, '2018-07-05 17:44:12.000000', '16', 'Salon des vignerons indÈpendants rennes ‡ Rennes', 3, '', 20, 1),
-(151, '2018-07-05 17:44:13.000000', '15', 'Salon des vignerons indÈpendants rennes ‡ Rennes', 3, '', 20, 1),
-(152, '2018-07-05 17:44:13.000000', '14', 'Salon des vignerons indÈpendants rennes ‡ Rennes', 3, '', 20, 1),
-(153, '2018-07-05 17:44:13.000000', '13', 'Salon des vignerons indÈpendants rennes ‡ Rennes', 3, '', 20, 1),
-(154, '2018-07-05 18:42:40.000000', '25', 'DÈgustation de biËres artisanales brasserie du ton ‡ LaillÈ', 2, '[{\"added\": {\"name\": \"event image\", \"object\": \"uploads/event/Soiree-avec-Pascal-Pochon-Chocolatier-STMalo0_rWaKECZ.JPG de D\\u00e9gustation de bi\\u00e8res artisanales brasserie du ton\"}}]', 20, 1),
-(155, '2018-07-06 12:20:44.000000', '1', 'Èpicerie fine', 2, '[{\"changed\": {\"fields\": [\"nom\"]}}]', 17, 1),
+(124, '2018-07-05 17:40:33.000000', '25', 'D√©gustation de bi√®res artisanales brasserie du ton √† Laill√©', 3, '', 20, 1),
+(125, '2018-07-05 17:40:33.000000', '24', 'D√©gustation de rhums-Et whiskys chateau d\\\'apign√© √† le Rheu', 3, '', 20, 1),
+(126, '2018-07-05 17:40:33.000000', '23', 'Salon de la bi√®res rennes 2018 √† Rennes', 3, '', 20, 1),
+(127, '2018-07-05 17:40:34.000000', '22', 'Salon de la bi√®res artisanale saint-Malo √† Saint-Malo', 3, '', 20, 1),
+(128, '2018-07-05 17:40:34.000000', '21', 'Salon vignocaves rennes 2018 √† Rennes', 3, '', 20, 1),
+(129, '2018-07-05 17:40:34.000000', '20', 'Le salon des vins de loire 2018 √† Angers', 3, '', 20, 1),
+(130, '2018-07-05 17:40:34.000000', '19', 'Salon des vignerons ind√©pendants rennes √† Rennes', 3, '', 20, 1),
+(131, '2018-07-05 17:40:34.000000', '18', 'Salon des vignerons ind√©pendants rennes √† Rennes', 3, '', 20, 1),
+(132, '2018-07-05 17:40:34.000000', '17', 'Salon des vignerons ind√©pendants rennes √† Rennes', 3, '', 20, 1),
+(133, '2018-07-05 17:40:34.000000', '16', 'Salon des vignerons ind√©pendants rennes √† Rennes', 3, '', 20, 1),
+(134, '2018-07-05 17:40:34.000000', '15', 'Salon des vignerons ind√©pendants rennes √† Rennes', 3, '', 20, 1),
+(135, '2018-07-05 17:40:35.000000', '14', 'Salon des vignerons ind√©pendants rennes √† Rennes', 3, '', 20, 1),
+(136, '2018-07-05 17:40:35.000000', '13', 'Salon des vignerons ind√©pendants rennes √† Rennes', 3, '', 20, 1),
+(137, '2018-07-05 17:40:35.000000', '12', 'Soir√©e domaine rety √† Laill√©', 3, '', 20, 1),
+(138, '2018-07-05 17:40:35.000000', '10', 'Soir√©e champagnes jean despret √† Laill√©', 3, '', 20, 1),
+(139, '2018-07-05 17:40:35.000000', '9', 'Rencontre avec monsieur rety  √† Melesse', 3, '', 20, 1),
+(140, '2018-07-05 17:40:35.000000', '8', 'Salon vignes et vilaine √† Laill√©', 3, '', 20, 1),
+(141, '2018-07-05 17:40:35.000000', '7', 'Salon de paris √† Paris', 3, '', 20, 1),
+(142, '2018-07-05 17:40:35.000000', '6', 'Visite pichon longueville bordeaux √† Bordeaux', 3, '', 20, 1),
+(143, '2018-07-05 17:40:36.000000', '5', 'Soir√©e avec pascal pochon chocolatier st malo √† Laill√©', 3, '', 20, 1),
+(144, '2018-07-05 17:40:36.000000', '4', 'Soir√©e avec guillaume joubin ancien sommelier de l √† Laill√©', 3, '', 20, 1),
+(145, '2018-07-05 17:40:36.000000', '3', 'Du vin et des gourmandises √† Laille', 3, '', 20, 1),
+(146, '2018-07-05 17:40:36.000000', '2', 'Visite chateauneuf du pape √† CHATEAUNEUF DU PAPE', 3, '', 20, 1),
+(147, '2018-07-05 17:40:36.000000', '1', 'Soir√©e d√©gustation rhum avec chants marins √† Laill√©', 3, '', 20, 1),
+(148, '2018-07-05 17:44:12.000000', '19', 'Salon des vignerons ind√©pendants rennes √† Rennes', 3, '', 20, 1),
+(149, '2018-07-05 17:44:12.000000', '18', 'Salon des vignerons ind√©pendants rennes √† Rennes', 3, '', 20, 1),
+(150, '2018-07-05 17:44:12.000000', '16', 'Salon des vignerons ind√©pendants rennes √† Rennes', 3, '', 20, 1),
+(151, '2018-07-05 17:44:13.000000', '15', 'Salon des vignerons ind√©pendants rennes √† Rennes', 3, '', 20, 1),
+(152, '2018-07-05 17:44:13.000000', '14', 'Salon des vignerons ind√©pendants rennes √† Rennes', 3, '', 20, 1),
+(153, '2018-07-05 17:44:13.000000', '13', 'Salon des vignerons ind√©pendants rennes √† Rennes', 3, '', 20, 1),
+(154, '2018-07-05 18:42:40.000000', '25', 'D√©gustation de bi√®res artisanales brasserie du ton √† Laill√©', 2, '[{\"added\": {\"name\": \"event image\", \"object\": \"uploads/event/Soiree-avec-Pascal-Pochon-Chocolatier-STMalo0_rWaKECZ.JPG de D\\u00e9gustation de bi\\u00e8res artisanales brasserie du ton\"}}]', 20, 1),
+(155, '2018-07-06 12:20:44.000000', '1', '√©picerie fine', 2, '[{\"changed\": {\"fields\": [\"nom\"]}}]', 17, 1),
 (156, '2018-07-06 12:38:26.000000', '0', 'alcool', 2, '[{\"changed\": {\"fields\": [\"categories\"]}}]', 17, 1),
-(157, '2018-07-06 12:38:40.000000', '1', 'Èpicerie fine', 2, '[{\"changed\": {\"fields\": [\"categories\"]}}]', 17, 1),
+(157, '2018-07-06 12:38:40.000000', '1', '√©picerie fine', 2, '[{\"changed\": {\"fields\": [\"categories\"]}}]', 17, 1),
 (158, '2018-07-06 12:59:56.000000', '1', 'uploads/boutique/IMG_1659.JPG', 1, '[{\"added\": {}}]', 10, 1),
 (159, '2018-07-06 13:01:01.000000', '2', 'uploads/boutique/ico-full_-79576.jpg', 1, '[{\"added\": {}}]', 10, 1),
 (160, '2018-07-06 13:21:56.000000', '1', 'test', 1, '[{\"added\": {}}, {\"added\": {\"name\": \"card image\", \"object\": \"uploads/panier_image/IMG_0359_5j2h8Yn.JPG de test\"}}, {\"added\": {\"name\": \"card image\", \"object\": \"uploads/panier_image/IMG_0545_hd7fv4u.JPG de test\"}}]', 7, 1),
@@ -316,7 +316,7 @@ CREATE TABLE IF NOT EXISTS `django_content_type` (
 ) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `django_content_type`
+-- D√©chargement des donn√©es de la table `django_content_type`
 --
 
 INSERT INTO `django_content_type` (`id`, `app_label`, `model`) VALUES
@@ -359,7 +359,7 @@ CREATE TABLE IF NOT EXISTS `django_migrations` (
 ) ENGINE=MyISAM AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `django_migrations`
+-- D√©chargement des donn√©es de la table `django_migrations`
 --
 
 INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
@@ -427,7 +427,7 @@ CREATE TABLE IF NOT EXISTS `django_session` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `django_session`
+-- D√©chargement des donn√©es de la table `django_session`
 --
 
 INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
@@ -456,34 +456,34 @@ CREATE TABLE IF NOT EXISTS `event_event` (
 ) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `event_event`
+-- D√©chargement des donn√©es de la table `event_event`
 --
 
 INSERT INTO `event_event` (`id`, `nom`, `description`, `lieu`, `date`, `heure`, `type_id`) VALUES
-(1, 'SoirÈe dÈgustation rhum avec chants marins', 'Une soirÈe pour dÈcouvrir notre gamme de rhum accompagnÈ par des chants marins', 'LaillÈ', '2017-03-02', '20:00:00.000000', 1),
+(1, 'Soir√©e d√©gustation rhum avec chants marins', 'Une soir√©e pour d√©couvrir notre gamme de rhum accompagn√© par des chants marins', 'Laill√©', '2017-03-02', '20:00:00.000000', 1),
 (2, 'Visite chateauneuf du pape', 'Visite domaine alain jaume', 'CHATEAUNEUF DU PAPE', '2016-08-13', '15:00:00.000000', 1),
 (3, 'Du vin et des gourmandises', 'La passion et le partage', 'Laille', '2016-03-03', '14:00:00.000000', 1),
-(4, 'SoirÈe avec guillaume joubin ancien sommelier de l', 'SoirÈe ‡ themes rhone', 'LaillÈ', '2016-05-19', '19:30:00.000000', 1),
-(5, 'SoirÈe avec pascal pochon chocolatier st malo', 'DÈgustation de chocolats  \r\naccords mets et vin', 'LaillÈ', '2016-06-04', '17:00:00.000000', 1),
-(6, 'Visite pichon longueville bordeaux', 'Rencontre avec les vignerons ‡ bordeaux \r\n', 'Bordeaux', '2015-09-11', '16:00:00.000000', 1),
-(7, 'Salon de paris', 'DÈgustations alcools fort', 'Paris', '2016-10-10', '09:00:00.000000', 1),
-(8, 'Salon vignes et vilaine', 'Salon de la loire', 'LaillÈ', '2016-11-25', '09:00:00.000000', 1),
-(9, 'Rencontre avec monsieur rety ', 'Rencontre avec monsieur rety( vigneron\r\ndomaine rety)le domaine rety vient de recevoir 3 Ètoiles dans le nouveau guide\r\nhachette des vins 2018.le vin rouge primÈ est le cote du roussillon l\'insolente\r\nmillÈsimÈ 2015 qui a reÁu une note de 5 sur 5 soit 3 Ètoiles vin exceptionnel.', 'Melesse', '2017-09-11', '17:30:00.000000', 1),
-(10, 'SoirÈe champagnes jean despret', 'DÈgustation de la gamme jean despret', 'LaillÈ', '2017-11-18', '19:30:00.000000', 1),
-(12, 'SoirÈe domaine rety', 'Animation du vigneron monsieur rety et dÈcouverte des vins du domaine.', 'LaillÈ', '2017-12-08', '19:30:00.000000', 1),
-(13, 'Salon des vignerons indÈpendants rennes', '300exposants', 'Rennes', '2018-01-28', '09:30:00.000000', 1),
-(14, 'Salon des vignerons indÈpendants rennes', '300exposants', 'Rennes', '2018-01-28', '09:30:00.000000', 1),
-(15, 'Salon des vignerons indÈpendants rennes', '300 exposants', 'Rennes', '2018-01-28', '09:30:00.000000', 1),
-(16, 'Salon des vignerons indÈpendants rennes', '300 exposants', 'Rennes', '2018-01-28', '09:30:00.000000', 1),
-(17, 'Salon des vignerons indÈpendants rennes', '300 exposants', 'Rennes', '2018-01-28', '09:30:00.000000', 1),
-(18, 'Salon des vignerons indÈpendants rennes', '300exposants', 'Rennes', '2018-01-28', '09:30:00.000000', 1),
-(19, 'Salon des vignerons indÈpendants rennes', '300exposants', 'Rennes', '2018-01-28', '09:30:00.000000', 1),
+(4, 'Soir√©e avec guillaume joubin ancien sommelier de l', 'Soir√©e √† themes rhone', 'Laill√©', '2016-05-19', '19:30:00.000000', 1),
+(5, 'Soir√©e avec pascal pochon chocolatier st malo', 'D√©gustation de chocolats  \r\naccords mets et vin', 'Laill√©', '2016-06-04', '17:00:00.000000', 1),
+(6, 'Visite pichon longueville bordeaux', 'Rencontre avec les vignerons √† bordeaux \r\n', 'Bordeaux', '2015-09-11', '16:00:00.000000', 1),
+(7, 'Salon de paris', 'D√©gustations alcools fort', 'Paris', '2016-10-10', '09:00:00.000000', 1),
+(8, 'Salon vignes et vilaine', 'Salon de la loire', 'Laill√©', '2016-11-25', '09:00:00.000000', 1),
+(9, 'Rencontre avec monsieur rety ', 'Rencontre avec monsieur rety( vigneron\r\ndomaine rety)le domaine rety vient de recevoir 3 √©toiles dans le nouveau guide\r\nhachette des vins 2018.le vin rouge prim√© est le cote du roussillon l\'insolente\r\nmill√©sim√© 2015 qui a re√ßu une note de 5 sur 5 soit 3 √©toiles vin exceptionnel.', 'Melesse', '2017-09-11', '17:30:00.000000', 1),
+(10, 'Soir√©e champagnes jean despret', 'D√©gustation de la gamme jean despret', 'Laill√©', '2017-11-18', '19:30:00.000000', 1),
+(12, 'Soir√©e domaine rety', 'Animation du vigneron monsieur rety et d√©couverte des vins du domaine.', 'Laill√©', '2017-12-08', '19:30:00.000000', 1),
+(13, 'Salon des vignerons ind√©pendants rennes', '300exposants', 'Rennes', '2018-01-28', '09:30:00.000000', 1),
+(14, 'Salon des vignerons ind√©pendants rennes', '300exposants', 'Rennes', '2018-01-28', '09:30:00.000000', 1),
+(15, 'Salon des vignerons ind√©pendants rennes', '300 exposants', 'Rennes', '2018-01-28', '09:30:00.000000', 1),
+(16, 'Salon des vignerons ind√©pendants rennes', '300 exposants', 'Rennes', '2018-01-28', '09:30:00.000000', 1),
+(17, 'Salon des vignerons ind√©pendants rennes', '300 exposants', 'Rennes', '2018-01-28', '09:30:00.000000', 1),
+(18, 'Salon des vignerons ind√©pendants rennes', '300exposants', 'Rennes', '2018-01-28', '09:30:00.000000', 1),
+(19, 'Salon des vignerons ind√©pendants rennes', '300exposants', 'Rennes', '2018-01-28', '09:30:00.000000', 1),
 (20, 'Le salon des vins de loire 2018', '300 exposants vins de loire 2018.', 'Angers', '2018-02-05', '09:00:00.000000', 1),
 (21, 'Salon vignocaves rennes 2018', 'Rencontre avec les vignerons (70 vignerons)', 'Rennes', '2018-03-05', '09:00:00.000000', 1),
-(22, 'Salon de la biËres artisanale saint-Malo', '52 exposants', 'Saint-Malo', '2018-03-25', '13:00:00.000000', 1),
-(23, 'Salon de la biËres rennes 2018', 'DÈgustations de biËres du monde.(40 exposants).', 'Rennes', '2018-04-09', '10:00:00.000000', 1),
-(24, 'DÈgustation de rhums-Et whiskys chateau d\\\'apignÈ', 'DÈgustation et cour sur le rhums et whiskys\r\n8 rhums/8 whiskys.', 'le Rheu', '2018-04-16', '09:30:00.000000', 1),
-(25, 'DÈgustation de biËres artisanales brasserie du ton', 'DÈcouverte de biËres artisanales et chants marins', 'LaillÈ', '2018-06-14', '19:30:00.000000', 1);
+(22, 'Salon de la bi√®res artisanale saint-Malo', '52 exposants', 'Saint-Malo', '2018-03-25', '13:00:00.000000', 1),
+(23, 'Salon de la bi√®res rennes 2018', 'D√©gustations de bi√®res du monde.(40 exposants).', 'Rennes', '2018-04-09', '10:00:00.000000', 1),
+(24, 'D√©gustation de rhums-Et whiskys chateau d\\\'apign√©', 'D√©gustation et cour sur le rhums et whiskys\r\n8 rhums/8 whiskys.', 'le Rheu', '2018-04-16', '09:30:00.000000', 1),
+(25, 'D√©gustation de bi√®res artisanales brasserie du ton', 'D√©couverte de bi√®res artisanales et chants marins', 'Laill√©', '2018-06-14', '19:30:00.000000', 1);
 
 -- --------------------------------------------------------
 
@@ -501,7 +501,7 @@ CREATE TABLE IF NOT EXISTS `event_eventimage` (
 ) ENGINE=MyISAM AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `event_eventimage`
+-- D√©chargement des donn√©es de la table `event_eventimage`
 --
 
 INSERT INTO `event_eventimage` (`id`, `image`, `event_id`) VALUES
@@ -571,7 +571,7 @@ CREATE TABLE IF NOT EXISTS `event_eventtype` (
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `event_eventtype`
+-- D√©chargement des donn√©es de la table `event_eventtype`
 --
 
 INSERT INTO `event_eventtype` (`id`, `nom`) VALUES
@@ -592,7 +592,7 @@ CREATE TABLE IF NOT EXISTS `magasin_categorie` (
 ) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `magasin_categorie`
+-- D√©chargement des donn√©es de la table `magasin_categorie`
 --
 
 INSERT INTO `magasin_categorie` (`id`, `nom`) VALUES
@@ -600,13 +600,13 @@ INSERT INTO `magasin_categorie` (`id`, `nom`) VALUES
 (2, 'Effervescent'),
 (3, 'Vin'),
 (4, 'Cidre'),
-(5, 'BiËre'),
-(6, 'SalÈ'),
-(7, 'SucrÈ'),
-(8, 'ThÈ'),
-(9, 'CafÈ'),
+(5, 'Bi√®re'),
+(6, 'Sal√©'),
+(7, 'Sucr√©'),
+(8, 'Th√©'),
+(9, 'Caf√©'),
 (12, 'Condiments'),
-(15, 'ProvenÁaux'),
+(15, 'Proven√ßaux'),
 (16, 'Divers'),
 (17, 'ERROR');
 
@@ -634,7 +634,7 @@ CREATE TABLE IF NOT EXISTS `magasin_commande` (
 ) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `magasin_commande`
+-- D√©chargement des donn√©es de la table `magasin_commande`
 --
 
 INSERT INTO `magasin_commande` (`id`, `date`, `montant`, `est_panier`, `envoie`, `est_envoyee`, `est_archivee`, `est_payee`, `client_id`, `frais_port_id`) VALUES
@@ -659,7 +659,7 @@ CREATE TABLE IF NOT EXISTS `magasin_contenucommande` (
 ) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `magasin_contenucommande`
+-- D√©chargement des donn√©es de la table `magasin_contenucommande`
 --
 
 INSERT INTO `magasin_contenucommande` (`id`, `quantite`, `commande_id`, `produit_id`) VALUES
@@ -682,7 +682,7 @@ CREATE TABLE IF NOT EXISTS `magasin_fraisdeport` (
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `magasin_fraisdeport`
+-- D√©chargement des donn√©es de la table `magasin_fraisdeport`
 --
 
 INSERT INTO `magasin_fraisdeport` (`id`, `poid_min`, `poid_max`, `tarification`) VALUES
@@ -706,7 +706,7 @@ CREATE TABLE IF NOT EXISTS `magasin_marque` (
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `magasin_marque`
+-- D√©chargement des donn√©es de la table `magasin_marque`
 --
 
 INSERT INTO `magasin_marque` (`id`, `nom`) VALUES
@@ -716,8 +716,8 @@ INSERT INTO `magasin_marque` (`id`, `nom`) VALUES
 (3, 'Skumenn'),
 (4, 'Rhum Metiss'),
 (5, 'Loire'),
-(6, 'Les …Èlices de marie'),
-(7, 'Les DÈlices de marie'),
+(6, 'Les √â√©lices de marie'),
+(7, 'Les D√©lices de marie'),
 (8, 'Ladure'),
 (9, 'Jaquesson'),
 (10, 'Writers Tears');
@@ -758,129 +758,129 @@ CREATE TABLE IF NOT EXISTS `magasin_produit` (
 ) ENGINE=MyISAM AUTO_INCREMENT=343 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `magasin_produit`
+-- D√©chargement des donn√©es de la table `magasin_produit`
 --
 
 INSERT INTO `magasin_produit` (`id`, `nom`, `description`, `cepage`, `notes_degustation`, `accords`, `temperature`, `date_ajout`, `prix`, `est_promo`, `debut_promo`, `fin_promo`, `stock`, `poid`, `categorie_id`, `marque_id`, `sous_categorie_id`, `type_id`, `photo`) VALUES
 (5, 'Skumen Rye indiapale ale issu de la culture biologique 75cl', 'Issu de la culture biologique', NULL, NULL, NULL, NULL, '2018-07-06', 5.5, 0, NULL, NULL, 0, 132, 5, 0, 3, 0, 'uploads/produit/Skumen-Rye-india-pale-al0.JPG'),
-(6, 'BiËre Tri martolod 33cl', 'BrassÈe ‡  concarneau (29).', NULL, NULL, NULL, NULL, '2018-07-06', 2.4, 0, NULL, NULL, 8, 55, 5, 1, 4, 0, 'uploads/produit/Biere_Tri_Martolod.JPG'),
+(6, 'Bi√®re Tri martolod 33cl', 'Brass√©e √†  concarneau (29).', NULL, NULL, NULL, NULL, '2018-07-06', 2.4, 0, NULL, NULL, 8, 55, 5, 1, 4, 0, 'uploads/produit/Biere_Tri_Martolod.JPG'),
 (7, 'Gin Mare', '', NULL, NULL, NULL, NULL, '2018-07-06', 36, 0, NULL, NULL, 1, 125, 1, NULL, 16, 0, 'uploads/produit/Gin_Mare.JPG'),
 (8, 'Tequila Corralejo mexique', '', NULL, NULL, NULL, NULL, '2018-07-06', 37, 0, NULL, NULL, 2, 125, 1, NULL, 15, 0, 'uploads/produit/Tequila_Corralejo.JPG'),
-(9, ' Armagnac ch‚teau laubade', '', NULL, NULL, NULL, NULL, '2018-07-06', 41, 0, NULL, NULL, 1, 125, 1, NULL, 14, 0, 'uploads/produit/Chateau-De-laubade1.JPG'),
-(10, ' Armagnac ch‚teau de laubade hors d\'‚ge', '', NULL, NULL, NULL, NULL, '2018-07-06', 52, 0, NULL, NULL, 0, 125, 1, NULL, 14, 0, 'uploads/produit/Chateau_de_Laubade.JPG'),
-(11, 'Beaujolais Blanc', 'CÈpage chardonnay\r\naccords::foie gras, poissons et apÈritif.', NULL, NULL, NULL, NULL, '2018-07-06', 12, 0, NULL, NULL, 12, 125, 3, NULL, 5, 0, 'uploads/produit/Beaujolais_Blanc.JPG'),
-(12, 'Ustersbacher  50cl biËre belge', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.5, 0, NULL, NULL, 0, 56, 5, NULL, 3, 0, 'uploads/produit/Ustersbacher-Urhell0.JPG'),
+(9, ' Armagnac ch√¢teau laubade', '', NULL, NULL, NULL, NULL, '2018-07-06', 41, 0, NULL, NULL, 1, 125, 1, NULL, 14, 0, 'uploads/produit/Chateau-De-laubade1.JPG'),
+(10, ' Armagnac ch√¢teau de laubade hors d\'√¢ge', '', NULL, NULL, NULL, NULL, '2018-07-06', 52, 0, NULL, NULL, 0, 125, 1, NULL, 14, 0, 'uploads/produit/Chateau_de_Laubade.JPG'),
+(11, 'Beaujolais Blanc', 'C√©page chardonnay\r\naccords::foie gras, poissons et ap√©ritif.', NULL, NULL, NULL, NULL, '2018-07-06', 12, 0, NULL, NULL, 12, 125, 3, NULL, 5, 0, 'uploads/produit/Beaujolais_Blanc.JPG'),
+(12, 'Ustersbacher  50cl bi√®re belge', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.5, 0, NULL, NULL, 0, 56, 5, NULL, 3, 0, 'uploads/produit/Ustersbacher-Urhell0.JPG'),
 (13, 'Cidre coat-Albret brut', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.5, 0, NULL, NULL, 4, 125, 4, NULL, 50, 0, 'uploads/produit/Cidre-coat-Albret0.JPG'),
-(14, 'Roussette De savoie', 'Accords:raclette ,fondue de fromages,apÈritif,charcuterie', NULL, NULL, NULL, NULL, '2018-07-06', 13.3, 0, NULL, NULL, 6, 125, 3, NULL, 6, 0, 'uploads/produit/Monthoux0.JPG'),
-(15, 'Chignin Bergeron savoie', 'Aromes puissants d\'abricots et de pain grillÈ.\r\nun foie gras poÍlÈ accompagnera parfaitement un tel vin.', NULL, NULL, NULL, NULL, '2018-07-06', 15.9, 0, NULL, NULL, 6, 800, 3, NULL, 6, 0, 'uploads/produit/Chignin-Bergeron0.JPG'),
+(14, 'Roussette De savoie', 'Accords:raclette ,fondue de fromages,ap√©ritif,charcuterie', NULL, NULL, NULL, NULL, '2018-07-06', 13.3, 0, NULL, NULL, 6, 125, 3, NULL, 6, 0, 'uploads/produit/Monthoux0.JPG'),
+(15, 'Chignin Bergeron savoie', 'Aromes puissants d\'abricots et de pain grill√©.\r\nun foie gras po√™l√© accompagnera parfaitement un tel vin.', NULL, NULL, NULL, NULL, '2018-07-06', 15.9, 0, NULL, NULL, 6, 800, 3, NULL, 6, 0, 'uploads/produit/Chignin-Bergeron0.JPG'),
 (16, 'Domaine Les esquirots', '', NULL, NULL, NULL, NULL, '2018-07-06', 5.9, 0, NULL, NULL, 0, 125, 3, NULL, 7, 0, 'uploads/produit/none.JPG'),
-(17, 'Domaine De perhus', 'CÈpages:gros manseng.\r\n arÙmes de fruits bien murs: ananas -mangue.\r\naccords :foie gras ,apÈritif, dessert.', NULL, NULL, NULL, NULL, '2018-07-06', 6.2, 0, NULL, NULL, 6, 125, 3, NULL, 7, 0, 'uploads/produit/Domaine-De-perhus0.JPG'),
-(18, 'Les Hauts de montrouge moelleux', 'Accords:apÈritif,foie gras,dessert chocolat', NULL, NULL, NULL, NULL, '2018-07-06', 7.2, 0, NULL, NULL, 6, 125, 3, NULL, 7, 0, 'uploads/produit/Les-Hauts-de-montrouge0.JPG'),
+(17, 'Domaine De perhus', 'C√©pages:gros manseng.\r\n ar√¥mes de fruits bien murs: ananas -mangue.\r\naccords :foie gras ,ap√©ritif, dessert.', NULL, NULL, NULL, NULL, '2018-07-06', 6.2, 0, NULL, NULL, 6, 125, 3, NULL, 7, 0, 'uploads/produit/Domaine-De-perhus0.JPG'),
+(18, 'Les Hauts de montrouge moelleux', 'Accords:ap√©ritif,foie gras,dessert chocolat', NULL, NULL, NULL, NULL, '2018-07-06', 7.2, 0, NULL, NULL, 6, 125, 3, NULL, 7, 0, 'uploads/produit/Les-Hauts-de-montrouge0.JPG'),
 (19, 'Skumen Amber ale issu de la culture biologique 33cl', 'Produit issu de l\'agriculture biologique', NULL, NULL, NULL, NULL, '2018-07-06', 2.8, 0, NULL, NULL, 0, 56, 5, 0, 1, 0, 'uploads/produit/Skumen-Amber-Ale0.JPG'),
 (20, 'Skumen Amber ale 75cl', 'Issu de la culture biologique', NULL, NULL, NULL, NULL, '2018-07-06', 5.5, 0, NULL, NULL, 2, 132, 5, 0, 1, 0, 'uploads/produit/Skumen-Amber-Ale1.JPG'),
 (23, 'Skumen Wheat india pale ale issu de la culture biologique 75cl', 'Issu de la culture biologique', NULL, NULL, NULL, NULL, '2018-07-06', 5.5, 0, NULL, NULL, 0, 132, 5, 0, 2, 0, 'uploads/produit/Skumen-Wheat-India-Pale-Ale0.JPG'),
 (24, 'Skumen Pale ale blonde issu de la culturebiologique 75cl', 'Issu de la culture biologique', NULL, NULL, NULL, NULL, '2018-07-06', 5.5, 0, NULL, NULL, 2, 132, 5, 0, 3, 0, 'uploads/produit/Skumen-Pale-Ale0.JPG'),
-(25, 'Perle De roseline rosÈ', 'Accords :charcuterie, apÈritif,salade.', NULL, NULL, NULL, NULL, '2018-07-06', 7.4, 0, NULL, NULL, 18, 125, 3, NULL, 8, 0, 'uploads/produit/Perle-Cote-de-Provence0.JPG'),
-(26, 'Moulin-¿-vent 2014', 'Accords:plat ÈpicÈ', NULL, NULL, NULL, NULL, '2018-07-06', 12.3, 0, NULL, NULL, 24, 125, 3, NULL, 5, 0, 'uploads/produit/Moulin-a-vent0.JPG'),
+(25, 'Perle De roseline ros√©', 'Accords :charcuterie, ap√©ritif,salade.', NULL, NULL, NULL, NULL, '2018-07-06', 7.4, 0, NULL, NULL, 18, 125, 3, NULL, 8, 0, 'uploads/produit/Perle-Cote-de-Provence0.JPG'),
+(26, 'Moulin-√Ä-vent 2014', 'Accords:plat √©pic√©', NULL, NULL, NULL, NULL, '2018-07-06', 12.3, 0, NULL, NULL, 24, 125, 3, NULL, 5, 0, 'uploads/produit/Moulin-a-vent0.JPG'),
 (27, 'Fleurie ', '', NULL, NULL, NULL, NULL, '2018-07-06', 11.8, 0, NULL, NULL, 24, 125, 3, NULL, 5, 0, 'uploads/produit/Fleurie0.JPG'),
 (28, ' Muscadet brin d\'or domaine de la grange', '', NULL, NULL, NULL, NULL, '2018-07-06', 5.9, 0, NULL, NULL, 6, 125, 3, NULL, 9, 0, 'uploads/produit/Brin-dor-domaine-de-la-grange0.JPG'),
 (29, ' Muscadet vieilles vignes domaine de la grange', 'Accords :poisson en sauce.', NULL, NULL, NULL, NULL, '2018-07-06', 6.75, 0, NULL, NULL, 8, 125, 3, NULL, 9, 0, 'uploads/produit/Vieilles-Vignes-Domaine-de-la-grange0.JPG'),
-(30, 'BiËre Sainte colombe blonde 33cl', 'BrassÈe ‡ ste colombe (35).', NULL, NULL, NULL, NULL, '2018-07-06', 2.4, 0, NULL, NULL, 0, 56, 5, 2, 3, 0, 'uploads/produit/Biere-Sainte-Colombe-Blonde0.JPG'),
-(31, 'BiËre Sainte colombe blonde 75cl', 'BrassÈe ‡ ste colombe (35).', NULL, NULL, NULL, NULL, '2018-07-06', 4.2, 0, NULL, NULL, 0, 132, 5, NULL, 3, 0, 'uploads/produit/Biere-Sainte-Colombe-Blonde1.JPG'),
-(32, 'BiËre Sainte colombe blanche 75cl', 'BrassÈe ‡ ste colombe (35).', NULL, NULL, NULL, NULL, '2018-07-06', 4.2, 0, NULL, NULL, 0, 132, 5, NULL, 2, 0, 'uploads/produit/Biere-Sainte-colombe-blanche0.JPG'),
-(33, 'BiËre Sainte colombe dorÈe', '', NULL, NULL, NULL, NULL, '2018-07-06', 2.4, 0, NULL, NULL, 0, 56, 5, NULL, 50, 0, 'uploads/produit/none_FRZkM0e.JPG'),
-(34, 'BiËre Sainte colombe ambrÈe 75cl', 'BrassÈe ‡ ste colombe (35).', NULL, NULL, NULL, NULL, '2018-07-06', 4.2, 0, NULL, NULL, 0, 132, 5, NULL, 1, 0, 'uploads/produit/Biere-Sainte-Colombe-Ambree0.JPG'),
-(35, 'Cognac ragnaud-Sabourin n∞10', '', NULL, NULL, NULL, NULL, '2018-07-06', 47, 0, NULL, NULL, 0, 125, 1, NULL, 10, 0, 'uploads/produit/Cognac-Ragnaud-Sabourin-N100.JPG'),
-(36, 'Cognac ragnaud-Sabourin n∞20', '', NULL, NULL, NULL, NULL, '2018-07-06', 62, 0, NULL, NULL, 0, 125, 1, NULL, 10, 0, 'uploads/produit/Cognac-Ragnaud-Sabourin-N200.JPG'),
-(37, 'Ter\'raz Rouge 2015', 'Accords:barbecue,charcuterie,apÈritif.\r\n', NULL, NULL, NULL, NULL, '2018-07-06', 4.95, 0, NULL, NULL, 24, 125, 3, NULL, 43, 0, 'uploads/produit/TerRaz0.JPG'),
+(30, 'Bi√®re Sainte colombe blonde 33cl', 'Brass√©e √† ste colombe (35).', NULL, NULL, NULL, NULL, '2018-07-06', 2.4, 0, NULL, NULL, 0, 56, 5, 2, 3, 0, 'uploads/produit/Biere-Sainte-Colombe-Blonde0.JPG'),
+(31, 'Bi√®re Sainte colombe blonde 75cl', 'Brass√©e √† ste colombe (35).', NULL, NULL, NULL, NULL, '2018-07-06', 4.2, 0, NULL, NULL, 0, 132, 5, NULL, 3, 0, 'uploads/produit/Biere-Sainte-Colombe-Blonde1.JPG'),
+(32, 'Bi√®re Sainte colombe blanche 75cl', 'Brass√©e √† ste colombe (35).', NULL, NULL, NULL, NULL, '2018-07-06', 4.2, 0, NULL, NULL, 0, 132, 5, NULL, 2, 0, 'uploads/produit/Biere-Sainte-colombe-blanche0.JPG'),
+(33, 'Bi√®re Sainte colombe dor√©e', '', NULL, NULL, NULL, NULL, '2018-07-06', 2.4, 0, NULL, NULL, 0, 56, 5, NULL, 50, 0, 'uploads/produit/none_FRZkM0e.JPG'),
+(34, 'Bi√®re Sainte colombe ambr√©e 75cl', 'Brass√©e √† ste colombe (35).', NULL, NULL, NULL, NULL, '2018-07-06', 4.2, 0, NULL, NULL, 0, 132, 5, NULL, 1, 0, 'uploads/produit/Biere-Sainte-Colombe-Ambree0.JPG'),
+(35, 'Cognac ragnaud-Sabourin n¬∞10', '', NULL, NULL, NULL, NULL, '2018-07-06', 47, 0, NULL, NULL, 0, 125, 1, NULL, 10, 0, 'uploads/produit/Cognac-Ragnaud-Sabourin-N100.JPG'),
+(36, 'Cognac ragnaud-Sabourin n¬∞20', '', NULL, NULL, NULL, NULL, '2018-07-06', 62, 0, NULL, NULL, 0, 125, 1, NULL, 10, 0, 'uploads/produit/Cognac-Ragnaud-Sabourin-N200.JPG'),
+(37, 'Ter\'raz Rouge 2015', 'Accords:barbecue,charcuterie,ap√©ritif.\r\n', NULL, NULL, NULL, NULL, '2018-07-06', 4.95, 0, NULL, NULL, 24, 125, 3, NULL, 43, 0, 'uploads/produit/TerRaz0.JPG'),
 (38, 'Ter \'raz blanc', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.95, 0, NULL, NULL, 12, 125, 3, NULL, 43, 0, 'uploads/produit/TerRaz1.JPG'),
-(39, 'Tarani Rose  millÈsime 2015', 'Accord:apÈritif.', NULL, NULL, NULL, NULL, '2018-07-06', 4.95, 0, NULL, NULL, 12, 125, 3, NULL, 44, 0, 'uploads/produit/Tarani-Millesime-20150.JPG'),
-(40, 'Tarani Rouge millÈsime 2015', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.95, 0, NULL, NULL, 12, 125, 3, NULL, 44, 0, 'uploads/produit/Tarani-Millesime-20151.JPG'),
-(41, 'Domaine Martin faudot cÈpage chardonnay', 'Accord:poisson ,contÈ 24 mois', NULL, NULL, NULL, NULL, '2018-07-06', 10.6, 0, NULL, NULL, 22, 125, 3, NULL, 11, 0, 'uploads/produit/Domaine-Martin-Faudot-Cepage-Chardonnay0.JPG'),
-(42, 'Domaine Martin faudot cÈpage trousseau 2012', 'Accord:petit gibiers,caille', NULL, NULL, NULL, NULL, '2018-07-06', 12.5, 0, NULL, NULL, 20, 125, 3, NULL, 11, 0, 'uploads/produit/Domaine-Martin-Faudot-Cepage-Trousseau0.JPG'),
-(43, 'Vin De paille  martin faudot en arbois', 'Accod:contÈ 24 mois ', NULL, NULL, NULL, NULL, '2018-07-06', 32, 0, NULL, NULL, 2, 125, 3, NULL, 11, 0, 'uploads/produit/Vin-de-paille-de-Martin-Faudot-en-Arbois0.JPG'),
-(44, 'BiËre Philomenn blonde 33cl', 'BrassÈe ‡ trÈguier (22).', NULL, NULL, NULL, NULL, '2018-07-06', 2.5, 0, NULL, NULL, 8, 56, 5, NULL, 3, 0, 'uploads/produit/Biere-Philomenn-Blonde0.JPG'),
-(45, 'BiËre Philomenn triple 33cl', 'BrassÈe ‡ trÈguier (22).', NULL, NULL, NULL, NULL, '2018-07-06', 2.5, 0, NULL, NULL, 2, 56, 5, NULL, 1, 0, 'uploads/produit/Biere-Philomenn-Triple0.JPG'),
-(46, 'BiËre Philomenn blanche 33cl', 'BrassÈe ‡ trÈguier (22).', NULL, NULL, NULL, NULL, '2018-07-06', 2.5, 0, NULL, NULL, 0, 56, 5, 3, 2, 0, 'uploads/produit/Biere-Philomenn-Blanche0.JPG'),
-(47, 'BiËre Philomenn blonde 75cl', 'BrassÈe ‡ trÈguier (22).', NULL, NULL, NULL, NULL, '2018-07-06', 4.5, 0, NULL, NULL, 6, 132, 5, NULL, 3, 0, 'uploads/produit/Biere-Philomenn-Blonde1.JPG'),
-(48, 'BiËre Philomenn rousse 75cl', 'BrassÈe ‡ trÈguier (22).', NULL, NULL, NULL, NULL, '2018-07-06', 4.5, 0, NULL, NULL, 10, 132, 5, NULL, 12, 0, 'uploads/produit/Biere-Philomenn-Rousse0.JPG'),
-(49, 'Pack BiËre philomenn ', 'Pack de 3 biËres philomenn avec une biËre blonde, une biËre brune et une biËre triple', NULL, NULL, NULL, NULL, '2018-07-06', 8, 0, NULL, NULL, 0, 168, 5, NULL, 50, 0, 'uploads/produit/Pack-Biere-Philomenn-0.JPG'),
+(39, 'Tarani Rose  mill√©sime 2015', 'Accord:ap√©ritif.', NULL, NULL, NULL, NULL, '2018-07-06', 4.95, 0, NULL, NULL, 12, 125, 3, NULL, 44, 0, 'uploads/produit/Tarani-Millesime-20150.JPG'),
+(40, 'Tarani Rouge mill√©sime 2015', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.95, 0, NULL, NULL, 12, 125, 3, NULL, 44, 0, 'uploads/produit/Tarani-Millesime-20151.JPG'),
+(41, 'Domaine Martin faudot c√©page chardonnay', 'Accord:poisson ,cont√© 24 mois', NULL, NULL, NULL, NULL, '2018-07-06', 10.6, 0, NULL, NULL, 22, 125, 3, NULL, 11, 0, 'uploads/produit/Domaine-Martin-Faudot-Cepage-Chardonnay0.JPG'),
+(42, 'Domaine Martin faudot c√©page trousseau 2012', 'Accord:petit gibiers,caille', NULL, NULL, NULL, NULL, '2018-07-06', 12.5, 0, NULL, NULL, 20, 125, 3, NULL, 11, 0, 'uploads/produit/Domaine-Martin-Faudot-Cepage-Trousseau0.JPG'),
+(43, 'Vin De paille  martin faudot en arbois', 'Accod:cont√© 24 mois ', NULL, NULL, NULL, NULL, '2018-07-06', 32, 0, NULL, NULL, 2, 125, 3, NULL, 11, 0, 'uploads/produit/Vin-de-paille-de-Martin-Faudot-en-Arbois0.JPG'),
+(44, 'Bi√®re Philomenn blonde 33cl', 'Brass√©e √† tr√©guier (22).', NULL, NULL, NULL, NULL, '2018-07-06', 2.5, 0, NULL, NULL, 8, 56, 5, NULL, 3, 0, 'uploads/produit/Biere-Philomenn-Blonde0.JPG'),
+(45, 'Bi√®re Philomenn triple 33cl', 'Brass√©e √† tr√©guier (22).', NULL, NULL, NULL, NULL, '2018-07-06', 2.5, 0, NULL, NULL, 2, 56, 5, NULL, 1, 0, 'uploads/produit/Biere-Philomenn-Triple0.JPG'),
+(46, 'Bi√®re Philomenn blanche 33cl', 'Brass√©e √† tr√©guier (22).', NULL, NULL, NULL, NULL, '2018-07-06', 2.5, 0, NULL, NULL, 0, 56, 5, 3, 2, 0, 'uploads/produit/Biere-Philomenn-Blanche0.JPG'),
+(47, 'Bi√®re Philomenn blonde 75cl', 'Brass√©e √† tr√©guier (22).', NULL, NULL, NULL, NULL, '2018-07-06', 4.5, 0, NULL, NULL, 6, 132, 5, NULL, 3, 0, 'uploads/produit/Biere-Philomenn-Blonde1.JPG'),
+(48, 'Bi√®re Philomenn rousse 75cl', 'Brass√©e √† tr√©guier (22).', NULL, NULL, NULL, NULL, '2018-07-06', 4.5, 0, NULL, NULL, 10, 132, 5, NULL, 12, 0, 'uploads/produit/Biere-Philomenn-Rousse0.JPG'),
+(49, 'Pack Bi√®re philomenn ', 'Pack de 3 bi√®res philomenn avec une bi√®re blonde, une bi√®re brune et une bi√®re triple', NULL, NULL, NULL, NULL, '2018-07-06', 8, 0, NULL, NULL, 0, 168, 5, NULL, 50, 0, 'uploads/produit/Pack-Biere-Philomenn-0.JPG'),
 (50, 'Duck Triple', '', NULL, NULL, NULL, NULL, '2018-07-06', 5.5, 0, NULL, NULL, 0, 132, 5, NULL, 3, 0, 'uploads/produit/Duck-Triple0.JPG'),
-(51, 'BiËre Duck blonde 75cl', '', NULL, NULL, NULL, NULL, '2018-07-06', 5.5, 0, NULL, NULL, 0, 132, 5, NULL, 3, 0, 'uploads/produit/Biere-Duck-Blonde0.JPG'),
-(52, 'BiËre Duck blonde 33cl', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.1, 0, NULL, NULL, 0, 56, 5, NULL, 3, 0, 'uploads/produit/Biere-D0.JPG'),
-(53, 'BiËre Duck bretagne  rousse75cl', '', NULL, NULL, NULL, NULL, '2018-07-06', 5.5, 0, NULL, NULL, 0, 132, 5, NULL, 12, 0, 'uploads/produit/Biere-Duck-Bretagne0.JPG'),
-(54, 'BiËre Duck bretagne rousse 33cl', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.1, 0, NULL, NULL, 0, 56, 5, NULL, 12, 0, 'uploads/produit/Biere-Duck-Bretagne1.JPG'),
-(55, 'BiËre Trompe souris blonde 75cl', 'BrassÈe ‡ la chapelle basse mer (44).', NULL, NULL, NULL, NULL, '2018-07-06', 5.5, 0, NULL, NULL, 0, 132, 5, NULL, 3, 0, 'uploads/produit/Biere-Trompe-Souris-Blonde0.JPG'),
-(56, 'BiËre Trompe souris blonde 33cl', 'BrassÈe ‡ la chapelle basse mer (44).', NULL, NULL, NULL, NULL, '2018-07-06', 3.1, 0, NULL, NULL, 0, 56, 5, NULL, 3, 0, 'uploads/produit/Biere-Trompe-Souris-Blonde1.JPG'),
+(51, 'Bi√®re Duck blonde 75cl', '', NULL, NULL, NULL, NULL, '2018-07-06', 5.5, 0, NULL, NULL, 0, 132, 5, NULL, 3, 0, 'uploads/produit/Biere-Duck-Blonde0.JPG'),
+(52, 'Bi√®re Duck blonde 33cl', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.1, 0, NULL, NULL, 0, 56, 5, NULL, 3, 0, 'uploads/produit/Biere-D0.JPG'),
+(53, 'Bi√®re Duck bretagne  rousse75cl', '', NULL, NULL, NULL, NULL, '2018-07-06', 5.5, 0, NULL, NULL, 0, 132, 5, NULL, 12, 0, 'uploads/produit/Biere-Duck-Bretagne0.JPG'),
+(54, 'Bi√®re Duck bretagne rousse 33cl', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.1, 0, NULL, NULL, 0, 56, 5, NULL, 12, 0, 'uploads/produit/Biere-Duck-Bretagne1.JPG'),
+(55, 'Bi√®re Trompe souris blonde 75cl', 'Brass√©e √† la chapelle basse mer (44).', NULL, NULL, NULL, NULL, '2018-07-06', 5.5, 0, NULL, NULL, 0, 132, 5, NULL, 3, 0, 'uploads/produit/Biere-Trompe-Souris-Blonde0.JPG'),
+(56, 'Bi√®re Trompe souris blonde 33cl', 'Brass√©e √† la chapelle basse mer (44).', NULL, NULL, NULL, NULL, '2018-07-06', 3.1, 0, NULL, NULL, 0, 56, 5, NULL, 3, 0, 'uploads/produit/Biere-Trompe-Souris-Blonde1.JPG'),
 (57, 'Rhum Don papa philippines', 'Bouche :notes de vanille', NULL, NULL, NULL, NULL, '2018-07-06', 42, 0, NULL, NULL, 4, 196, 1, NULL, 13, 0, 'uploads/produit/Rhum-Don-Papa0.JPG'),
-(58, 'Rhum Diplomatico vÈnezuela', 'Au dÈpart moelleux ,voire sirupeux,il prend une incontestable vigueur aromatique en se dÈveloppant en bouche.\r\nla palette aromatique, d\'une grande intensitÈ, est particuliËrement diversifiÈe fruits secs et compotÈs, caramel au beurre ,miel tout en Ètant trËs fondue et bien ÈquilibrÈe.\r\n', NULL, NULL, NULL, NULL, '2018-07-06', 42, 0, NULL, NULL, 4, 196, 1, NULL, 13, 0, 'uploads/produit/Rhum-Diplomatico0.JPG'),
-(59, 'Rhum Angostura 1919 tobago', 'MarquÈ par les notes de vanille,de caramel\r\nau beurre salÈ et de fruits tropicaux,c\'est\r\nun rhum trËs doux et presque moelleux.', NULL, NULL, NULL, NULL, '2018-07-06', 45, 0, NULL, NULL, 3, 196, 1, NULL, 13, 0, 'uploads/produit/Rhum-Angostura0.JPG'),
-(60, 'Rhum Matusalem 15 ans cuba', 'La bouche onctueuse et suave est marquÈe\r\npar des notes Ètonnantes de caramel,vanille,oranges confites et feuille\r\nde cigare fraiches.\r\n', NULL, NULL, NULL, NULL, '2018-07-06', 42, 0, NULL, NULL, 3, 196, 1, NULL, 13, 0, 'uploads/produit/Rhum-Matusalem0.JPG'),
-(61, 'Rhum Botran 15 ans guatemala', 'Bouche: des notes de cafÈ,cacao', NULL, NULL, NULL, NULL, '2018-07-06', 36, 0, NULL, NULL, 3, 196, 1, NULL, 13, 0, 'uploads/produit/Rhum-Botran0.JPG'),
-(62, 'Rhum Agricole hse martinique', 'Bouche:amande grillÈ.\r\npur jus de canne', NULL, NULL, NULL, NULL, '2018-07-06', 51, 0, NULL, NULL, 4, 196, 1, NULL, 13, 0, 'uploads/produit/Rhum-Agricole-HSE0.JPG'),
-(63, 'Rhum ArrangÈ mangue letchis reunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 30, 0, NULL, NULL, 1, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Mangue-Letchis-Reunion0.JPG'),
-(64, 'Rhum ArrangÈ menthe citron vert', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 1, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Menthe-Citron-Vert0.JPG'),
-(66, 'Rhum ArrangÈ ananas victoria fruit de la passion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 1, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-ananas-victoria-fruit-de-la-passion0.JPG'),
-(67, 'Rhum ArrangÈ fruit de la passion reunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 2, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Fruit-de-la-passion0.JPG'),
-(68, 'Rhum ArrangÈ mangue fruit de la passion reunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 3, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Mangue-Fruit-de-la-passion0.JPG'),
-(69, 'Rhum ArrangÈ ananas victoria mangue reunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 1, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Ananas-Victoria-Mangue0.JPG'),
-(70, 'Rhum ArrangÈ ananas victoria reunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 1, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Ananas-Victoria0.JPG'),
-(71, 'Rhum ArrangÈ punch de noÎl', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 0, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Punch-de-Noel0.JPG'),
-(72, 'Rhum ArrangÈ piment espelette reunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 2, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Piment-Espelette0.JPG'),
-(73, 'Rhum ArrangÈ vanille rÈunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 3, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Vanille-Reunion0.JPG'),
-(74, 'Rhum ArrangÈ fraise framboise reunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 2, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Fraise-Framboise0.JPG'),
-(75, 'Rhum ArrangÈ noix de coco reunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 2, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Noix-de-coco0.JPG'),
-(76, 'Rhum ArrangÈ orange cafÈ reunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 1, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Orange-Cafe0.JPG'),
-(77, 'Rhum ArrangÈ gingembre citron reunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 1, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Gingembre-Citron0.JPG'),
-(78, 'Rhum ArrangÈ vanille cafÈ bourbon pointu bio', 'Rhum arrangÈ rÈunion', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 3, 196, 1, NULL, 13, 0, 'uploads/produit/Rhum-Arrange-Vanille-Cafe-Bourbon-Pointu-bio0.JPG'),
-(79, 'Whisky The irishman irlandais', 'Bouche: note fruitÈ.', NULL, NULL, NULL, NULL, '2018-07-06', 38, 0, NULL, NULL, 1, 196, 1, NULL, 18, 0, 'uploads/produit/Whisky-The-Irishman0.JPG'),
-(80, 'Whisky Black bottle ecossais', 'Bouche:moelleuse et fruitÈe avec des saveurs subtilement ÈquilibrÈes de fumÈe\r\nsuivies de bois tendre et de miel de bruyËre.', NULL, NULL, NULL, NULL, '2018-07-06', 31, 0, NULL, NULL, 3, 144, 1, NULL, 18, 0, 'uploads/produit/Whisky-Black-Bottle0.JPG'),
-(81, 'Whisky Tokinoka japonais', 'Bouche:note miel de bruyËre', NULL, NULL, NULL, NULL, '2018-07-06', 31, 0, NULL, NULL, 6, 144, 1, NULL, 18, 0, 'uploads/produit/Whisky-Tokinoka0.JPG'),
-(82, 'Whisky Deanston ecossais', 'Bouche:fruits cuits,ÈpicÈ', NULL, NULL, NULL, NULL, '2018-07-06', 40, 0, NULL, NULL, 0, 144, 1, NULL, 18, 0, 'uploads/produit/Whisky-Deanston0.JPG'),
-(83, 'Whisky The six isles Ècossais', 'Assemblage de 6 whiskys.lÈgËrement tourbÈe.', NULL, NULL, NULL, NULL, '2018-07-06', 45, 0, NULL, NULL, 2, 144, 1, NULL, 18, 0, 'uploads/produit/Whisky-The-Six-Isles0.JPG'),
-(84, 'Whisky Mac na mara Ècossais', 'Bouche :note de caramel', NULL, NULL, NULL, NULL, '2018-07-06', 25, 0, NULL, NULL, 4, 144, 1, NULL, 18, 0, 'uploads/produit/Whisky-Mac-Namara0.JPG'),
-(85, 'Whisky Glengoyne 12 ans Ècossais', 'Bouche:pomme verte,caramel', NULL, NULL, NULL, NULL, '2018-07-06', 59, 0, NULL, NULL, 6, 144, 1, NULL, 18, 0, 'uploads/produit/Whisky-Glengoyne0.JPG'),
-(86, 'Whisky Tobermory 10 ans Ècossais', 'Bouche:fruitÈes,des notes de poire,pomme,\r\npointes ÈpicÈes et des notes mentholÈes.', NULL, NULL, NULL, NULL, '2018-07-06', 54, 0, NULL, NULL, 2, 144, 1, NULL, 18, 0, 'uploads/produit/Whisky-Tobermory0.JPG'),
-(87, 'Whisky Bunnahabhain 12 ans Ècossais', 'Bunnahabhain franchit le pas de la non filtration ‡ froid et de fort degrÈ d\'alcool .', NULL, NULL, NULL, NULL, '2018-07-06', 58, 0, NULL, NULL, 3, 144, 1, NULL, 18, 0, 'uploads/produit/Whisky-Bunnahabhain0.JPG'),
+(58, 'Rhum Diplomatico v√©nezuela', 'Au d√©part moelleux ,voire sirupeux,il prend une incontestable vigueur aromatique en se d√©veloppant en bouche.\r\nla palette aromatique, d\'une grande intensit√©, est particuli√®rement diversifi√©e fruits secs et compot√©s, caramel au beurre ,miel tout en √©tant tr√®s fondue et bien √©quilibr√©e.\r\n', NULL, NULL, NULL, NULL, '2018-07-06', 42, 0, NULL, NULL, 4, 196, 1, NULL, 13, 0, 'uploads/produit/Rhum-Diplomatico0.JPG'),
+(59, 'Rhum Angostura 1919 tobago', 'Marqu√© par les notes de vanille,de caramel\r\nau beurre sal√© et de fruits tropicaux,c\'est\r\nun rhum tr√®s doux et presque moelleux.', NULL, NULL, NULL, NULL, '2018-07-06', 45, 0, NULL, NULL, 3, 196, 1, NULL, 13, 0, 'uploads/produit/Rhum-Angostura0.JPG'),
+(60, 'Rhum Matusalem 15 ans cuba', 'La bouche onctueuse et suave est marqu√©e\r\npar des notes √©tonnantes de caramel,vanille,oranges confites et feuille\r\nde cigare fraiches.\r\n', NULL, NULL, NULL, NULL, '2018-07-06', 42, 0, NULL, NULL, 3, 196, 1, NULL, 13, 0, 'uploads/produit/Rhum-Matusalem0.JPG'),
+(61, 'Rhum Botran 15 ans guatemala', 'Bouche: des notes de caf√©,cacao', NULL, NULL, NULL, NULL, '2018-07-06', 36, 0, NULL, NULL, 3, 196, 1, NULL, 13, 0, 'uploads/produit/Rhum-Botran0.JPG'),
+(62, 'Rhum Agricole hse martinique', 'Bouche:amande grill√©.\r\npur jus de canne', NULL, NULL, NULL, NULL, '2018-07-06', 51, 0, NULL, NULL, 4, 196, 1, NULL, 13, 0, 'uploads/produit/Rhum-Agricole-HSE0.JPG'),
+(63, 'Rhum Arrang√© mangue letchis reunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 30, 0, NULL, NULL, 1, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Mangue-Letchis-Reunion0.JPG'),
+(64, 'Rhum Arrang√© menthe citron vert', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 1, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Menthe-Citron-Vert0.JPG'),
+(66, 'Rhum Arrang√© ananas victoria fruit de la passion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 1, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-ananas-victoria-fruit-de-la-passion0.JPG'),
+(67, 'Rhum Arrang√© fruit de la passion reunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 2, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Fruit-de-la-passion0.JPG'),
+(68, 'Rhum Arrang√© mangue fruit de la passion reunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 3, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Mangue-Fruit-de-la-passion0.JPG'),
+(69, 'Rhum Arrang√© ananas victoria mangue reunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 1, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Ananas-Victoria-Mangue0.JPG'),
+(70, 'Rhum Arrang√© ananas victoria reunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 1, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Ananas-Victoria0.JPG'),
+(71, 'Rhum Arrang√© punch de no√´l', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 0, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Punch-de-Noel0.JPG'),
+(72, 'Rhum Arrang√© piment espelette reunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 2, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Piment-Espelette0.JPG'),
+(73, 'Rhum Arrang√© vanille r√©union', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 3, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Vanille-Reunion0.JPG'),
+(74, 'Rhum Arrang√© fraise framboise reunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 2, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Fraise-Framboise0.JPG'),
+(75, 'Rhum Arrang√© noix de coco reunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 2, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Noix-de-coco0.JPG'),
+(76, 'Rhum Arrang√© orange caf√© reunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 1, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Orange-Cafe0.JPG'),
+(77, 'Rhum Arrang√© gingembre citron reunion', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 1, 196, 1, 4, 13, 0, 'uploads/produit/Rhum-Arrange-Gingembre-Citron0.JPG'),
+(78, 'Rhum Arrang√© vanille caf√© bourbon pointu bio', 'Rhum arrang√© r√©union', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 3, 196, 1, NULL, 13, 0, 'uploads/produit/Rhum-Arrange-Vanille-Cafe-Bourbon-Pointu-bio0.JPG'),
+(79, 'Whisky The irishman irlandais', 'Bouche: note fruit√©.', NULL, NULL, NULL, NULL, '2018-07-06', 38, 0, NULL, NULL, 1, 196, 1, NULL, 18, 0, 'uploads/produit/Whisky-The-Irishman0.JPG'),
+(80, 'Whisky Black bottle ecossais', 'Bouche:moelleuse et fruit√©e avec des saveurs subtilement √©quilibr√©es de fum√©e\r\nsuivies de bois tendre et de miel de bruy√®re.', NULL, NULL, NULL, NULL, '2018-07-06', 31, 0, NULL, NULL, 3, 144, 1, NULL, 18, 0, 'uploads/produit/Whisky-Black-Bottle0.JPG'),
+(81, 'Whisky Tokinoka japonais', 'Bouche:note miel de bruy√®re', NULL, NULL, NULL, NULL, '2018-07-06', 31, 0, NULL, NULL, 6, 144, 1, NULL, 18, 0, 'uploads/produit/Whisky-Tokinoka0.JPG'),
+(82, 'Whisky Deanston ecossais', 'Bouche:fruits cuits,√©pic√©', NULL, NULL, NULL, NULL, '2018-07-06', 40, 0, NULL, NULL, 0, 144, 1, NULL, 18, 0, 'uploads/produit/Whisky-Deanston0.JPG'),
+(83, 'Whisky The six isles √©cossais', 'Assemblage de 6 whiskys.l√©g√®rement tourb√©e.', NULL, NULL, NULL, NULL, '2018-07-06', 45, 0, NULL, NULL, 2, 144, 1, NULL, 18, 0, 'uploads/produit/Whisky-The-Six-Isles0.JPG'),
+(84, 'Whisky Mac na mara √©cossais', 'Bouche :note de caramel', NULL, NULL, NULL, NULL, '2018-07-06', 25, 0, NULL, NULL, 4, 144, 1, NULL, 18, 0, 'uploads/produit/Whisky-Mac-Namara0.JPG'),
+(85, 'Whisky Glengoyne 12 ans √©cossais', 'Bouche:pomme verte,caramel', NULL, NULL, NULL, NULL, '2018-07-06', 59, 0, NULL, NULL, 6, 144, 1, NULL, 18, 0, 'uploads/produit/Whisky-Glengoyne0.JPG'),
+(86, 'Whisky Tobermory 10 ans √©cossais', 'Bouche:fruit√©es,des notes de poire,pomme,\r\npointes √©pic√©es et des notes menthol√©es.', NULL, NULL, NULL, NULL, '2018-07-06', 54, 0, NULL, NULL, 2, 144, 1, NULL, 18, 0, 'uploads/produit/Whisky-Tobermory0.JPG'),
+(87, 'Whisky Bunnahabhain 12 ans √©cossais', 'Bunnahabhain franchit le pas de la non filtration √† froid et de fort degr√© d\'alcool .', NULL, NULL, NULL, NULL, '2018-07-06', 58, 0, NULL, NULL, 3, 144, 1, NULL, 18, 0, 'uploads/produit/Whisky-Bunnahabhain0.JPG'),
 (88, 'Whisky Port charlotte', '', NULL, NULL, NULL, NULL, '2018-07-06', 55, 0, NULL, NULL, 0, 144, 1, NULL, 18, 0, 'uploads/produit/none_RgY4KFP.JPG'),
 (89, 'Whisky  boubon woodford reserve americain', 'C\'est un festival de saveurs:fruits noirs,caramel,chocolat', NULL, NULL, NULL, NULL, '2018-07-06', 52, 0, NULL, NULL, 4, 144, 1, NULL, 18, 0, 'uploads/produit/Whisky-Woodford-Reserve0.JPG'),
-(90, 'Whisky Ledaig 18 ans ecossais', 'Bouche:aromes fruitÈs et boisÈs avec des notes de fumÈe de poivre noir,et de piment de cayenne', NULL, NULL, NULL, NULL, '2018-07-06', 148, 0, NULL, NULL, 0, 196, 1, NULL, 18, 0, 'uploads/produit/Whisky-Ledaig0.JPG'),
+(90, 'Whisky Ledaig 18 ans ecossais', 'Bouche:aromes fruit√©s et bois√©s avec des notes de fum√©e de poivre noir,et de piment de cayenne', NULL, NULL, NULL, NULL, '2018-07-06', 148, 0, NULL, NULL, 0, 196, 1, NULL, 18, 0, 'uploads/produit/Whisky-Ledaig0.JPG'),
 (92, 'Domaine Brazilier vin mousseux brut', '', NULL, NULL, NULL, NULL, '2018-07-06', 7.1, 0, NULL, NULL, 10, 150, 2, NULL, 19, 0, 'uploads/produit/none_FLPmL8m.JPG'),
-(93, 'Domaine Brazilier vin mousseux rosÈ', '', NULL, NULL, NULL, NULL, '2018-07-06', 7.1, 0, NULL, NULL, 20, 150, 2, NULL, 19, 0, 'uploads/produit/none_UJOZS6a.JPG'),
-(101, ' Haut mÈdoc ch‚teau lalande 2014', '', NULL, NULL, NULL, NULL, '2018-07-06', 12.5, 0, NULL, NULL, 18, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Lalande0.JPG'),
+(93, 'Domaine Brazilier vin mousseux ros√©', '', NULL, NULL, NULL, NULL, '2018-07-06', 7.1, 0, NULL, NULL, 20, 150, 2, NULL, 19, 0, 'uploads/produit/none_UJOZS6a.JPG'),
+(101, ' Haut m√©doc ch√¢teau lalande 2014', '', NULL, NULL, NULL, NULL, '2018-07-06', 12.5, 0, NULL, NULL, 18, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Lalande0.JPG'),
 (102, 'Domaine Les barthes 2015', 'Cepage mabec\r\naccord:charcuterie ,barbecue', NULL, NULL, NULL, NULL, '2018-07-06', 7, 0, NULL, NULL, 0, 125, 3, NULL, 50, 0, 'uploads/produit/Domaine-Les-Barthes0.JPG'),
 (103, ' Merlot louis eschenauer 2015', 'Louis eschenauer: un savoir faire fort depuis 1821.\r\nle merlot est rond puissant des tanins souples.\r\naccords: volailles et charcuteries.', NULL, NULL, NULL, NULL, '2018-07-06', 7.6, 0, NULL, NULL, 0, 125, 3, NULL, 21, 0, 'uploads/produit/Louis-Eschenauer0.JPG'),
-(104, ' Gewurztraminer dopff & irion les sorciËres', 'Peut se dÈguster ‡ l\'apÈritif. \r\nbeaux accords avec le foie gras et le munster.', NULL, NULL, NULL, NULL, '2018-07-06', 18.8, 0, NULL, NULL, 6, 125, 3, NULL, 22, 0, 'uploads/produit/Domaines-du-Chateau-de-Riquewihr-Les-sorcieres0.JPG'),
-(105, 'Gewurztramier Dopff irion', 'Accords: munster,apÈritif,foie gras.', NULL, NULL, NULL, NULL, '2018-07-06', 13.9, 0, NULL, NULL, 4, 125, 3, NULL, 22, 0, 'uploads/produit/Dopff--Irion-Cuvee-Rene-Dopff-Gewurztraminer0.JPG'),
-(106, 'Pinot Gris dopff irion', 'Accord:apÈritif,foie gras', NULL, NULL, NULL, NULL, '2018-07-06', 13.8, 0, NULL, NULL, 6, 125, 3, NULL, 22, 0, 'uploads/produit/Dopff--irion-cuvee-rene-dopff-pinot-gris0.JPG'),
+(104, ' Gewurztraminer dopff & irion les sorci√®res', 'Peut se d√©guster √† l\'ap√©ritif. \r\nbeaux accords avec le foie gras et le munster.', NULL, NULL, NULL, NULL, '2018-07-06', 18.8, 0, NULL, NULL, 6, 125, 3, NULL, 22, 0, 'uploads/produit/Domaines-du-Chateau-de-Riquewihr-Les-sorcieres0.JPG'),
+(105, 'Gewurztramier Dopff irion', 'Accords: munster,ap√©ritif,foie gras.', NULL, NULL, NULL, NULL, '2018-07-06', 13.9, 0, NULL, NULL, 4, 125, 3, NULL, 22, 0, 'uploads/produit/Dopff--Irion-Cuvee-Rene-Dopff-Gewurztraminer0.JPG'),
+(106, 'Pinot Gris dopff irion', 'Accord:ap√©ritif,foie gras', NULL, NULL, NULL, NULL, '2018-07-06', 13.8, 0, NULL, NULL, 6, 125, 3, NULL, 22, 0, 'uploads/produit/Dopff--irion-cuvee-rene-dopff-pinot-gris0.JPG'),
 (107, 'Riesling Dopff irion', 'Accord :fruits de mer', NULL, NULL, NULL, NULL, '2018-07-06', 11.5, 0, NULL, NULL, 6, 125, 3, NULL, 22, 0, 'uploads/produit/Dopff--irion-cuvee-rene-dopff-Riesling0.JPG'),
-(108, ' CrÈmant d\'alscace dopff & irion blanc de blancs brut', '', NULL, NULL, NULL, NULL, '2018-07-06', 11.6, 0, NULL, NULL, 6, 125, 2, NULL, 19, 0, 'uploads/produit/Dopff--Irion-Blanc-de-Blancs-Brut0.JPG'),
+(108, ' Cr√©mant d\'alscace dopff & irion blanc de blancs brut', '', NULL, NULL, NULL, NULL, '2018-07-06', 11.6, 0, NULL, NULL, 6, 125, 2, NULL, 19, 0, 'uploads/produit/Dopff--Irion-Blanc-de-Blancs-Brut0.JPG'),
 (110, 'Champagne Jean despret ', '', NULL, NULL, NULL, NULL, '2018-07-06', 19.9, 0, NULL, NULL, 6, 150, 2, NULL, 23, 0, 'uploads/produit/Champagne-Jean-Despret-0.JPG'),
 (111, 'Champagne larnaudie-Hirault 1er cru', '', NULL, NULL, NULL, NULL, '2018-07-06', 22.5, 0, NULL, NULL, 4, 150, 2, NULL, 23, 0, 'uploads/produit/Champagne-Larnaudie-Hirault0.JPG'),
-(112, 'Champagne larnaudie-Hirault rosÈ guide hachette 2018', 'Joli succËs pour le champagne larnaudie\r\nrosÈ premier cru:1 Ètoile dans le guide hachette des vins 2018,et une mÈdaille d\'or dÈcernÈe par elle a table.', NULL, NULL, NULL, NULL, '2018-07-06', 25, 0, NULL, NULL, 3, 150, 2, NULL, 23, 0, 'uploads/produit/Champagne-Larnaudie-Hirault-Rose-Guide-Hachette-20180.JPG'),
+(112, 'Champagne larnaudie-Hirault ros√© guide hachette 2018', 'Joli succ√®s pour le champagne larnaudie\r\nros√© premier cru:1 √©toile dans le guide hachette des vins 2018,et une m√©daille d\'or d√©cern√©e par elle a table.', NULL, NULL, NULL, NULL, '2018-07-06', 25, 0, NULL, NULL, 3, 150, 2, NULL, 23, 0, 'uploads/produit/Champagne-Larnaudie-Hirault-Rose-Guide-Hachette-20180.JPG'),
 (113, 'Champagne Mailly grand cru 37.5 cl', '', NULL, NULL, NULL, NULL, '2018-07-06', 16.2, 0, NULL, NULL, 24, 150, 2, NULL, 23, 0, 'uploads/produit/Champagne-Mailly0.JPG'),
 (114, 'Champagne Mailly grand cru', '', NULL, NULL, NULL, NULL, '2018-07-06', 29.9, 0, NULL, NULL, 0, 150, 2, NULL, 23, 0, 'uploads/produit/Champagne-Mailly1.JPG'),
 (115, 'Champagne Mailly magnum', '', NULL, NULL, NULL, NULL, '2018-07-06', 61.8, 0, NULL, NULL, 3, 320, 2, NULL, 23, 0, 'uploads/produit/Champagne-Mailly2.JPG'),
-(116, 'Champagne Ar lenoble dozage zÈro', '', NULL, NULL, NULL, NULL, '2018-07-06', 29.5, 0, NULL, NULL, 6, 150, 2, NULL, 23, 0, 'uploads/produit/Champagne-Arlenoble0.JPG'),
+(116, 'Champagne Ar lenoble dozage z√©ro', '', NULL, NULL, NULL, NULL, '2018-07-06', 29.5, 0, NULL, NULL, 6, 150, 2, NULL, 23, 0, 'uploads/produit/Champagne-Arlenoble0.JPG'),
 (117, 'Champagne Ar lenoble intense', '', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 3, 150, 2, NULL, 23, 0, 'uploads/produit/Champagne-Arlenoble1.JPG'),
 (118, 'Champagne Ar lenoble grand cru blanc de blancs', '', NULL, NULL, NULL, NULL, '2018-07-06', 33.5, 0, NULL, NULL, 4, 150, 2, NULL, 23, 0, 'uploads/produit/Champagne-Arlenoble2.JPG'),
 (119, 'Champagne Lenoble les aventures', '', NULL, NULL, NULL, NULL, '2018-07-06', 80, 0, NULL, NULL, 2, 150, 2, NULL, 23, 0, 'uploads/produit/Champagne-Lenoble-Les-aventures0.JPG'),
-(120, 'Champagne Lenoble rosÈ', '', NULL, NULL, NULL, NULL, '2018-07-06', 42, 0, NULL, NULL, 6, 150, 2, NULL, 23, 0, 'uploads/produit/Champagne-Lenoble-Rose0.JPG'),
-(121, 'Champagne Paul bara millÈsime 2010', '', NULL, NULL, NULL, NULL, '2018-07-06', 35, 0, NULL, NULL, 6, 150, 2, NULL, 23, 0, 'uploads/produit/Champagne-Paul-Bara-0.JPG'),
-(122, 'CrÈmant De bourgogne bailly lapierre', '', NULL, NULL, NULL, NULL, '2018-07-06', 9.9, 0, NULL, NULL, 36, 150, 2, NULL, 19, 0, 'uploads/produit/Champagne-Bailly-Lapierre0.JPG'),
-(123, 'CrÈmant D\'alscace dopff & irion', '', NULL, NULL, NULL, NULL, '2018-07-06', 10.9, 0, NULL, NULL, 1, 150, 2, NULL, 19, 0, 'uploads/produit/none_yTauDDp.JPG'),
-(124, 'Champagne Ch‚teau de passavent', '', NULL, NULL, NULL, NULL, '2018-07-06', 14.7, 0, NULL, NULL, 0, 150, 2, NULL, 23, 0, 'uploads/produit/none_B0s4tWl.JPG'),
+(120, 'Champagne Lenoble ros√©', '', NULL, NULL, NULL, NULL, '2018-07-06', 42, 0, NULL, NULL, 6, 150, 2, NULL, 23, 0, 'uploads/produit/Champagne-Lenoble-Rose0.JPG'),
+(121, 'Champagne Paul bara mill√©sime 2010', '', NULL, NULL, NULL, NULL, '2018-07-06', 35, 0, NULL, NULL, 6, 150, 2, NULL, 23, 0, 'uploads/produit/Champagne-Paul-Bara-0.JPG'),
+(122, 'Cr√©mant De bourgogne bailly lapierre', '', NULL, NULL, NULL, NULL, '2018-07-06', 9.9, 0, NULL, NULL, 36, 150, 2, NULL, 19, 0, 'uploads/produit/Champagne-Bailly-Lapierre0.JPG'),
+(123, 'Cr√©mant D\'alscace dopff & irion', '', NULL, NULL, NULL, NULL, '2018-07-06', 10.9, 0, NULL, NULL, 1, 150, 2, NULL, 19, 0, 'uploads/produit/none_yTauDDp.JPG'),
+(124, 'Champagne Ch√¢teau de passavent', '', NULL, NULL, NULL, NULL, '2018-07-06', 14.7, 0, NULL, NULL, 0, 150, 2, NULL, 23, 0, 'uploads/produit/none_B0s4tWl.JPG'),
 (125, 'Saumur Brut domaine des sanzay', '', NULL, NULL, NULL, NULL, '2018-07-06', 9.7, 0, NULL, NULL, 3, 150, 2, NULL, 19, 0, 'uploads/produit/Champagne-Domaine-des-Sanzay0.JPG'),
 (126, 'Saumur Roze domaine des sanzay', '', NULL, NULL, NULL, NULL, '2018-07-06', 10.6, 0, NULL, NULL, 3, 150, 2, NULL, 19, 0, 'uploads/produit/Champagne-Domaine-des-Sanzay-Rose0.JPG'),
 (127, ' Prosecco, issu de la culture biologique', 'Effervescent italien.\r\nissu de la culture biologigue', NULL, NULL, NULL, NULL, '2018-07-06', 11.5, 0, NULL, NULL, 10, 150, 2, NULL, 19, 0, 'uploads/produit/Champagne-prosecco0.JPG'),
 (128, 'Champagne Ruinart brut', '', NULL, NULL, NULL, NULL, '2018-07-06', 44, 0, NULL, NULL, 3, 150, 2, NULL, 23, 0, 'uploads/produit/Champagne-Ruinart0.JPG'),
 (129, 'Champagne Ruinart blanc de blanc', '', NULL, NULL, NULL, NULL, '2018-07-06', 63, 0, NULL, NULL, 2, 150, 2, NULL, 23, 0, 'uploads/produit/Champagne-Ruinart1.JPG'),
-(131, 'Nuits-Saint-georges les br˚lÈes 2013', 'Accord: gigot agneau', NULL, NULL, NULL, NULL, '2018-07-06', 32.7, 0, NULL, NULL, 12, 125, 3, NULL, 24, 0, 'uploads/produit/Nuits-Saint-Georges-Les-brulees0.JPG'),
-(132, 'Chablis CuvÈe Èmeraude', 'Accords: poissons, crustacÈs.', NULL, NULL, NULL, NULL, '2018-07-06', 16.9, 0, NULL, NULL, 1, 125, 3, NULL, 24, 0, 'uploads/produit/Chablis-cuvee-emeraude0.JPG'),
+(131, 'Nuits-Saint-georges les br√ªl√©es 2013', 'Accord: gigot agneau', NULL, NULL, NULL, NULL, '2018-07-06', 32.7, 0, NULL, NULL, 12, 125, 3, NULL, 24, 0, 'uploads/produit/Nuits-Saint-Georges-Les-brulees0.JPG'),
+(132, 'Chablis Cuv√©e √©meraude', 'Accords: poissons, crustac√©s.', NULL, NULL, NULL, NULL, '2018-07-06', 16.9, 0, NULL, NULL, 1, 125, 3, NULL, 24, 0, 'uploads/produit/Chablis-cuvee-emeraude0.JPG'),
 (133, 'Chablis Premier cru', 'Accords: poissons en sauce ', NULL, NULL, NULL, NULL, '2018-07-06', 20, 0, NULL, NULL, 6, 125, 3, NULL, 24, 0, 'uploads/produit/Chablis-Premier-Cru0.JPG'),
-(134, 'Saint-VÈran', 'Accords:poisson grillÈ,apÈritif ,viande blanche', NULL, NULL, NULL, NULL, '2018-07-06', 13, 0, NULL, NULL, 3, 125, 3, NULL, 50, 0, 'uploads/produit/Saint-Veran0.JPG'),
-(135, 'Pouilly-FuissÈ la collonge', 'Accords: st jacques ,langoustines,poisson en sauce', NULL, NULL, NULL, NULL, '2018-07-06', 17, 0, NULL, NULL, 12, 125, 3, NULL, 24, 0, 'uploads/produit/Pouilly-Fuisse-La-collonge0.JPG'),
-(136, 'CÙte De nuits villages 2014', 'Issu de la culture biologique\r\naccords :carrÈ de veau , gigot d\'agneau.', NULL, NULL, NULL, NULL, '2018-07-06', 23.6, 0, NULL, NULL, 6, 125, 3, NULL, 24, 0, 'uploads/produit/Cote-de-nuits-villages0.JPG'),
+(134, 'Saint-V√©ran', 'Accords:poisson grill√©,ap√©ritif ,viande blanche', NULL, NULL, NULL, NULL, '2018-07-06', 13, 0, NULL, NULL, 3, 125, 3, NULL, 50, 0, 'uploads/produit/Saint-Veran0.JPG'),
+(135, 'Pouilly-Fuiss√© la collonge', 'Accords: st jacques ,langoustines,poisson en sauce', NULL, NULL, NULL, NULL, '2018-07-06', 17, 0, NULL, NULL, 12, 125, 3, NULL, 24, 0, 'uploads/produit/Pouilly-Fuisse-La-collonge0.JPG'),
+(136, 'C√¥te De nuits villages 2014', 'Issu de la culture biologique\r\naccords :carr√© de veau , gigot d\'agneau.', NULL, NULL, NULL, NULL, '2018-07-06', 23.6, 0, NULL, NULL, 6, 125, 3, NULL, 24, 0, 'uploads/produit/Cote-de-nuits-villages0.JPG'),
 (137, 'Marsanay Rouge ', 'Issu de la culture biologique', NULL, NULL, NULL, NULL, '2018-07-06', 26.5, 0, NULL, NULL, 6, 125, 3, NULL, 24, 0, 'uploads/produit/Marsanay0.JPG'),
 (138, 'Gevrey-Chambertin 2014', 'Issu de la culture biologique\r\naccords:viande rouge ,agneau ,gigot rotie', NULL, NULL, NULL, NULL, '2018-07-06', 36.4, 0, NULL, NULL, 4, 125, 3, NULL, 24, 0, 'uploads/produit/Gevrey-Chambertin0.JPG'),
 (139, 'Marsanay Blanc 2015', 'Issu de la culture biologique\r\naccords: blanquette de veau,poisson,', NULL, NULL, NULL, NULL, '2018-07-06', 23.4, 0, NULL, NULL, 2, 125, 3, NULL, 24, 0, 'uploads/produit/Marsanay1.JPG'),
@@ -891,77 +891,77 @@ INSERT INTO `magasin_produit` (`id`, `nom`, `description`, `cepage`, `notes_degu
 (144, 'Tamari Malbec', 'Vin argentin cepage malbec\r\naccord :viande rouge', NULL, NULL, NULL, NULL, '2018-07-06', 9.5, 0, NULL, NULL, 6, 125, 3, NULL, 25, 0, 'uploads/produit/bodega-Tamari0.JPG'),
 (145, ' Rioja coto vintage 2014', '', NULL, NULL, NULL, NULL, '2018-07-06', 11.8, 0, NULL, NULL, 6, 125, 3, NULL, 25, 0, 'uploads/produit/Coto-Vintage0.JPG'),
 (146, 'Footprint Chardonnay', '', NULL, NULL, NULL, NULL, '2018-07-06', 9.9, 0, NULL, NULL, 1, 125, 3, NULL, 25, 0, 'uploads/produit/Footprint0.JPG'),
-(148, 'Ch‚teau Des matards rouge 2014', '', NULL, NULL, NULL, NULL, '2018-07-06', 8.6, 0, NULL, NULL, 12, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-des-Matards0.JPG'),
-(149, ' CÙtes de bourg ch‚teau maÁay 2015', 'Merlot 65% cabernet sauvignon 15%\r\ncabernet franc 10% malbec10%', NULL, NULL, NULL, NULL, '2018-07-06', 9.9, 0, NULL, NULL, 12, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Macay0.JPG'),
-(150, ' fronsac ch‚teau mayne-Vieil', '', NULL, NULL, NULL, NULL, '2018-07-06', 13.5, 0, NULL, NULL, 4, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Mayne-Vieil0.JPG'),
-(151, ' Graves ch‚teau haut selve 2014', 'CÈpages:55% merlot, 45% cabernet sauvignon. \r\n12 ans de garde', NULL, NULL, NULL, NULL, '2018-07-06', 14, 0, NULL, NULL, 35, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Haut-Selve0.JPG'),
+(148, 'Ch√¢teau Des matards rouge 2014', '', NULL, NULL, NULL, NULL, '2018-07-06', 8.6, 0, NULL, NULL, 12, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-des-Matards0.JPG'),
+(149, ' C√¥tes de bourg ch√¢teau ma√ßay 2015', 'Merlot 65% cabernet sauvignon 15%\r\ncabernet franc 10% malbec10%', NULL, NULL, NULL, NULL, '2018-07-06', 9.9, 0, NULL, NULL, 12, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Macay0.JPG'),
+(150, ' fronsac ch√¢teau mayne-Vieil', '', NULL, NULL, NULL, NULL, '2018-07-06', 13.5, 0, NULL, NULL, 4, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Mayne-Vieil0.JPG'),
+(151, ' Graves ch√¢teau haut selve 2014', 'C√©pages:55% merlot, 45% cabernet sauvignon. \r\n12 ans de garde', NULL, NULL, NULL, NULL, '2018-07-06', 14, 0, NULL, NULL, 35, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Haut-Selve0.JPG'),
 (152, 'Lalande De pomerol', '', NULL, NULL, NULL, NULL, '2018-07-06', 17.5, 0, NULL, NULL, 0, 125, 3, NULL, 20, 0, 'uploads/produit/none_EgCZVRq.JPG'),
 (153, 'St Emilion grand cru 2012', '', NULL, NULL, NULL, NULL, '2018-07-06', 18, 0, NULL, NULL, 6, 125, 3, NULL, 20, 0, 'uploads/produit/none_78VL2kU.JPG'),
-(154, ' Medoc ch‚teau fourcas hosten 2011', 'MÈdoc cru bourgeois.\r\noffre une parfaite symphonie de saveurs\r\ngr‚ce ‡ ses vieilles vignes de merlot et de \r\ncabernet sauvignon', NULL, NULL, NULL, NULL, '2018-07-06', 21, 0, NULL, NULL, 7, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Fourcas-Hosten0.JPG'),
+(154, ' Medoc ch√¢teau fourcas hosten 2011', 'M√©doc cru bourgeois.\r\noffre une parfaite symphonie de saveurs\r\ngr√¢ce √† ses vieilles vignes de merlot et de \r\ncabernet sauvignon', NULL, NULL, NULL, NULL, '2018-07-06', 21, 0, NULL, NULL, 7, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Fourcas-Hosten0.JPG'),
 (155, 'Medoc Les c \'edres d\'hosten 2011', 'Accord:viande en sauce', NULL, NULL, NULL, NULL, '2018-07-06', 18, 0, NULL, NULL, 1, 125, 3, NULL, 20, 0, 'uploads/produit/Les-cedres-DHostex0.JPG'),
 (156, 'Medoc Chapelle de potensac 2014', 'Second vin de potensac\r\naccord viande rouge', NULL, NULL, NULL, NULL, '2018-07-06', 19.5, 0, NULL, NULL, 3, 125, 3, NULL, 20, 0, 'uploads/produit/Chapelle-de-Potensac-0.JPG'),
-(157, ' Pomerol ch‚teau la fleur des rouzes 2012', 'CÈpages :cabernet franc et merlot.\r\nvin ‡ la fois rond et charmeur.\r\naccompagnera ‡ merveille les plats de viande .', NULL, NULL, NULL, NULL, '2018-07-06', 25.5, 0, NULL, NULL, 2, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-La-Fleur-des-Rouzes0.JPG'),
-(158, ' st julien ch‚teau lalande-Borie 2011', 'CÈpages :cabernet franc ,cabernet sauvignon, colombaud,merlot.\r\nun vin dense .', NULL, NULL, NULL, NULL, '2018-07-06', 27.5, 0, NULL, NULL, 8, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Lalande-Borie-0.JPG'),
-(159, ' St estephe ch‚teau sÈgur de cabanac 2008', 'CÈpages: 40% merlot et 60% cabernet sauvignon.\r\n', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 3, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Segur-De-Cabanac0.JPG'),
-(160, ' St estephe ch‚teau clauzet 2010', 'CÈpages:55% cabernet sauvignon,\r\n40% merlot, 5% cabernet franc et petit verdot', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 24, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Clauzet0.JPG'),
-(161, ' Pauillac ch‚teau tour pibran 2010', 'Mis en bouteille ‡ la propriÈtÈ ch‚teau pichon longueville.\r\nsecond vin ch‚teau pibran\r\ncÈpages: 50% merlot et 50% cabernet sauvignon.\r\nstyle caractÈristique des grands pauillac.', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 10, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Tour-Pibran0.JPG'),
+(157, ' Pomerol ch√¢teau la fleur des rouzes 2012', 'C√©pages :cabernet franc et merlot.\r\nvin √† la fois rond et charmeur.\r\naccompagnera √† merveille les plats de viande .', NULL, NULL, NULL, NULL, '2018-07-06', 25.5, 0, NULL, NULL, 2, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-La-Fleur-des-Rouzes0.JPG'),
+(158, ' st julien ch√¢teau lalande-Borie 2011', 'C√©pages :cabernet franc ,cabernet sauvignon, colombaud,merlot.\r\nun vin dense .', NULL, NULL, NULL, NULL, '2018-07-06', 27.5, 0, NULL, NULL, 8, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Lalande-Borie-0.JPG'),
+(159, ' St estephe ch√¢teau s√©gur de cabanac 2008', 'C√©pages: 40% merlot et 60% cabernet sauvignon.\r\n', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 3, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Segur-De-Cabanac0.JPG'),
+(160, ' St estephe ch√¢teau clauzet 2010', 'C√©pages:55% cabernet sauvignon,\r\n40% merlot, 5% cabernet franc et petit verdot', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 24, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Clauzet0.JPG'),
+(161, ' Pauillac ch√¢teau tour pibran 2010', 'Mis en bouteille √† la propri√©t√© ch√¢teau pichon longueville.\r\nsecond vin ch√¢teau pibran\r\nc√©pages: 50% merlot et 50% cabernet sauvignon.\r\nstyle caract√©ristique des grands pauillac.', NULL, NULL, NULL, NULL, '2018-07-06', 28.5, 0, NULL, NULL, 10, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Tour-Pibran0.JPG'),
 (162, ' Margaux vivens 2009', '', NULL, NULL, NULL, NULL, '2018-07-06', 33.2, 0, NULL, NULL, 0, 125, 3, NULL, 20, 0, 'uploads/produit/Vivens0.JPG'),
-(163, ' Margaux les hauts du tertre 2012', 'Second vin du grand cru classÈ chateau\r\ndu tertre\r\ncÈpages:cbernet sauvignon,merlot,cabernet franc,petit verdot', NULL, NULL, NULL, NULL, '2018-07-06', 32.5, 0, NULL, NULL, 4, 125, 3, NULL, 20, 0, 'uploads/produit/Les-hauts-du-Tertre0.JPG'),
-(164, 'Ch‚teau Bouscaut pessac lÈognan 2011', 'Grand cru classÈ de graves.', NULL, NULL, NULL, NULL, '2018-07-06', 39.9, 0, NULL, NULL, 6, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Bouscaut0.JPG'),
-(165, 'Ch‚teau Des matards blanc', 'Blaye blanc\r\naccords:crustacÈs,fruits de mer et apÈritif.', NULL, NULL, NULL, NULL, '2018-07-06', 8.6, 0, NULL, NULL, 6, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-des-Matards1.JPG'),
+(163, ' Margaux les hauts du tertre 2012', 'Second vin du grand cru class√© chateau\r\ndu tertre\r\nc√©pages:cbernet sauvignon,merlot,cabernet franc,petit verdot', NULL, NULL, NULL, NULL, '2018-07-06', 32.5, 0, NULL, NULL, 4, 125, 3, NULL, 20, 0, 'uploads/produit/Les-hauts-du-Tertre0.JPG'),
+(164, 'Ch√¢teau Bouscaut pessac l√©ognan 2011', 'Grand cru class√© de graves.', NULL, NULL, NULL, NULL, '2018-07-06', 39.9, 0, NULL, NULL, 6, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Bouscaut0.JPG'),
+(165, 'Ch√¢teau Des matards blanc', 'Blaye blanc\r\naccords:crustac√©s,fruits de mer et ap√©ritif.', NULL, NULL, NULL, NULL, '2018-07-06', 8.6, 0, NULL, NULL, 6, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-des-Matards1.JPG'),
 (166, 'Sauternes Castelnau', 'Accords:salade de fruits,foie gras.', NULL, NULL, NULL, NULL, '2018-07-06', 24.5, 0, NULL, NULL, 0, 125, 3, NULL, 20, 0, 'uploads/produit/Castelnau0.JPG'),
-(167, ' st estephe ch‚teau clauzet - magnum', '55% cabernet sauvignon, 40% merlot,\r\n5% cabernet franc et petit verdot.', NULL, NULL, NULL, NULL, '2018-07-06', 41, 0, NULL, NULL, 0, 250, 3, NULL, 20, 0, 'uploads/produit/Chateau-Clauzet1.JPG'),
-(168, ' Graves ch‚teau haut selve', '', NULL, NULL, NULL, NULL, '2018-07-06', 33, 0, NULL, NULL, 0, 250, 3, NULL, 20, 0, 'uploads/produit/none_blmmVyD.JPG'),
-(169, ' castillon ch‚teau saint-GenËs 2015', 'Servir ‡ 16 degrÈs .\r\naccords:apÈritif,charcuterie.', NULL, NULL, NULL, NULL, '2018-07-06', 9.9, 0, NULL, NULL, 0, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Saint-Genes0.JPG'),
-(170, 'St Emilion ch‚teau franc cantenac 2014', 'Accord:viande en sauce.', NULL, NULL, NULL, NULL, '2018-07-06', 17.7, 0, NULL, NULL, 18, 125, 3, NULL, 20, 0, 'uploads/produit/none_e6OzBf2.JPG'),
-(171, ' Fitou l\'impusilf', 'CÈpages syrah carignan grenache, ‡\r\ncarafer 1 ‡ 2 heures avant consommation\r\naccords gibier,chocolat noir,cassoulets', NULL, NULL, NULL, NULL, '2018-07-06', 8.4, 0, NULL, NULL, 0, 125, 3, NULL, 26, 0, 'uploads/produit/Limpusilf0.JPG'),
-(172, ' Fitou partage 2014', 'CÈpages:syrah, carignan, grenache noir.\r\ns\"accorde parfaitement avec le:gibier, le cassoulet et le chocolat noir.', NULL, NULL, NULL, NULL, '2018-07-06', 10.5, 0, NULL, NULL, 4, 125, 3, NULL, 26, 0, 'uploads/produit/Partage0.JPG'),
-(173, ' CÙteaux du languedoc la tour penedesses 2013', 'Issu de la culture biologique', NULL, NULL, NULL, NULL, '2018-07-06', 8.9, 0, NULL, NULL, 6, 125, 3, NULL, 26, 0, 'uploads/produit/Domaine-La-tour-Penedesses0.JPG'),
-(174, 'Domaine La tour penedesses faugËres 2014', 'Issu de la culture biologique\r\nrÈcolte manuelle', NULL, NULL, NULL, NULL, '2018-07-06', 10.9, 0, NULL, NULL, 8, 125, 3, NULL, 26, 0, 'uploads/produit/Domaine-La-tour-Penedesses-Faugeres0.JPG'),
-(175, 'Chateau Haut glÈon corbiËres 2012', 'CÈpages :grenache 60%, syrah 25% , carignan 15%.\r\naccords: pot au feu, gibiers.', NULL, NULL, NULL, NULL, '2018-07-06', 14, 0, NULL, NULL, 10, 125, 3, NULL, 26, 0, 'uploads/produit/Chateau-Haut-Gleon-Corbieres0.JPG'),
+(167, ' st estephe ch√¢teau clauzet - magnum', '55% cabernet sauvignon, 40% merlot,\r\n5% cabernet franc et petit verdot.', NULL, NULL, NULL, NULL, '2018-07-06', 41, 0, NULL, NULL, 0, 250, 3, NULL, 20, 0, 'uploads/produit/Chateau-Clauzet1.JPG'),
+(168, ' Graves ch√¢teau haut selve', '', NULL, NULL, NULL, NULL, '2018-07-06', 33, 0, NULL, NULL, 0, 250, 3, NULL, 20, 0, 'uploads/produit/none_blmmVyD.JPG'),
+(169, ' castillon ch√¢teau saint-Gen√®s 2015', 'Servir √† 16 degr√©s .\r\naccords:ap√©ritif,charcuterie.', NULL, NULL, NULL, NULL, '2018-07-06', 9.9, 0, NULL, NULL, 0, 125, 3, NULL, 20, 0, 'uploads/produit/Chateau-Saint-Genes0.JPG'),
+(170, 'St Emilion ch√¢teau franc cantenac 2014', 'Accord:viande en sauce.', NULL, NULL, NULL, NULL, '2018-07-06', 17.7, 0, NULL, NULL, 18, 125, 3, NULL, 20, 0, 'uploads/produit/none_e6OzBf2.JPG'),
+(171, ' Fitou l\'impusilf', 'C√©pages syrah carignan grenache, √†\r\ncarafer 1 √† 2 heures avant consommation\r\naccords gibier,chocolat noir,cassoulets', NULL, NULL, NULL, NULL, '2018-07-06', 8.4, 0, NULL, NULL, 0, 125, 3, NULL, 26, 0, 'uploads/produit/Limpusilf0.JPG'),
+(172, ' Fitou partage 2014', 'C√©pages:syrah, carignan, grenache noir.\r\ns\"accorde parfaitement avec le:gibier, le cassoulet et le chocolat noir.', NULL, NULL, NULL, NULL, '2018-07-06', 10.5, 0, NULL, NULL, 4, 125, 3, NULL, 26, 0, 'uploads/produit/Partage0.JPG'),
+(173, ' C√¥teaux du languedoc la tour penedesses 2013', 'Issu de la culture biologique', NULL, NULL, NULL, NULL, '2018-07-06', 8.9, 0, NULL, NULL, 6, 125, 3, NULL, 26, 0, 'uploads/produit/Domaine-La-tour-Penedesses0.JPG'),
+(174, 'Domaine La tour penedesses faug√®res 2014', 'Issu de la culture biologique\r\nr√©colte manuelle', NULL, NULL, NULL, NULL, '2018-07-06', 10.9, 0, NULL, NULL, 8, 125, 3, NULL, 26, 0, 'uploads/produit/Domaine-La-tour-Penedesses-Faugeres0.JPG'),
+(175, 'Chateau Haut gl√©on corbi√®res 2012', 'C√©pages :grenache 60%, syrah 25% , carignan 15%.\r\naccords: pot au feu, gibiers.', NULL, NULL, NULL, NULL, '2018-07-06', 14, 0, NULL, NULL, 10, 125, 3, NULL, 26, 0, 'uploads/produit/Chateau-Haut-Gleon-Corbieres0.JPG'),
 (176, 'Corbieres Haut gleon', '', NULL, NULL, NULL, NULL, '2018-07-06', 9.5, 0, NULL, NULL, 0, 125, 3, NULL, 26, 0, 'uploads/produit/none_dLVAOjr.JPG'),
 (177, 'Domaine Des maels minervois', 'Issu de la culture biologique', NULL, NULL, NULL, NULL, '2018-07-06', 8.5, 0, NULL, NULL, 6, 125, 3, NULL, 26, 0, 'uploads/produit/none_geg01Lj.JPG'),
 (178, 'St Chinian tradition rouge 2014 ', '', NULL, NULL, NULL, NULL, '2018-07-06', 7.1, 0, NULL, NULL, 2, 125, 3, NULL, 26, 0, 'uploads/produit/Domaine-La-croix-Sainte-Eulalie0.JPG'),
 (179, 'St Chinian armandelis 2013', 'Accod : viande rouge', NULL, NULL, NULL, NULL, '2018-07-06', 11, 0, NULL, NULL, 3, 125, 3, NULL, 26, 0, 'uploads/produit/Domaine-La-cr0.JPG'),
 (180, 'St Chinian tradition blanc  domaine la croix sainte eulalie', 'Accords:poisson ,aperitif', NULL, NULL, NULL, NULL, '2018-07-06', 6.5, 0, NULL, NULL, 6, 125, 3, NULL, 26, 0, 'uploads/produit/Domaine-La-croix-Sainte-Eulalie1.JPG'),
-(181, 'Domaine la croix sainte eulalie saint-Chinian rose', 'Accord :charcuterie,apÈritif,barbecue,salade', NULL, NULL, NULL, NULL, '2018-07-06', 7.1, 0, NULL, NULL, 6, 125, 3, NULL, 26, 0, 'uploads/produit/Domaine-La-croix-Sainte-Eulalie-Saint-Chinian0.JPG'),
+(181, 'Domaine la croix sainte eulalie saint-Chinian rose', 'Accord :charcuterie,ap√©ritif,barbecue,salade', NULL, NULL, NULL, NULL, '2018-07-06', 7.1, 0, NULL, NULL, 6, 125, 3, NULL, 26, 0, 'uploads/produit/Domaine-La-croix-Sainte-Eulalie-Saint-Chinian0.JPG'),
 (182, 'Languedoc Reserve chateau d\'assas 2011', 'Accord :viande rouge ,gibiers', NULL, NULL, NULL, NULL, '2018-07-06', 9.3, 0, NULL, NULL, 3, 125, 3, NULL, 26, 0, 'uploads/produit/Gres-De-Monpellier-Chateau-dAssas0.JPG'),
 (183, 'Chardonnay Rouquet\'s', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.3, 0, NULL, NULL, 1, 125, 3, NULL, 26, 0, 'uploads/produit/Chardonnay-Rouquets0.JPG'),
 (184, 'Viognier Rouquet\'s', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.3, 0, NULL, NULL, 0, 125, 3, NULL, 26, 0, 'uploads/produit/Viognier-Rouquets0.JPG'),
 (185, 'Mas Belles eaux blanc', 'Accord :poisson ', NULL, NULL, NULL, NULL, '2018-07-06', 9.9, 0, NULL, NULL, 0, 125, 3, NULL, 26, 0, 'uploads/produit/Mas-Belles-Eaux0.JPG'),
-(186, 'RosÈ Ch‚teau belles eaux', 'Accords :tapas, plats ÈpicÈs.', NULL, NULL, NULL, NULL, '2018-07-06', 9.2, 0, NULL, NULL, 0, 125, 3, NULL, 26, 0, 'uploads/produit/Chateau-Belles-Eaux-0.JPG'),
+(186, 'Ros√© Ch√¢teau belles eaux', 'Accords :tapas, plats √©pic√©s.', NULL, NULL, NULL, NULL, '2018-07-06', 9.2, 0, NULL, NULL, 0, 125, 3, NULL, 26, 0, 'uploads/produit/Chateau-Belles-Eaux-0.JPG'),
 (187, 'Chinon Couly dutheil  2013', 'Accords: barbecue ,volailles.', NULL, NULL, NULL, NULL, '2018-07-06', 9.7, 0, NULL, NULL, 2, 125, 3, NULL, 27, 0, 'uploads/produit/Chinion0.JPG'),
 (188, 'Reuilly Rose', '', NULL, NULL, NULL, NULL, '2018-07-06', 9.1, 0, NULL, NULL, 0, 125, 3, NULL, 27, 0, 'uploads/produit/Reuilly-0.JPG'),
-(189, 'Quincy Tradition', 'Accords:viande blanche ,poisson,apÈritif', NULL, NULL, NULL, NULL, '2018-07-06', 8.9, 0, NULL, NULL, 6, 125, 3, NULL, 27, 0, 'uploads/produit/Quincy0.JPG'),
+(189, 'Quincy Tradition', 'Accords:viande blanche ,poisson,ap√©ritif', NULL, NULL, NULL, NULL, '2018-07-06', 8.9, 0, NULL, NULL, 6, 125, 3, NULL, 27, 0, 'uploads/produit/Quincy0.JPG'),
 (190, 'Domaines Des forges sauvignon', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.95, 0, NULL, NULL, 4, 125, 3, NULL, 27, 0, 'uploads/produit/Domaines-des-Forges-Sauvignon0.JPG'),
 (191, 'Domaines Des forges chardonnay', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.95, 0, NULL, NULL, 12, 125, 3, NULL, 27, 0, 'uploads/produit/Domaines-des-Forges-Chardonnay0.JPG'),
-(192, ' Anjou blanc domaines des forges l\'audace', 'Vin blanc sec 100% chenin,\r\n‡ carafer 2 h avant consommation', NULL, NULL, NULL, NULL, '2018-07-06', 7.95, 0, NULL, NULL, 6, 125, 3, 5, 27, 0, 'uploads/produit/Domaines-des-Forges-Laudace0.JPG'),
-(193, ' Savennieres le moulin du guÈ du domaine des forges', '100% chenin.\r\nvendanges manuelles.\r\na carafer et servir ‡ 10-12 degrÈs.\r\nmerveilleux compagnon des poissons en sauce.', NULL, NULL, NULL, NULL, '2018-07-06', 11.6, 0, NULL, NULL, 6, 125, 3, NULL, 27, 0, 'uploads/produit/Le-Moulin-du-gue-du-domaine-des-forges0.JPG'),
-(194, 'Anjou 3c du domaines des forges 2015', 'CÈpages: 60% cabernet sauvignon, 40% cabernet franc.\r\nvendanges manuelles\r\nnotes ÈpicÈes.', NULL, NULL, NULL, NULL, '2018-07-06', 9.9, 0, NULL, NULL, 3, 125, 3, NULL, 27, 0, 'uploads/produit/Les-3C-du-domaines-des-Forges0.JPG'),
-(195, 'RosÈ DÈlice d\'ÈtÈ  cabernet d\'anjou', '', NULL, NULL, NULL, NULL, '2018-07-06', 6.7, 0, NULL, NULL, 0, 125, 3, NULL, 27, 0, 'uploads/produit/Delice-dete0.JPG'),
-(197, 'CÙteaux Du layon passavant bio', 'Issu de la culture biologique\r\ncÈpage chenin\r\naccords:apÈritif, foie gras, fromages bleus.', NULL, NULL, NULL, NULL, '2018-07-06', 14.5, 0, NULL, NULL, 18, 125, 3, NULL, 27, 0, 'uploads/produit/Chateau-de-Passavant0.JPG'),
+(192, ' Anjou blanc domaines des forges l\'audace', 'Vin blanc sec 100% chenin,\r\n√† carafer 2 h avant consommation', NULL, NULL, NULL, NULL, '2018-07-06', 7.95, 0, NULL, NULL, 6, 125, 3, 5, 27, 0, 'uploads/produit/Domaines-des-Forges-Laudace0.JPG'),
+(193, ' Savennieres le moulin du gu√© du domaine des forges', '100% chenin.\r\nvendanges manuelles.\r\na carafer et servir √† 10-12 degr√©s.\r\nmerveilleux compagnon des poissons en sauce.', NULL, NULL, NULL, NULL, '2018-07-06', 11.6, 0, NULL, NULL, 6, 125, 3, NULL, 27, 0, 'uploads/produit/Le-Moulin-du-gue-du-domaine-des-forges0.JPG'),
+(194, 'Anjou 3c du domaines des forges 2015', 'C√©pages: 60% cabernet sauvignon, 40% cabernet franc.\r\nvendanges manuelles\r\nnotes √©pic√©es.', NULL, NULL, NULL, NULL, '2018-07-06', 9.9, 0, NULL, NULL, 3, 125, 3, NULL, 27, 0, 'uploads/produit/Les-3C-du-domaines-des-Forges0.JPG'),
+(195, 'Ros√© D√©lice d\'√©t√©  cabernet d\'anjou', '', NULL, NULL, NULL, NULL, '2018-07-06', 6.7, 0, NULL, NULL, 0, 125, 3, NULL, 27, 0, 'uploads/produit/Delice-dete0.JPG'),
+(197, 'C√¥teaux Du layon passavant bio', 'Issu de la culture biologique\r\nc√©page chenin\r\naccords:ap√©ritif, foie gras, fromages bleus.', NULL, NULL, NULL, NULL, '2018-07-06', 14.5, 0, NULL, NULL, 18, 125, 3, NULL, 27, 0, 'uploads/produit/Chateau-de-Passavant0.JPG'),
 (198, 'Saumur Champigny domaine des sanzay', '', NULL, NULL, NULL, NULL, '2018-07-06', 8.5, 0, NULL, NULL, 2, 125, 3, NULL, 27, 0, 'uploads/produit/Saumur-Champigny-domaine-des-sanzay1.JPG'),
-(199, ' CÙtes du rhÙne rÈserve grand veneur 2016', 'Une vÈritable expression du terroir d\'origine', NULL, NULL, NULL, NULL, '2018-07-06', 8.8, 0, NULL, NULL, 18, 125, 3, NULL, 28, 0, 'uploads/produit/Reserve-Grand-Veneur0.JPG'),
-(200, 'CÙtes Du rhÙne champauvins 2015', 'Issu de la culture biologique\r\nbien que classÈe cÙtes du rhÙne, cette cuvÈe est souvent comparÈe aux grands vins de la rÈgion.\r\n', NULL, NULL, NULL, NULL, '2018-07-06', 12, 0, NULL, NULL, 18, 125, 3, NULL, 28, 0, 'uploads/produit/Domaine-Grand-Veneur-Les-Champauvins0.JPG'),
+(199, ' C√¥tes du rh√¥ne r√©serve grand veneur 2016', 'Une v√©ritable expression du terroir d\'origine', NULL, NULL, NULL, NULL, '2018-07-06', 8.8, 0, NULL, NULL, 18, 125, 3, NULL, 28, 0, 'uploads/produit/Reserve-Grand-Veneur0.JPG'),
+(200, 'C√¥tes Du rh√¥ne champauvins 2015', 'Issu de la culture biologique\r\nbien que class√©e c√¥tes du rh√¥ne, cette cuv√©e est souvent compar√©e aux grands vins de la r√©gion.\r\n', NULL, NULL, NULL, NULL, '2018-07-06', 12, 0, NULL, NULL, 18, 125, 3, NULL, 28, 0, 'uploads/produit/Domaine-Grand-Veneur-Les-Champauvins0.JPG'),
 (201, 'Lirac Roquedon 2013', '', NULL, NULL, NULL, NULL, '2018-07-06', 12, 0, NULL, NULL, 6, 125, 3, NULL, 28, 0, 'uploads/produit/Roquedon-Lirac0.JPG'),
 (202, 'Vacqueyras Grande garrigue 2015', 'Accord: viande rouge,gibiers', NULL, NULL, NULL, NULL, '2018-07-06', 15.2, 0, NULL, NULL, 18, 125, 3, NULL, 28, 0, 'uploads/produit/Grande-Garrigue0.JPG'),
 (203, 'Terrasses De montmirail gigondas', '', NULL, NULL, NULL, NULL, '2018-07-06', 18.8, 0, NULL, NULL, 12, 125, 3, NULL, 28, 0, 'uploads/produit/Terrasses-de-Montmirail-Gigondas0.JPG'),
-(204, 'Domaine Grand veneur blanc de viognier', 'Issu de la culture biologique\r\naccord:poisson en sauce,apÈritif', NULL, NULL, NULL, NULL, '2018-07-06', 13.3, 0, NULL, NULL, 6, 125, 3, NULL, 28, 0, 'uploads/produit/Domaine-Grand-Veneur-Blanc-de-Viognier0.JPG'),
-(205, 'RosÈ Cotes du rhÙne ', 'Issu de la culture biologique', NULL, NULL, NULL, NULL, '2018-07-06', 8.8, 0, NULL, NULL, 2, 125, 3, NULL, 28, 0, 'uploads/produit/none_u7yihKt.JPG'),
-(206, 'Le CrÈtacÈ tavel', 'Accords:tajine agneau,coscous,', NULL, NULL, NULL, NULL, '2018-07-06', 12, 0, NULL, NULL, 6, 125, 3, NULL, 28, 0, 'uploads/produit/Le-cretace-Tavel0.JPG'),
+(204, 'Domaine Grand veneur blanc de viognier', 'Issu de la culture biologique\r\naccord:poisson en sauce,ap√©ritif', NULL, NULL, NULL, NULL, '2018-07-06', 13.3, 0, NULL, NULL, 6, 125, 3, NULL, 28, 0, 'uploads/produit/Domaine-Grand-Veneur-Blanc-de-Viognier0.JPG'),
+(205, 'Ros√© Cotes du rh√¥ne ', 'Issu de la culture biologique', NULL, NULL, NULL, NULL, '2018-07-06', 8.8, 0, NULL, NULL, 2, 125, 3, NULL, 28, 0, 'uploads/produit/none_u7yihKt.JPG'),
+(206, 'Le Cr√©tac√© tavel', 'Accords:tajine agneau,coscous,', NULL, NULL, NULL, NULL, '2018-07-06', 12, 0, NULL, NULL, 6, 125, 3, NULL, 28, 0, 'uploads/produit/Le-cretace-Tavel0.JPG'),
 (207, 'Chateuneuf Du pape mont redon 2009', 'Accords :viandes rouges, cassoulets.', NULL, NULL, NULL, NULL, '2018-07-06', 33, 0, NULL, NULL, 12, 125, 3, NULL, 28, 0, 'uploads/produit/Chateau-Mont-Redon0.JPG'),
 (208, 'Cotes Du rhone mont redon ', '', NULL, NULL, NULL, NULL, '2018-07-06', 10.4, 0, NULL, NULL, 0, 125, 3, NULL, 28, 0, 'uploads/produit/Chateau-Mont-Redon1.JPG'),
-(209, ' Chateauneuf du pape 2012', 'Domaine mathieu 2012\r\nrobe rubis , notes de fruits noirs et d\'Èpices,\r\nouvrir 2 ‡ 3 heures avant consommation, \r\nservir ‡ 18 degrÈs', NULL, NULL, NULL, NULL, '2018-07-06', 25, 0, NULL, NULL, 5, 125, 3, NULL, 28, 0, 'uploads/produit/Domaine-Mathieu-Chateauneuf-du-pape0.JPG'),
+(209, ' Chateauneuf du pape 2012', 'Domaine mathieu 2012\r\nrobe rubis , notes de fruits noirs et d\'√©pices,\r\nouvrir 2 √† 3 heures avant consommation, \r\nservir √† 18 degr√©s', NULL, NULL, NULL, NULL, '2018-07-06', 25, 0, NULL, NULL, 5, 125, 3, NULL, 28, 0, 'uploads/produit/Domaine-Mathieu-Chateauneuf-du-pape0.JPG'),
 (210, 'Crozes-Hermitage ', '', NULL, NULL, NULL, NULL, '2018-07-06', 20, 0, NULL, NULL, 0, 125, 3, NULL, 28, 0, 'uploads/produit/Crozes-Hermitage-0.JPG'),
 (211, 'Mini Madeleine citron', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.95, 0, NULL, NULL, 0, 26, 7, 6, 30, 1, 'uploads/produit/Mini-Madeleine-Citron0.JPG'),
 (212, 'Cookie', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.95, 0, NULL, NULL, 0, 22, 7, 7, 30, 1, 'uploads/produit/Cookie0.JPG'),
 (213, 'Meringues', '', NULL, NULL, NULL, NULL, '2018-07-06', 2.95, 0, NULL, NULL, 0, 10600, 7, 7, 30, 1, 'uploads/produit/Meringues0.JPG'),
 (214, 'Croquants Pommes caramel amandes', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.95, 0, NULL, NULL, 0, 11, 7, NULL, 30, 1, 'uploads/produit/Croquants-Pommes-Caramel-Amandes0.JPG'),
-(215, 'Croquants PÈpites de chocolat et Ècorces d\'orange', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.95, 0, NULL, NULL, 0, 12, 7, NULL, 30, 1, 'uploads/produit/Croquants-Pepites-de-chocolat-et-ecorces-dorange0.JPG'),
+(215, 'Croquants P√©pites de chocolat et √©corces d\'orange', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.95, 0, NULL, NULL, 0, 12, 7, NULL, 30, 1, 'uploads/produit/Croquants-Pepites-de-chocolat-et-ecorces-dorange0.JPG'),
 (216, 'Les Croquants caramel', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.95, 0, NULL, NULL, 0, 12, 7, NULL, 30, 1, 'uploads/produit/Les-croquants-Caramel0.JPG'),
-(217, 'Le Craquant au caramel salÈ', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.95, 0, NULL, NULL, 0, 12, 7, NULL, 30, 1, 'uploads/produit/Le-Craquant-au-Caramel-Sale0.JPG'),
+(217, 'Le Craquant au caramel sal√©', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.95, 0, NULL, NULL, 0, 12, 7, NULL, 30, 1, 'uploads/produit/Le-Craquant-au-Caramel-Sale0.JPG'),
 (218, 'Noisettes Aux trois chocolats', '', NULL, NULL, NULL, NULL, '2018-07-06', 12, 0, NULL, NULL, 0, 22, 7, NULL, 29, 1, 'uploads/produit/Noisettes-aux-trois-chocolats0.JPG'),
-(220, 'CarrÈs Chocolat noir', '', NULL, NULL, NULL, NULL, '2018-07-06', 5.2, 0, NULL, NULL, 0, 13, 7, NULL, 29, 1, 'uploads/produit/Carres-Chocolat-Noir0.JPG'),
+(220, 'Carr√©s Chocolat noir', '', NULL, NULL, NULL, NULL, '2018-07-06', 5.2, 0, NULL, NULL, 0, 13, 7, NULL, 29, 1, 'uploads/produit/Carres-Chocolat-Noir0.JPG'),
 (221, 'Tablette Chocolat lait', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.8, 0, NULL, NULL, 0, 90, 7, NULL, 29, 1, 'uploads/produit/Tablette-Chocolat-Lait0.JPG'),
 (222, 'Maxi Tablette', '', NULL, NULL, NULL, NULL, '2018-07-06', 12.5, 0, NULL, NULL, 0, 63, 7, NULL, 29, 1, 'uploads/produit/Maxi-Tablette0.JPG'),
 (223, 'Chocolat Au lait', '', NULL, NULL, NULL, NULL, '2018-07-06', 6.7, 0, NULL, NULL, 0, 29, 7, 8, 29, 1, 'uploads/produit/Chocolat-au-lait0.JPG'),
@@ -972,28 +972,28 @@ INSERT INTO `magasin_produit` (`id`, `nom`, `description`, `cepage`, `notes_degu
 (228, 'Palets Chocolat noir ', '', NULL, NULL, NULL, NULL, '2018-07-06', 5.5, 0, NULL, NULL, 0, 26, 7, NULL, 29, 1, 'uploads/produit/Palets-Chocolat-Noir-0.JPG'),
 (229, 'Tablette Chocolat noir 70%', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.3, 0, NULL, NULL, 0, 96, 7, NULL, 29, 1, 'uploads/produit/Tablette-Chocolat-Noir-700.JPG'),
 (230, 'Tablette Chocolat noir 74%', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.3, 0, NULL, NULL, 0, 88, 7, NULL, 29, 1, 'uploads/produit/Tablette-Chocolat-Noir-740.JPG'),
-(231, 'Confiture Framboise ‡ la violette', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.8, 0, NULL, NULL, 0, 27, 7, NULL, 31, 1, 'uploads/produit/Confiture-Framboise-a-la-violette0.JPG'),
+(231, 'Confiture Framboise √† la violette', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.8, 0, NULL, NULL, 0, 27, 7, NULL, 31, 1, 'uploads/produit/Confiture-Framboise-a-la-violette0.JPG'),
 (232, 'Confiture Fraise', '', NULL, NULL, NULL, NULL, '2018-07-06', 5.35, 0, NULL, NULL, 0, 55, 7, NULL, 31, 1, 'uploads/produit/Confiture-Fraise0.JPG'),
 (233, 'Confiture Fraise au coquelicot', '', NULL, NULL, NULL, NULL, '2018-07-06', 5.35, 0, NULL, NULL, 0, 55, 7, NULL, 31, 1, 'uploads/produit/Confiture-Fraise-au-Coquelicot0.JPG'),
 (234, 'Confiture Rhubarbe et cassis', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.8, 0, NULL, NULL, 0, 55, 7, NULL, 31, 1, 'uploads/produit/Confiture-Rhubarbe-et-Cassis0.JPG'),
-(236, 'Joli Mois de mai fraise, passion, fËve de tonka', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.8, 0, NULL, NULL, 0, 27, 7, NULL, 31, 1, 'uploads/produit/Joli-mois-de-Mai-fraise-passion-feve-de-tonka0.JPG'),
+(236, 'Joli Mois de mai fraise, passion, f√®ve de tonka', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.8, 0, NULL, NULL, 0, 27, 7, NULL, 31, 1, 'uploads/produit/Joli-mois-de-Mai-fraise-passion-feve-de-tonka0.JPG'),
 (237, '1,2,3 Soleil orange, citron, pomelos', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.8, 0, NULL, NULL, 0, 27, 7, NULL, 31, 1, 'uploads/produit/123-Soleil-Orange-Citron-Pomelos0.JPG'),
-(238, 'ClÈmentine De corse', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.8, 0, NULL, NULL, 0, 27, 7, NULL, 31, 1, 'uploads/produit/Clementine-de-Corse0.JPG'),
-(239, 'Automne Coing, pomme, poire, Èpices', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.8, 0, NULL, NULL, 0, 27, 7, NULL, 31, 1, 'uploads/produit/Automne-Coing-Pomme-Poire-epices0.JPG'),
+(238, 'Cl√©mentine De corse', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.8, 0, NULL, NULL, 0, 27, 7, NULL, 31, 1, 'uploads/produit/Clementine-de-Corse0.JPG'),
+(239, 'Automne Coing, pomme, poire, √©pices', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.8, 0, NULL, NULL, 0, 27, 7, NULL, 31, 1, 'uploads/produit/Automne-Coing-Pomme-Poire-epices0.JPG'),
 (240, 'Cerise Noire', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.8, 0, NULL, NULL, 0, 27, 7, NULL, 31, 1, 'uploads/produit/Cerise-Noire0.JPG'),
-(241, 'Il …tait une fois fraise, framboise, cerise, groseille', '', NULL, NULL, NULL, NULL, '2018-07-06', 5.35, 0, NULL, NULL, 0, 55, 7, NULL, 31, 1, 'uploads/produit/Il-etait-une-fois-fraise-framboise-cerise-groseille0.JPG'),
-(242, 'Miel De ch‚taignier', '', NULL, NULL, NULL, NULL, '2018-07-06', 6.4, 0, NULL, NULL, 0, 38, 7, NULL, 32, 1, 'uploads/produit/Miel-de-Chataignier0.JPG'),
+(241, 'Il √âtait une fois fraise, framboise, cerise, groseille', '', NULL, NULL, NULL, NULL, '2018-07-06', 5.35, 0, NULL, NULL, 0, 55, 7, NULL, 31, 1, 'uploads/produit/Il-etait-une-fois-fraise-framboise-cerise-groseille0.JPG'),
+(242, 'Miel De ch√¢taignier', '', NULL, NULL, NULL, NULL, '2018-07-06', 6.4, 0, NULL, NULL, 0, 38, 7, NULL, 32, 1, 'uploads/produit/Miel-de-Chataignier0.JPG'),
 (243, 'Miel De fleurs', '', NULL, NULL, NULL, NULL, '2018-07-06', 6.4, 0, NULL, NULL, 0, 40, 7, NULL, 32, 1, 'uploads/produit/Miel-de-Fleurs0.JPG'),
-(244, 'Miel De bruyËres erica', '', NULL, NULL, NULL, NULL, '2018-07-06', 7.1, 0, NULL, NULL, 0, 39, 7, NULL, 32, 1, 'uploads/produit/Miel-de-Bruyeres-Erica0.JPG'),
-(247, 'Miel De blÈ noir', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.85, 0, NULL, NULL, 0, 22, 7, NULL, 32, 1, 'uploads/produit/Miel-de-Ble-Noir0.JPG'),
+(244, 'Miel De bruy√®res erica', '', NULL, NULL, NULL, NULL, '2018-07-06', 7.1, 0, NULL, NULL, 0, 39, 7, NULL, 32, 1, 'uploads/produit/Miel-de-Bruyeres-Erica0.JPG'),
+(247, 'Miel De bl√© noir', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.85, 0, NULL, NULL, 0, 22, 7, NULL, 32, 1, 'uploads/produit/Miel-de-Ble-Noir0.JPG'),
 (248, 'Tagliatelle Nature', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.5, 0, NULL, NULL, 0, 22, 6, NULL, 33, 1, 'uploads/produit/Tagliatelle-Nature0.JPG'),
 (249, 'Fettucine Au piment d\'espelette', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.5, 0, NULL, NULL, 0, 23, 6, NULL, 33, 1, 'uploads/produit/Fettucine-au-piment-despelette0.JPG'),
 (250, 'Risone Nature', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.5, 0, NULL, NULL, 0, 31, 6, NULL, 33, 1, 'uploads/produit/Risone-nature0.JPG'),
 (251, 'Likenn Nature', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.5, 0, NULL, NULL, 0, 27, 6, NULL, 33, 1, 'uploads/produit/Likenn-Nature0.JPG'),
 (252, 'Rozenn Nature', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.5, 0, NULL, NULL, 0, 27, 6, NULL, 33, 1, 'uploads/produit/Rozenn-Nature0.JPG'),
 (253, 'Feltuccine Au sarrasin', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.5, 0, NULL, NULL, 0, 23, 6, NULL, 33, 1, 'uploads/produit/Feltuccine-au-Sarrasin0.JPG'),
-(254, 'Feltuccine Aux cÈpes', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.5, 0, NULL, NULL, 0, 23, 6, NULL, 33, 1, 'uploads/produit/Feltuccine-aux-cepes0.JPG'),
-(255, 'Feltuccine Au noir de sÈpia', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.5, 0, NULL, NULL, 0, 23, 6, NULL, 33, 1, 'uploads/produit/Feltuccine-au-noir-de-Sepia0.JPG'),
+(254, 'Feltuccine Aux c√©pes', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.5, 0, NULL, NULL, 0, 23, 6, NULL, 33, 1, 'uploads/produit/Feltuccine-aux-cepes0.JPG'),
+(255, 'Feltuccine Au noir de s√©pia', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.5, 0, NULL, NULL, 0, 23, 6, NULL, 33, 1, 'uploads/produit/Feltuccine-au-noir-de-Sepia0.JPG'),
 (256, 'Likenn Aux 5 saveurs', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.5, 0, NULL, NULL, 0, 26, 6, NULL, 33, 1, 'uploads/produit/Likenn-aux-5-saveurs0.JPG'),
 (257, 'Rillettes De hareng fume aux tomates confites', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.75, 0, NULL, NULL, 0, 21, 6, NULL, 34, 1, 'uploads/produit/Rillettes-de-Hareng-Fume-aux-tomates-Confites0.JPG'),
 (258, 'Rillettes De st jacques aux algues', '', NULL, NULL, NULL, NULL, '2018-07-06', 5, 0, NULL, NULL, 0, 21, 6, NULL, 34, 1, 'uploads/produit/Rillettes-de-St-Jacques-aux-algues0.JPG'),
@@ -1005,76 +1005,76 @@ INSERT INTO `magasin_produit` (`id`, `nom`, `description`, `cepage`, `notes_degu
 (264, 'Soupe 3 poissons aux algues', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.2, 0, NULL, NULL, 0, 71, 6, NULL, 34, 1, 'uploads/produit/Soupe-3-poissons-aux-algues0.JPG'),
 (265, 'Bisque De langoustine aux algues', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.4, 0, NULL, NULL, 0, 70, 6, NULL, 34, 1, 'uploads/produit/Bisque-de-langoustine-aux-algues0.JPG'),
 (266, 'Salicornes En marinade', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.7, 0, NULL, NULL, 0, 31, 6, NULL, 34, 1, 'uploads/produit/Salicornes-en-marinade0.JPG'),
-(267, 'Saveurs D\'artichaut du lÈon', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.55, 0, NULL, NULL, 0, 21, 6, NULL, 34, 1, 'uploads/produit/Saveurs-dartichaut-du-leon0.JPG'),
+(267, 'Saveurs D\'artichaut du l√©on', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.55, 0, NULL, NULL, 0, 21, 6, NULL, 34, 1, 'uploads/produit/Saveurs-dartichaut-du-leon0.JPG'),
 (268, 'Saveurs de chou-Fleur a l\'andouille', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.35, 0, NULL, NULL, 0, 21, 6, NULL, 34, 1, 'uploads/produit/Saveurs-de-chou-fleur-a-landouille0.JPG'),
 (269, 'Saveurs De petit pois', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.35, 0, NULL, NULL, 0, 20, 6, NULL, 34, 1, 'uploads/produit/Saveurs-de-petit-pois0.JPG'),
-(270, 'Saveurs De potimarron du lÈon', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.35, 0, NULL, NULL, 0, 21, 6, NULL, 34, 1, 'uploads/produit/Saveurs-de-potimarron-du-Leon0.JPG'),
+(270, 'Saveurs De potimarron du l√©on', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.35, 0, NULL, NULL, 0, 21, 6, NULL, 34, 1, 'uploads/produit/Saveurs-de-potimarron-du-Leon0.JPG'),
 (271, 'Saveurs De tomates confites', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.85, 0, NULL, NULL, 0, 21, 6, NULL, 34, 1, 'uploads/produit/Saveurs-de-tomates-confites0.JPG'),
 (272, 'Rillettes De st jacques au lard', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.4, 0, NULL, NULL, 0, 21, 6, NULL, 34, 1, 'uploads/produit/Rillettes-de-St-Jacques-au-Lard0.JPG'),
 (273, 'Tartare D\'algues', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.5, 0, NULL, NULL, 0, 21, 6, NULL, 34, 1, 'uploads/produit/Tartare-dAlgues0.JPG'),
 (274, 'Rillettes De lotte aux agrumes', '', NULL, NULL, NULL, NULL, '2018-07-06', 5.5, 0, NULL, NULL, 0, 29, 6, NULL, 34, 1, 'uploads/produit/Rillettes-de-Lotte-aux-Agrumes0.JPG'),
-(277, 'Rillettes De maquereaux faÁon boucane', '', NULL, NULL, NULL, NULL, '2018-07-06', 0, 0, NULL, NULL, 0, 0, 6, NULL, 34, 1, 'uploads/produit/Rillettes-de-Maquereaux-facon-Boucane0.JPG'),
+(277, 'Rillettes De maquereaux fa√ßon boucane', '', NULL, NULL, NULL, NULL, '2018-07-06', 0, 0, NULL, NULL, 0, 0, 6, NULL, 34, 1, 'uploads/produit/Rillettes-de-Maquereaux-facon-Boucane0.JPG'),
 (278, 'Rillettes De sardines aux tomates confites', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.4, 0, NULL, NULL, 0, 21, 6, NULL, 34, 1, 'uploads/produit/Rillettes-de-sardines-aux-tomates-confites0.JPG'),
 (279, 'Cuisses De canard confites', '', NULL, NULL, NULL, NULL, '2018-07-06', 9.5, 0, NULL, NULL, 0, 123, 6, NULL, 35, 1, 'uploads/produit/Cuisses-de-canard-Confites0.JPG'),
 (280, 'Cassoulet Au confit de canard', '', NULL, NULL, NULL, NULL, '2018-07-06', 6.2, 0, NULL, NULL, 0, 82, 6, NULL, 35, 1, 'uploads/produit/Cassoulet-au-confit-de-canard0.JPG');
 INSERT INTO `magasin_produit` (`id`, `nom`, `description`, `cepage`, `notes_degustation`, `accords`, `temperature`, `date_ajout`, `prix`, `est_promo`, `debut_promo`, `fin_promo`, `stock`, `poid`, `categorie_id`, `marque_id`, `sous_categorie_id`, `type_id`, `photo`) VALUES
-(281, 'Foie Gras de canard entier ‡ la fleur de sel', '', NULL, NULL, NULL, NULL, '2018-07-06', 18.5, 0, NULL, NULL, 0, 51, 6, NULL, 35, 1, 'uploads/produit/Foie-gras-de-canard-entier-a-la-fleur-de-sel0.JPG'),
+(281, 'Foie Gras de canard entier √† la fleur de sel', '', NULL, NULL, NULL, NULL, '2018-07-06', 18.5, 0, NULL, NULL, 0, 51, 6, NULL, 35, 1, 'uploads/produit/Foie-gras-de-canard-entier-a-la-fleur-de-sel0.JPG'),
 (282, 'Bloc De foie gras de canard', '', NULL, NULL, NULL, NULL, '2018-07-06', 9.5, 0, NULL, NULL, 0, 24, 6, NULL, 35, 1, 'uploads/produit/Bloc-de-foie-gras-de-canard0.JPG'),
-(283, 'DÈlice De canard ', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.95, 0, NULL, NULL, 0, 27, 6, NULL, 35, 1, 'uploads/produit/Delice-de-canard-0.JPG'),
+(283, 'D√©lice De canard ', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.95, 0, NULL, NULL, 0, 27, 6, NULL, 35, 1, 'uploads/produit/Delice-de-canard-0.JPG'),
 (284, 'Terrine D\'oie aux fruits rouges', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.4, 0, NULL, NULL, 0, 34, 6, NULL, 35, 1, 'uploads/produit/Terrine-doie-aux-fruits-rouges0.JPG'),
 (285, 'Terrine De pintade aux girolles', '', NULL, NULL, NULL, NULL, '2018-07-06', 5.55, 0, NULL, NULL, 0, 34, 17, NULL, 50, 1, 'uploads/produit/Terrine-de-pintade-aux-girolles0.JPG'),
 (286, 'Rillettes De canard au foie gras', '', NULL, NULL, NULL, NULL, '2018-07-06', 5.9, 0, NULL, NULL, 0, 34, 6, NULL, 35, 1, 'uploads/produit/Rillettes-de-canard-au-foie-gras0.JPG'),
 (287, 'Rillettes D\'oie', '', NULL, NULL, NULL, NULL, '2018-07-06', 5.75, 0, NULL, NULL, 0, 34, 6, NULL, 35, 1, 'uploads/produit/Rillettes-doie0.JPG'),
-(288, 'PatÈ ¿ l\'andouille', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.95, 0, NULL, NULL, 0, 22, 6, NULL, 35, 1, 'uploads/produit/Pate-a-landouille0.JPG'),
+(288, 'Pat√© √Ä l\'andouille', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.95, 0, NULL, NULL, 0, 22, 6, NULL, 35, 1, 'uploads/produit/Pate-a-landouille0.JPG'),
 (289, 'Rillettes De porcs', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.9, 0, NULL, NULL, 0, 35, 6, NULL, 35, 1, 'uploads/produit/Rillettes-de-porcs0.JPG'),
-(290, 'Rillettes Au wakamÈ', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.95, 0, NULL, NULL, 0, 22, 6, NULL, 35, 1, 'uploads/produit/Rillettes-au-wakame0.JPG'),
+(290, 'Rillettes Au wakam√©', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.95, 0, NULL, NULL, 0, 22, 6, NULL, 35, 1, 'uploads/produit/Rillettes-au-wakame0.JPG'),
 (291, 'Rillettes Au cidre', '', NULL, NULL, NULL, NULL, '2018-07-06', 3.95, 0, NULL, NULL, 0, 22, 6, NULL, 35, 1, 'uploads/produit/Rillettes-au-cidre0.JPG'),
 (293, 'Rillettes Pur autruche au piment d\'espellette', '', NULL, NULL, NULL, NULL, '2018-07-06', 5, 0, NULL, NULL, 0, 21, 6, NULL, 35, 1, 'uploads/produit/Rillettes-pur-autruche0.JPG'),
 (294, 'Rillettes Pur autruche aux algues', '', NULL, NULL, NULL, NULL, '2018-07-06', 5, 0, NULL, NULL, 0, 21, 6, NULL, 35, 1, 'uploads/produit/Rillettes-pur-autruche-aux-algues0.JPG'),
 (295, 'Rillettes Pur autruche au pommeau de bretagne', '', NULL, NULL, NULL, NULL, '2018-07-06', 5, 0, NULL, NULL, 0, 21, 6, NULL, 35, 1, 'uploads/produit/Rillettes-pur-autruche-au-pommeau-de-Bretagne0.JPG'),
-(296, 'Rillettes De canard au magret fumÈ', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.25, 0, NULL, NULL, 0, 34, 6, NULL, 35, 1, 'uploads/produit/Rillettes-de-canard-au-magret-fume0.JPG'),
-(298, 'CrÈmant De loire', '', NULL, NULL, NULL, NULL, '2018-07-06', 8.8, 0, NULL, NULL, 6, 125, 2, NULL, 19, 0, 'uploads/produit/Cremant-de-Loire0.JPG'),
-(299, 'Whisky Flatnose Ècossais', 'Bouche :cÈrÈales,ÈpicÈ ', NULL, NULL, NULL, NULL, '2018-07-06', 33, 0, NULL, NULL, 1, 144, 1, NULL, 18, 0, 'uploads/produit/WHISKY-FLATNOSE0.JPG'),
+(296, 'Rillettes De canard au magret fum√©', '', NULL, NULL, NULL, NULL, '2018-07-06', 4.25, 0, NULL, NULL, 0, 34, 6, NULL, 35, 1, 'uploads/produit/Rillettes-de-canard-au-magret-fume0.JPG'),
+(298, 'Cr√©mant De loire', '', NULL, NULL, NULL, NULL, '2018-07-06', 8.8, 0, NULL, NULL, 6, 125, 2, NULL, 19, 0, 'uploads/produit/Cremant-de-Loire0.JPG'),
+(299, 'Whisky Flatnose √©cossais', 'Bouche :c√©r√©ales,√©pic√© ', NULL, NULL, NULL, NULL, '2018-07-06', 33, 0, NULL, NULL, 1, 144, 1, NULL, 18, 0, 'uploads/produit/WHISKY-FLATNOSE0.JPG'),
 (300, 'Rhum Naga', '', NULL, NULL, NULL, NULL, '2018-07-06', 39, 0, NULL, NULL, 0, 144, 17, NULL, 50, 0, 'uploads/produit/rhum-Naga0.JPG'),
 (301, 'Clairette De die', '', NULL, NULL, NULL, NULL, '2018-07-06', 8, 0, NULL, NULL, 6, 150, 2, NULL, 19, 0, 'uploads/produit/Clairette-De-die0.JPG'),
-(302, 'Fuji-Sanroku japonais', 'Whisky japonais 50 degres\r\nfuji-sanroku est une exclusivitÈ japonaise lancÈe en mars 2016. cette spÈcificitÈ lui apporte des aromes de fruits cuits.', NULL, NULL, NULL, NULL, '2018-07-06', 43, 0, NULL, NULL, 6, 145, 1, NULL, 18, 0, 'uploads/produit/Fuji-Sanroku-japonais0.JPG'),
-(303, 'Rhum Naga indonesie', 'En bouche:souple ,douce,ÈpicÈe.', NULL, NULL, NULL, NULL, '2018-07-06', 39, 0, NULL, NULL, 2, 145, 1, NULL, 13, 0, 'uploads/produit/Rhum-Naga-indonesie0.JPG'),
-(304, 'Domaine Rety 2015 l\'insolente roussillon 3 Ètoiles guide hachette 2018', 'Le domaine rety vient de recevoir 3 Ètoiles dans le nouveau guide hachette des vins 2018.le vin rouge primÈ est le cote du roussillon l\'insolente millÈsimÈ\r\n2015 qui a reÁu une note de 5 sur 5 soit \r\n3 Ètoiles vin exceptionnel .\r\naccords:viande blanche,viande rouge.\r\n\r\n\r\n', NULL, NULL, NULL, NULL, '2018-07-06', 13.9, 0, NULL, NULL, 12, 144, 3, NULL, 48, 0, 'uploads/produit/Domaine-Rety-2015-linsolente-Roussillon-3-etoiles-guide-hachette-20180.JPG'),
-(305, 'Reuilly Blanc', 'Accords:apÈritif,poisson ,crottin de chevre', NULL, NULL, NULL, NULL, '2018-07-06', 9.1, 0, NULL, NULL, 48, 144, 3, NULL, 27, 0, 'uploads/produit/Reuilly-Blanc0.JPG'),
+(302, 'Fuji-Sanroku japonais', 'Whisky japonais 50 degres\r\nfuji-sanroku est une exclusivit√© japonaise lanc√©e en mars 2016. cette sp√©cificit√© lui apporte des aromes de fruits cuits.', NULL, NULL, NULL, NULL, '2018-07-06', 43, 0, NULL, NULL, 6, 145, 1, NULL, 18, 0, 'uploads/produit/Fuji-Sanroku-japonais0.JPG'),
+(303, 'Rhum Naga indonesie', 'En bouche:souple ,douce,√©pic√©e.', NULL, NULL, NULL, NULL, '2018-07-06', 39, 0, NULL, NULL, 2, 145, 1, NULL, 13, 0, 'uploads/produit/Rhum-Naga-indonesie0.JPG'),
+(304, 'Domaine Rety 2015 l\'insolente roussillon 3 √©toiles guide hachette 2018', 'Le domaine rety vient de recevoir 3 √©toiles dans le nouveau guide hachette des vins 2018.le vin rouge prim√© est le cote du roussillon l\'insolente mill√©sim√©\r\n2015 qui a re√ßu une note de 5 sur 5 soit \r\n3 √©toiles vin exceptionnel .\r\naccords:viande blanche,viande rouge.\r\n\r\n\r\n', NULL, NULL, NULL, NULL, '2018-07-06', 13.9, 0, NULL, NULL, 12, 144, 3, NULL, 48, 0, 'uploads/produit/Domaine-Rety-2015-linsolente-Roussillon-3-etoiles-guide-hachette-20180.JPG'),
+(305, 'Reuilly Blanc', 'Accords:ap√©ritif,poisson ,crottin de chevre', NULL, NULL, NULL, NULL, '2018-07-06', 9.1, 0, NULL, NULL, 48, 144, 3, NULL, 27, 0, 'uploads/produit/Reuilly-Blanc0.JPG'),
 (306, ' Pauillac tour pibran 6 bouteilles 75cl dont 2 gratuites', '', NULL, NULL, NULL, NULL, '2018-07-06', 114, 0, NULL, NULL, 5, 870, 3, NULL, 20, 0, 'uploads/produit/none_vB3jk58.JPG'),
-(307, 'Rhum Coloma 8 ans', 'Rhum coloma 8 ans est un rhum de colombie ÈlaborÈ ‡ partir de jus de canne ‡ sucres deux variÈtÈs diffÈrentes.\r\npossÈdant des aromes vanillÈs et lÈgËrement orangÈ, on le compare au don papa.', NULL, NULL, NULL, NULL, '2018-07-06', 38, 0, NULL, NULL, 2, 144, 1, NULL, 13, 0, 'uploads/produit/Rhum-Coloma-8-Ans0.JPG'),
-(308, 'Bunnahabhain Toiteach', 'Son nom, qui signifie fumÈ en gaÈlique,Èvoque la tourbe, bien prÈsente qui n\'Ècrase en rien le caractËre fruitÈ de\r\nla distillerie bunnahabhain et l\'enrobÈ d\'une touche chocolatÈe.', NULL, NULL, NULL, NULL, '2018-07-06', 56, 0, NULL, NULL, 2, 144, 1, NULL, 18, 0, 'uploads/produit/Bunnahabhain-Toiteach0.JPG'),
-(309, 'Flatnose Blended malt', 'Le tout nouveau flatnose blended malt est assemblÈ ‡ partir de 100%de scotch single malt en provenance de chaque rÈgion de production,avec un accent sur\r\nceux provenant de l\'ile d\'islay,ainsi la tourbe est prÈsente de maniËre douce\r\nmais persistante et ÈquilibrÈ par des saveurs dÈlicates d\"e miel et citron confit.\r\n', NULL, NULL, NULL, NULL, '2018-07-06', 43, 0, NULL, NULL, 2, 144, 1, NULL, 18, 0, 'uploads/produit/Flatnose-Blended-Malt0.JPG'),
+(307, 'Rhum Coloma 8 ans', 'Rhum coloma 8 ans est un rhum de colombie √©labor√© √† partir de jus de canne √† sucres deux vari√©t√©s diff√©rentes.\r\nposs√©dant des aromes vanill√©s et l√©g√®rement orang√©, on le compare au don papa.', NULL, NULL, NULL, NULL, '2018-07-06', 38, 0, NULL, NULL, 2, 144, 1, NULL, 13, 0, 'uploads/produit/Rhum-Coloma-8-Ans0.JPG'),
+(308, 'Bunnahabhain Toiteach', 'Son nom, qui signifie fum√© en ga√©lique,√©voque la tourbe, bien pr√©sente qui n\'√©crase en rien le caract√®re fruit√© de\r\nla distillerie bunnahabhain et l\'enrob√© d\'une touche chocolat√©e.', NULL, NULL, NULL, NULL, '2018-07-06', 56, 0, NULL, NULL, 2, 144, 1, NULL, 18, 0, 'uploads/produit/Bunnahabhain-Toiteach0.JPG'),
+(309, 'Flatnose Blended malt', 'Le tout nouveau flatnose blended malt est assembl√© √† partir de 100%de scotch single malt en provenance de chaque r√©gion de production,avec un accent sur\r\nceux provenant de l\'ile d\'islay,ainsi la tourbe est pr√©sente de mani√®re douce\r\nmais persistante et √©quilibr√© par des saveurs d√©licates d\"e miel et citron confit.\r\n', NULL, NULL, NULL, NULL, '2018-07-06', 43, 0, NULL, NULL, 2, 144, 1, NULL, 18, 0, 'uploads/produit/Flatnose-Blended-Malt0.JPG'),
 (310, 'Rhum Centenario 20 ans', 'Bouche:des notes de fruits murs,de pommes,et de cerise.', NULL, NULL, NULL, NULL, '2018-07-06', 60, 0, NULL, NULL, 2, 144, 1, NULL, 13, 0, 'uploads/produit/RHUM-CENTENARIO-20-ANS0.JPG'),
 (311, 'Test', '', NULL, NULL, NULL, NULL, '2018-07-06', 5, 0, NULL, NULL, 5, 500, 1, NULL, 50, 1, 'uploads/produit/none_g4attXu.JPG'),
-(312, 'Magnum Domaine rety 2016 souffle d\'or', 'CÈpages:grenache,mourvËdre,syrah.\r\naccords mets et vin :viande rouge ,filet de boeuf.', NULL, NULL, NULL, NULL, '2018-07-06', 49.8, 0, NULL, NULL, 3, 370, 3, NULL, 48, 0, 'uploads/produit/Magnum-Domaine-RETY-2016-Souffle-DOr0.JPG'),
+(312, 'Magnum Domaine rety 2016 souffle d\'or', 'C√©pages:grenache,mourv√®dre,syrah.\r\naccords mets et vin :viande rouge ,filet de boeuf.', NULL, NULL, NULL, NULL, '2018-07-06', 49.8, 0, NULL, NULL, 3, 370, 3, NULL, 48, 0, 'uploads/produit/Magnum-Domaine-RETY-2016-Souffle-DOr0.JPG'),
 (313, '6 Bouteilles 75cl graves haut selve dont 2 offertes', '', NULL, NULL, NULL, NULL, '2018-07-06', 84, 0, NULL, NULL, 4, 950, 3, NULL, 20, 0, 'uploads/produit/6-bouteilles-75cl-Graves-Haut-Selve-dont-2-offertes0.JPG'),
 (314, '6 Bouteilles 75cl chinien bergeron savoie dont 2 offertes', '', NULL, NULL, NULL, NULL, '2018-07-06', 96, 0, NULL, NULL, 4, 960, 3, NULL, 6, 0, 'uploads/produit/6-bouteilles-75cl-Chinien-Bergeron-dont-2-offertes0.JPG'),
-(315, '6 Bouteilles 75cl fourcas hostein(listrac mÈdoc) dont 2 offertes', '', NULL, NULL, NULL, NULL, '2018-07-06', 126, 0, NULL, NULL, 3, 800, 3, NULL, 20, 0, 'uploads/produit/6-bouteilles-75cl-Fourcas-HosteinListrac-Medoc-dont-2-offertes0.JPG'),
-(316, '6 Bouteilles 75cl corbiËres haut glÈon dont 2 offertes', '', NULL, NULL, NULL, NULL, '2018-07-06', 84, 0, NULL, NULL, 2, 860, 3, NULL, 26, 0, 'uploads/produit/6-bouteilles-75cl-Corbieres-Haut-Gleon-dont-2-offertes0.JPG'),
-(317, 'Ventoux ', 'Accords: viande rouge,plat ÈpicÈ.', NULL, NULL, NULL, NULL, '2018-07-06', 7.7, 0, NULL, NULL, 18, 160, 3, NULL, 28, 0, 'uploads/produit/VENTOUX-0.JPG'),
+(315, '6 Bouteilles 75cl fourcas hostein(listrac m√©doc) dont 2 offertes', '', NULL, NULL, NULL, NULL, '2018-07-06', 126, 0, NULL, NULL, 3, 800, 3, NULL, 20, 0, 'uploads/produit/6-bouteilles-75cl-Fourcas-HosteinListrac-Medoc-dont-2-offertes0.JPG'),
+(316, '6 Bouteilles 75cl corbi√®res haut gl√©on dont 2 offertes', '', NULL, NULL, NULL, NULL, '2018-07-06', 84, 0, NULL, NULL, 2, 860, 3, NULL, 26, 0, 'uploads/produit/6-bouteilles-75cl-Corbieres-Haut-Gleon-dont-2-offertes0.JPG'),
+(317, 'Ventoux ', 'Accords: viande rouge,plat √©pic√©.', NULL, NULL, NULL, NULL, '2018-07-06', 7.7, 0, NULL, NULL, 18, 160, 3, NULL, 28, 0, 'uploads/produit/VENTOUX-0.JPG'),
 (318, 'Lirac rouge chateau mont-Redon', 'Accords:cote de boeuf ,cassoulet.', NULL, NULL, NULL, NULL, '2018-07-06', 17.8, 0, NULL, NULL, 2, 160, 3, NULL, 28, 0, 'uploads/produit/Lirac-rouge-Chateau-Mont-Redon0.JPG'),
-(319, 'Chateauneuf du pape blanc mont-Redon', 'Accords:poisson,viande blanche,chapon,apÈritif.', NULL, NULL, NULL, NULL, '2018-07-06', 31.6, 0, NULL, NULL, 5, 160, 3, NULL, 28, 0, 'uploads/produit/Chateauneuf-du-Pape-Blanc-Mont-Redon0.JPG'),
+(319, 'Chateauneuf du pape blanc mont-Redon', 'Accords:poisson,viande blanche,chapon,ap√©ritif.', NULL, NULL, NULL, NULL, '2018-07-06', 31.6, 0, NULL, NULL, 5, 160, 3, NULL, 28, 0, 'uploads/produit/Chateauneuf-du-Pape-Blanc-Mont-Redon0.JPG'),
 (320, 'Syrah 100% jean luc colombo', 'Accords:viande rouge.', NULL, NULL, NULL, NULL, '2018-07-06', 11, 0, NULL, NULL, 0, 160, 3, NULL, 28, 0, 'uploads/produit/Syrah-100-Jean-Luc-Colombo0.JPG'),
 (321, 'Cornas Jean luc colombo', 'Accords:viande rouge,magret de canard.', NULL, NULL, NULL, NULL, '2018-07-06', 48, 0, NULL, NULL, 5, 160, 3, NULL, 28, 0, 'uploads/produit/Cornas-Jean-Luc-Colombo0.JPG'),
 (322, 'Cote rotie jean-Luc colombo', 'Accords:viande rouge.', NULL, NULL, NULL, NULL, '2018-07-06', 55, 0, NULL, NULL, 4, 160, 3, NULL, 28, 0, 'uploads/produit/Cote-Rotie-Jean-Luc-Colombo0.JPG'),
 (323, 'Chateau La mijane', 'Accords:gibier,viande rouge,fromage bleu.', NULL, NULL, NULL, NULL, '2018-07-06', 9, 0, NULL, NULL, 10, 160, 3, NULL, 28, 0, 'uploads/produit/Chateau-La-Mijane0.JPG'),
-(325, 'Saint-Emilion grand cru classÈ 2015', '', NULL, NULL, NULL, NULL, '2018-07-06', 47.6, 0, NULL, NULL, 6, 160, 3, NULL, 20, 0, 'uploads/produit/SAINT-Emilion-Grand-Cru-Classe-20150.JPG'),
+(325, 'Saint-Emilion grand cru class√© 2015', '', NULL, NULL, NULL, NULL, '2018-07-06', 47.6, 0, NULL, NULL, 6, 160, 3, NULL, 20, 0, 'uploads/produit/SAINT-Emilion-Grand-Cru-Classe-20150.JPG'),
 (326, 'Pomerol Chateau la croix', '', NULL, NULL, NULL, NULL, '2018-07-06', 39.5, 0, NULL, NULL, 6, 160, 3, NULL, 20, 0, 'uploads/produit/Pomerol-Chateau-La-Croix0.JPG'),
 (327, 'Moulis Chateau mauvesin barton', '', NULL, NULL, NULL, NULL, '2018-07-06', 23, 0, NULL, NULL, 6, 160, 3, NULL, 20, 0, 'uploads/produit/Moulis-Chateau-Mauvesin-Barton0.JPG'),
-(328, 'Saint-VÈran chateau de beauregard', 'Accords:poisson grillÈe,apÈritif,poisson,\r\ncrustacÈs.', NULL, NULL, NULL, NULL, '2018-07-06', 19, 0, NULL, NULL, 12, 160, 3, NULL, 24, 0, 'uploads/produit/Saint-Veran-Chateau-de-Beauregard0.JPG'),
-(329, 'VirÈ-ClessÈ joseph burrier', 'Accords:apÈritif,poisson.', NULL, NULL, NULL, NULL, '2018-07-06', 20, 0, NULL, NULL, 6, 160, 3, NULL, 24, 0, 'uploads/produit/Vire-Clesse-Joseph-Burrier0.JPG'),
+(328, 'Saint-V√©ran chateau de beauregard', 'Accords:poisson grill√©e,ap√©ritif,poisson,\r\ncrustac√©s.', NULL, NULL, NULL, NULL, '2018-07-06', 19, 0, NULL, NULL, 12, 160, 3, NULL, 24, 0, 'uploads/produit/Saint-Veran-Chateau-de-Beauregard0.JPG'),
+(329, 'Vir√©-Cless√© joseph burrier', 'Accords:ap√©ritif,poisson.', NULL, NULL, NULL, NULL, '2018-07-06', 20, 0, NULL, NULL, 6, 160, 3, NULL, 24, 0, 'uploads/produit/Vire-Clesse-Joseph-Burrier0.JPG'),
 (330, 'Chinon Rouge bernard baudry', 'Accords:bar,lotte,viande en sauce.', NULL, NULL, NULL, NULL, '2018-07-06', 13.4, 0, NULL, NULL, 0, 160, 3, NULL, 27, 0, 'uploads/produit/Chinon-rouge-Bernard-Baudry0.JPG'),
-(331, 'Chinon Blanc bernard baudry', 'Accords:poisson ,apÈritif.', NULL, NULL, NULL, NULL, '2018-07-06', 15, 0, NULL, NULL, 6, 160, 3, NULL, 27, 0, 'uploads/produit/Chinon-Blanc-Bernard-Baudry0.JPG'),
+(331, 'Chinon Blanc bernard baudry', 'Accords:poisson ,ap√©ritif.', NULL, NULL, NULL, NULL, '2018-07-06', 15, 0, NULL, NULL, 6, 160, 3, NULL, 27, 0, 'uploads/produit/Chinon-Blanc-Bernard-Baudry0.JPG'),
 (332, 'Fixin Rouge', 'Accord:gigot d\'agneau.', NULL, NULL, NULL, NULL, '2018-07-06', 26.8, 0, NULL, NULL, 4, 160, 3, NULL, 24, 0, 'uploads/produit/FIXIN-ROUGE0.JPG'),
-(333, 'Roussanne Blanc', 'Accords:apÈritif,poisson;viande blanche.', NULL, NULL, NULL, NULL, '2018-07-06', 7.5, 0, NULL, NULL, 6, 160, 3, NULL, 50, 0, 'uploads/produit/Roussanne-blanc0.JPG'),
-(335, 'Minervois Rouge le clos du pech lauriÈ', 'Accords:tajines,viandes d\'agneau,canard. ', NULL, NULL, NULL, NULL, '2018-07-06', 16.9, 0, NULL, NULL, 6, 160, 3, NULL, 49, 0, 'uploads/produit/Minervois-rouge-Le-Clos-du-Pech-Laurie0.JPG'),
+(333, 'Roussanne Blanc', 'Accords:ap√©ritif,poisson;viande blanche.', NULL, NULL, NULL, NULL, '2018-07-06', 7.5, 0, NULL, NULL, 6, 160, 3, NULL, 50, 0, 'uploads/produit/Roussanne-blanc0.JPG'),
+(335, 'Minervois Rouge le clos du pech lauri√©', 'Accords:tajines,viandes d\'agneau,canard. ', NULL, NULL, NULL, NULL, '2018-07-06', 16.9, 0, NULL, NULL, 6, 160, 3, NULL, 49, 0, 'uploads/produit/Minervois-rouge-Le-Clos-du-Pech-Laurie0.JPG'),
 (336, 'Minervois Rouge domaine des maels', 'Accords:grillades,cassoulet,fromages.', NULL, NULL, NULL, NULL, '2018-07-06', 8.5, 0, NULL, NULL, 0, 160, 3, NULL, 49, 0, 'uploads/produit/Minervois-rouge-Domaine-des-Maels0.JPG'),
 (337, 'Domaine Rety souffle d\'or', 'Accords:viande rouge.', NULL, NULL, NULL, NULL, '2018-07-06', 16.9, 0, NULL, NULL, 6, 160, 3, NULL, 48, 0, 'uploads/produit/Domaine-Rety-Souffle-Dor0.JPG'),
-(338, 'Legacy Roussillon blanc', 'Accords:huitres,apÈritif.', NULL, NULL, NULL, NULL, '2018-07-06', 13.8, 0, NULL, NULL, 2, 160, 3, NULL, 48, 0, 'uploads/produit/Legacy-Roussillon-blanc0.JPG'),
+(338, 'Legacy Roussillon blanc', 'Accords:huitres,ap√©ritif.', NULL, NULL, NULL, NULL, '2018-07-06', 13.8, 0, NULL, NULL, 2, 160, 3, NULL, 48, 0, 'uploads/produit/Legacy-Roussillon-blanc0.JPG'),
 (339, 'Champagne Jacquesson', '', NULL, NULL, NULL, NULL, '2018-07-06', 45, 0, NULL, NULL, 6, 170, 2, 9, 23, 0, 'uploads/produit/Champagne-Jacquesson0.JPG'),
-(340, 'Writers Tears', 'Des notes ÈpicÈs.', NULL, NULL, NULL, NULL, '2018-07-06', 41, 0, NULL, NULL, 2, 160, 1, 10, 18, 0, 'uploads/produit/WRITERS-TEARS0.JPG'),
-(341, 'Coloma 15 ans', 'Vieilli pendant 15 ans dans des futs de chene amÈricains,puis 6mois en futs de chene de cafÈ.', NULL, NULL, NULL, NULL, '2018-07-06', 54, 0, NULL, NULL, 1, 160, 1, NULL, 18, 0, 'uploads/produit/none_mTePWvH.JPG'),
+(340, 'Writers Tears', 'Des notes √©pic√©s.', NULL, NULL, NULL, NULL, '2018-07-06', 41, 0, NULL, NULL, 2, 160, 1, 10, 18, 0, 'uploads/produit/WRITERS-TEARS0.JPG'),
+(341, 'Coloma 15 ans', 'Vieilli pendant 15 ans dans des futs de chene am√©ricains,puis 6mois en futs de chene de caf√©.', NULL, NULL, NULL, NULL, '2018-07-06', 54, 0, NULL, NULL, 1, 160, 1, NULL, 18, 0, 'uploads/produit/none_mTePWvH.JPG'),
 (342, 'Diplomatico Collection ', '', NULL, NULL, NULL, NULL, '2018-07-06', 59, 0, NULL, NULL, 2, 160, 1, NULL, 13, 0, 'uploads/produit/Diplomatico-collection-0.JPG');
 
 -- --------------------------------------------------------
@@ -1094,14 +1094,14 @@ CREATE TABLE IF NOT EXISTS `magasin_souscategorie` (
 ) ENGINE=MyISAM AUTO_INCREMENT=53 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `magasin_souscategorie`
+-- D√©chargement des donn√©es de la table `magasin_souscategorie`
 --
 
 INSERT INTO `magasin_souscategorie` (`id`, `nom`, `categorie_id`) VALUES
-(1, 'BiËre ambrÈe', 5),
-(2, 'BiËre blanche', 5),
-(3, 'BiËre blonde', 5),
-(4, 'BiËre brune', 5),
+(1, 'Bi√®re ambr√©e', 5),
+(2, 'Bi√®re blanche', 5),
+(3, 'Bi√®re blonde', 5),
+(4, 'Bi√®re brune', 5),
 (5, 'Beaujolais', 3),
 (6, 'Savoie', 3),
 (7, 'Gascogne', 3),
@@ -1109,7 +1109,7 @@ INSERT INTO `magasin_souscategorie` (`id`, `nom`, `categorie_id`) VALUES
 (9, 'Muscadet', 3),
 (10, 'Cognac', 1),
 (11, 'Jura', 3),
-(12, 'BiËre rousse', 5),
+(12, 'Bi√®re rousse', 5),
 (13, 'Rhum', 1),
 (14, 'Armagnac', 1),
 (15, 'Tequila', 1),
@@ -1124,12 +1124,12 @@ INSERT INTO `magasin_souscategorie` (`id`, `nom`, `categorie_id`) VALUES
 (25, 'Etrangers', 3),
 (26, 'Languedoc', 3),
 (27, 'Loire', 3),
-(28, 'RhÙne', 3),
+(28, 'Rh√¥ne', 3),
 (29, 'Chocolat', 7),
 (30, 'Biscuit confiserie', 7),
 (31, 'Confiture', 7),
 (32, 'Miel', 7),
-(33, 'P‚tes', 6),
+(33, 'P√¢tes', 6),
 (34, 'Produit de la mer', 6),
 (35, 'Produit de la terre', 6),
 (42, 'Autres', 2),
@@ -1155,7 +1155,7 @@ CREATE TABLE IF NOT EXISTS `magasin_typesproduit` (
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `magasin_typesproduit`
+-- D√©chargement des donn√©es de la table `magasin_typesproduit`
 --
 
 INSERT INTO `magasin_typesproduit` (`id`, `nom`) VALUES
@@ -1180,7 +1180,7 @@ CREATE TABLE IF NOT EXISTS `magasin_typesproduit_categories` (
 ) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `magasin_typesproduit_categories`
+-- D√©chargement des donn√©es de la table `magasin_typesproduit_categories`
 --
 
 INSERT INTO `magasin_typesproduit_categories` (`id`, `typesproduit_id`, `categorie_id`) VALUES
@@ -1351,7 +1351,7 @@ CREATE TABLE IF NOT EXISTS `user_user` (
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `user_user`
+-- D√©chargement des donn√©es de la table `user_user`
 --
 
 INSERT INTO `user_user` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`, `rue`, `ville`, `code_postal`, `phone_number`) VALUES
@@ -1406,7 +1406,7 @@ CREATE TABLE IF NOT EXISTS `website_acceuilcard` (
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `website_acceuilcard`
+-- D√©chargement des donn√©es de la table `website_acceuilcard`
 --
 
 INSERT INTO `website_acceuilcard` (`id`, `nom`, `desc`) VALUES
@@ -1427,7 +1427,7 @@ CREATE TABLE IF NOT EXISTS `website_boutiqueimage` (
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `website_boutiqueimage`
+-- D√©chargement des donn√©es de la table `website_boutiqueimage`
 --
 
 INSERT INTO `website_boutiqueimage` (`id`, `image`) VALUES
@@ -1450,7 +1450,7 @@ CREATE TABLE IF NOT EXISTS `website_cardimage` (
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `website_cardimage`
+-- D√©chargement des donn√©es de la table `website_cardimage`
 --
 
 INSERT INTO `website_cardimage` (`id`, `image`, `card_id`) VALUES
@@ -1473,7 +1473,7 @@ CREATE TABLE IF NOT EXISTS `website_diver` (
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- DÈchargement des donnÈes de la table `website_diver`
+-- D√©chargement des donn√©es de la table `website_diver`
 --
 
 INSERT INTO `website_diver` (`id`, `nom`, `data`) VALUES
