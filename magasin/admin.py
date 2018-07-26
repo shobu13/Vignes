@@ -6,8 +6,8 @@ from magasin.models import *
 class ProduitAdmin(admin.ModelAdmin):
     list_display = (
         'nom', 'temperature', 'date_ajout', 'categorie', 'sous_categorie', 'prix', 'est_promo',
-        'stock', 'photo')
-    list_filter = ('temperature', 'categorie', 'sous_categorie', 'prix', 'est_promo', )
+        'stock', 'photo', 'maj')
+    list_filter = ('temperature', 'categorie', 'sous_categorie', 'prix', 'est_promo', 'maj', )
     date_hierarchy = 'date_ajout'
     ordering = ('categorie', 'sous_categorie', 'date_ajout',)
     search_fields = ('nom', 'description', 'cepage',)
@@ -26,6 +26,9 @@ class ProduitAdmin(admin.ModelAdmin):
         ('Détails', {
             'classes': ['collapse', ],
             'fields': ('prix', 'poid', 'est_promo', 'debut_promo', 'fin_promo', 'stock',)
+        }),
+        ('Autre', {
+            'fields': ('maj',)
         }),
     )
 

@@ -27,6 +27,8 @@ class Produit(models.Model):
     stock = models.IntegerField()
     poid = models.FloatField(verbose_name="poid en gramme", null=True)
 
+    maj = models.BooleanField(default=False)
+
     def __str__(self):
         return self.nom
 
