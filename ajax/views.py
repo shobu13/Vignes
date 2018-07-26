@@ -61,7 +61,8 @@ def supr_cart(request):
     total_produit = len(produits)
     request.session['total'] = total_produit
     print('total=', total_produit)
-    return JsonResponse({"HTTPRESPONSE": 'ok', 'total': total_produit}, content_type="application/json")
+    return JsonResponse({"HTTPRESPONSE": 'ok', 'total': total_produit},
+                        content_type="application/json")
     # return redirect('magasinPanier')
 
 
@@ -87,7 +88,8 @@ def call_checker(request):
 def get_product_name_by_id(request):
     id_produit = request.GET.get('id_produit')
     produit = Produit.objects.get(id=id_produit)
-    return JsonResponse({"HTTPRESPONSE": 'ok', 'produit_nom': produit.nom}, content_type="application/json")
+    return JsonResponse({"HTTPRESPONSE": 'ok', 'produit_nom': produit.nom},
+                        content_type="application/json")
 
 
 def reset_filter(request):
@@ -113,7 +115,7 @@ def get_event_by_year_and_month(request):
     event_list = Event.objects.filter(date__year=year, date__month=month)
     for event in event_list:
         if len(event.description.split(" ")) > 100:
-            description = event.description.split(" ")[0:100]+"..."
+            description = event.description.split(" ")[0:100] + "..."
         else:
             description = event.description
         event_data = {
@@ -128,3 +130,10 @@ def get_event_by_year_and_month(request):
         data['event_list'][event.id] = event_data
 
     return JsonResponse(data, content_type="application/json")
+
+
+def get_default_sous_cat(request):
+    name = request.GET.get('name')
+    sous_cat = Produit.objects.get(nom=name).sous_categorie.nom
+    print(sous_cat)
+    return JsonResponse({"HTTPRESPONSE": 'ok', 'sous_cat': sous_cat}, content_type="application/json")

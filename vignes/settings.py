@@ -138,7 +138,7 @@ STATICFILES_DIRS = (
 
 STATIC_ROOT = os.path.join("/var/www/website", "static")
 
-MEDIA_ROOT = os.path.join("/var/www/website", "media")
+MEDIA_ROOT = os.path.join("media")
 MEDIA_URL = '/media/'
 
 PAYPAL_RECEIVER_EMAIL = 'lelu.awen@hacari.org'
