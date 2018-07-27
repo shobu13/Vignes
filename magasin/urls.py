@@ -27,5 +27,6 @@ urlpatterns = [
     path('payement_commande', views.payement_commande, name='payementCommande'),
     path('payement_commande_ok', views.payement_commande_ok, name='payementCommandeOk'),
     path('payement_commande_error', views.payement_commande_error, name='payementCommandeError'),
+    path('liste_produits', views.liste_produits, name='liste_produit'),
 
 ]

@@ -6,6 +6,7 @@ from django.core.paginator import Paginator
 from vignes import settings
 from magasin.models import Produit
 from magasin.models import Commande, ContenuCommande, Categorie, Marque, SousCategorie, FraisDePort
+from magasin.forms import ListForm
 from ajax.views import clear_cart
 
 from paypal.standard.forms import PayPalPaymentsForm
@@ -155,3 +156,14 @@ def payement_commande_error(request):
 def details_produit(request, id_produit):
     produit = Produit.objects.get(id=id_produit)
     return render(request, 'magasin/magasin_detail_produit.html', locals())
+
+
+def liste_produits(request):
+    form = ListForm(request.POST or None)
+    sous_cat = None
+    produits = None
+    if form.is_valid():
+        sous_cat = form.cleaned_data['sous_categorie']
+    if sous_cat:
+        produits = Produit.objects.filter(sous_categorie=sous_cat).filter(maj=False)
+    return render(request, 'magasin/magasin_liste_produits.html', locals())

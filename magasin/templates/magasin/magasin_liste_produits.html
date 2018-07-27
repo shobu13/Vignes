@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block contenu %}
+    <div class="container">
+        <form action="{% url 'liste_produit' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit">
+        </form>
+        {% for i in produits %}
+            <a href="/admin/magasin/produit/{{ i.id }}/change"><img src="{{ i.photo.url }}" style="width: 30%"/></a>
+        {% endfor %}
+    </div>
+{% endblock %}
+{% block javascript_addon %}
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>
+{% endblock %}
