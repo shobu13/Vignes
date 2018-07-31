@@ -9,4 +9,4 @@ def set_type():
             for produit in categorie.produit_set.all():
                 print("\t\t{}".format(produit))
                 produit.type = type
-                # produit.save()
+                produit.save()
