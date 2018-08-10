@@ -14,13 +14,11 @@
                         <p>{{ event.description }}</p>
                         <div class="row">
                             <div class="col m12">
-                                <div class="carousel carousel-slider z-depth-2">
+                                <div class="owl-carousel owl-theme">
                                     {% for image in event_image %}
-                                        <a class="carousel-item" href="#!"><img
-                                                src="{{ image.image.url }}"></a>
-                                    {% empty %}
-                                        <a class="carousel-item" href="#!"><img
-                                                src="{% static 'img/6-bouteilles-75cl-Chinien-Bergeron-dont-2-offertes0.JPG' %}"></a>
+                                        <div>
+                                            <img src="{{ image.image.url }}" alt="img">
+                                        </div>
                                     {% endfor %}
                                 </div>
                             </div>
