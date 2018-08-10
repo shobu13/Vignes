@@ -19,6 +19,10 @@
                                         <div>
                                             <img src="{{ image.image.url }}" alt="img">
                                         </div>
+                                    {% empty %}
+                                        <div>
+                                            <img src="{% static 'img/6-bouteilles-75cl-Chinien-Bergeron-dont-2-offertes0.JPG' %}">
+                                        </div>
                                     {% endfor %}
                                 </div>
                             </div>
