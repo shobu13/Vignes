@@ -75,12 +75,12 @@ class FraisDePortAdmin(admin.ModelAdmin):
 
 
 class CommandeAdmin(admin.ModelAdmin):
-    list_display = ('est_payee', 'est_envoyee', 'client')
+    list_display = ('__str__', 'est_payee', 'est_envoyee', 'client')
     list_filter = ('est_payee', 'est_envoyee', 'client')
 
 
 class ContenuCommandeAdmin(admin.ModelAdmin):
-    list_display = ('commande', )
+    list_display = ('__str__', 'commande', )
     list_filter = ('commande', )
 
 
@@ -89,5 +89,5 @@ admin.site.register(TypesProduit, TypesProduitAdmin)
 admin.site.register(Categorie, CategorieAdmin)
 admin.site.register(Marque, MarqueAdmin)
 admin.site.register(Commande, CommandeAdmin)
-admin.site.register(ContenuCommande)
+admin.site.register(ContenuCommande, ContenuCommandeAdmin)
 admin.site.register(FraisDePort, FraisDePortAdmin)
