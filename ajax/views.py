@@ -133,7 +133,10 @@ def get_event_by_year_and_month(request):
 
 
 def get_default_sous_cat(request):
-    name = request.GET.get('name')
-    sous_cat = Produit.objects.get(nom=name).sous_categorie.nom
-    print(sous_cat)
+    try:
+        name = request.GET.get('name')
+        sous_cat = Produit.objects.get(nom=name).sous_categorie.nom
+        print(sous_cat)
+    except BaseException:
+        sous_cat = -1
     return JsonResponse({"HTTPRESPONSE": 'ok', 'sous_cat': sous_cat}, content_type="application/json")
