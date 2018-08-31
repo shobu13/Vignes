@@ -7,7 +7,7 @@ class ProduitAdmin(admin.ModelAdmin):
     list_display = (
         'nom', 'temperature', 'date_ajout', 'categorie', 'sous_categorie', 'prix', 'est_promo',
         'stock', 'photo', 'maj')
-    list_filter = ('temperature', 'categorie', 'sous_categorie', 'prix', 'est_promo', 'maj', )
+    list_filter = ('temperature', 'categorie', 'sous_categorie', 'prix', 'est_promo', 'maj',)
     date_hierarchy = 'date_ajout'
     ordering = ('categorie', 'sous_categorie', 'date_ajout',)
     search_fields = ('nom', 'description', 'cepage',)
@@ -58,7 +58,7 @@ class SousCategorieAdmin(admin.ModelAdmin):
 
 
 class TypesProduitAdmin(admin.ModelAdmin):
-    filter_horizontal = ('categories', )
+    filter_horizontal = ('categories',)
     list_display = ('nom',)
     ordering = ('nom',)
     search_fields = ('nom',)
@@ -74,10 +74,20 @@ class FraisDePortAdmin(admin.ModelAdmin):
     ordering = ('tarification',)
 
 
+class CommandeAdmin(admin.ModelAdmin):
+    list_display = ('est_payee', 'est_envoyee', 'client')
+    list_filter = ('est_payee', 'est_envoyee', 'client')
+
+
+class ContenuCommandeAdmin(admin.ModelAdmin):
+    list_display = ('commande', )
+    list_filter = ('commande', )
+
+
 admin.site.register(Produit, ProduitAdmin)
 admin.site.register(TypesProduit, TypesProduitAdmin)
 admin.site.register(Categorie, CategorieAdmin)
 admin.site.register(Marque, MarqueAdmin)
-admin.site.register(Commande)
+admin.site.register(Commande, CommandeAdmin)
 admin.site.register(ContenuCommande)
 admin.site.register(FraisDePort, FraisDePortAdmin)
