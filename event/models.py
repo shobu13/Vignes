@@ -24,6 +24,7 @@ class Event(models.Model):
 class EventImage(models.Model):
     event = models.ForeignKey('Event', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='uploads/event')
+    rotation = models.IntegerField(default=0)
 
     def __str__(self):
         return '{} de {}'.format(self.image.name[0:100], self.event.nom)

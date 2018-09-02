@@ -17,7 +17,7 @@
                                 <div class="owl-carousel owl-theme">
                                     {% for image in event_image %}
                                         <div>
-                                            <img src="{{ image.image.url }}" alt="img">
+                                            <img src="{{ image.image.url }}" alt="img" style="transform:rotate({{ image.rotation }}deg);">
                                         </div>
                                     {% empty %}
                                         <div>
