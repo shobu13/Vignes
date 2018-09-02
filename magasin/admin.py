@@ -74,14 +74,19 @@ class FraisDePortAdmin(admin.ModelAdmin):
     ordering = ('tarification',)
 
 
+# class ContenuCommandeAdmin(admin.ModelAdmin):
+#     list_display = ('__str__', 'commande', )
+#     list_filter = ('commande', )
+
+class ContenuCommandeInline(admin.TabularInline):
+    model = ContenuCommande
+    extra = 0
+
+
 class CommandeAdmin(admin.ModelAdmin):
     list_display = ('__str__', 'est_payee', 'est_envoyee', 'client')
     list_filter = ('est_payee', 'est_envoyee', 'client')
-
-
-class ContenuCommandeAdmin(admin.ModelAdmin):
-    list_display = ('__str__', 'commande', )
-    list_filter = ('commande', )
+    inlines = [ContenuCommandeInline, ]
 
 
 admin.site.register(Produit, ProduitAdmin)
@@ -89,5 +94,5 @@ admin.site.register(TypesProduit, TypesProduitAdmin)
 admin.site.register(Categorie, CategorieAdmin)
 admin.site.register(Marque, MarqueAdmin)
 admin.site.register(Commande, CommandeAdmin)
-admin.site.register(ContenuCommande, ContenuCommandeAdmin)
+# admin.site.register(ContenuCommande, ContenuCommandeAdmin)
 admin.site.register(FraisDePort, FraisDePortAdmin)
