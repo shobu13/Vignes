@@ -4,4 +4,3 @@ from website.models import *
 
 admin.site.register(AcceuilCard)
 admin.site.register(Diver)
-admin.site.register(BoutiqueImage)

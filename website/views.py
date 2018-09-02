@@ -7,13 +7,12 @@ from django.core.exceptions import ValidationError
 from user.forms import UserForm, ConnexionForm, AdressForm
 from user.models import User
 
-from website.models import AcceuilCard, Diver, BoutiqueImage
+from website.models import AcceuilCard, Diver
 
 
 def home(request):
     cards = AcceuilCard.objects.all()
     num_tel = Diver.objects.get(nom='num_tel').data
-    images = BoutiqueImage.objects.all()
     return render(request, 'website/website_home.html', locals())
 
 

@@ -17,9 +17,3 @@ class Diver(models.Model):
     def __str__(self):
         return '{} : {}'.format(self.nom, self.data)
 
-
-class BoutiqueImage(models.Model):
-    image = models.ImageField(upload_to='uploads/boutique')
-
-    def __str__(self):
-        return self.image.name[0:100]
