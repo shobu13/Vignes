@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'paypal.standard.ipn',
-    'djexmo',
+    'nexmo',
 
     'website',
     'magasin',
