@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Sms{% endblock %}
+{% block contenu %}
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12">
+                <form action="{% url 'sms_envoie' %}" method="post">
+                    <label><input checked type="radio" name="isAll"
+                                  id="allButton" value="True"/><span>Envoyer à tous</span></label>
+                    <hr/>
+                    <label><input type="radio" name="isAll"
+                                  id="notAllButton" value="False"/><span>Envoyer à certain</span></label>
+
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" class="btn"/>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascript_addon %}
+    <script src="{% static 'sms/js/init.js' %}"></script>
+    <script src="{% static 'sms/js/UI.js' %}"></script>
+{% endblock %}

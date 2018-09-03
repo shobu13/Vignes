@@ -38,12 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'paypal.standard.ipn',
+    'djexmo',
 
     'website',
     'magasin',
     'ajax',
     'user',
     'event',
+    'sms',
 ]
 
 MIDDLEWARE = [
@@ -146,3 +148,8 @@ PAYPAL_TEST = True
 
 # custom user model
 AUTH_USER_MODEL = 'user.User'
+
+# django-nexmo
+NEXMO_API_KEY = '1a946862'
+NEXMO_API_SECRET = 'Svvtxh00HWMi62bo'
+NEXMO_DEFAULT_FROM = 'Vignes et gourmandises'

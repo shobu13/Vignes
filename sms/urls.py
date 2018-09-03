@@ -1,4 +1,4 @@
-"""vignes URL Configuration
+"""vignes.magasin URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
@@ -13,21 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
-from django.conf.urls import url
-from django.conf.urls.static import static
+from django.urls import path
 
-from vignes import settings
-
+from sms import views
 
 urlpatterns = [
-    path('paypal', include('paypal.standard.ipn.urls')),
-    path('admin/', admin.site.urls),
-    path('ajax/', include('ajax.urls')),
-    path('magasin/', include('magasin.urls')),
-    path('event/', include('event.urls')),
-    path('admin/sms/', include('sms.urls')),
-    path('', include('website.urls')),
+    path('', views.home, name='sms_home'),
+    path('sms_envoie', views.envoie, name='sms_envoie'),
 ]
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
