@@ -38,8 +38,8 @@
             <div class="owl-carousel owl-theme">
                 {% for card in cards %}
                     <div>
-                                <img src="{{ card.image.url }}"
-                                     alt="Unsplashed background img 3">
+                        <img src="{{ card.image.url }}"
+                             alt="Unsplashed background img 3">
                         <div class="section no-pad-bot">
                             <div class="row center">
                                 <h1 class="header center teal-text text-lighten-2">
@@ -87,9 +87,28 @@
         </a>
     </div>
 
+
+
+    {# Modal +18 #}
+    <div id="18ans" class="modal">
+        <div class="modal-content">
+            <h4>Vérification d'age</h4>
+            <p>Avez vous plus de 18 ans ?</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Oui</a>
+            <a href="https://framasoft.org" class="modal-close waves-effect waves-green btn-flat">Non</a>
+        </div>
+    </div>
+
 {% endblock %}
 
 {% block javascript_addon %}
     <script src="{% static 'website/js/scroller.js' %}"></script>
     <script src="{% static 'website/js/init.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            $('#18ans').modal('open');
+        })
+    </script>
 {% endblock %}

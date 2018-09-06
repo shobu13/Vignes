@@ -27,7 +27,14 @@
                     </div>
                     <hr/>
                 {% endfor %}
-                <h5>Frais de port : {{ tarification.tarification|stringformat:"2.2f" }} euros</h5>
+                <h5>Frais de port : {% if commande.envoie %}
+                    {{ tarification.tarification|stringformat:"2.2f" }}
+                {% else %}
+                    0.00
+                {% endif %}
+                    euros
+                </h5>
+                {% if commande.est_panier %}<h5>Panier : 5.00 euros</h5>{% endif %}
                 <h3>Pour un total de : {{ total|stringformat:"2.2f" }} euros</h3>
                 <a href="{% url 'payementCommande' %}">
                     <button class="btn green">Payer !</button>

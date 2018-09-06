@@ -23,7 +23,8 @@
                         </div>
                         <div class="col m3">
                             <br/><br/>
-                            <b style="font-size: large" class="red-text text-darken-4">prix unitaire
+                            <b style="font-size: large" class="red-text text-darken-4">prix
+                                unitaire
                                 : {{ produit.0.prix|stringformat:"2.2f" }}<br/></b>
                             <b style="font-size: x-large" class="red-text text-darken-4">total
                                 : {{ produit.2|stringformat:"2.2f" }}<br/></b>
@@ -31,8 +32,11 @@
                         <div class="col m3">
                             <br/><br/>
                             {% if produit.1 > produit.0.stock %}
-                                <u><b style="font-size: large" class="red-text text-darken-4">/!\ Attention, le stock de
-                                    ce produit ({{ produit.0.stock }}) est inferieur à la quantité demandée
+                                <u><b style="font-size: large" class="red-text text-darken-4">/!\
+                                    Attention, le stock de
+                                    ce produit ({{ produit.0.stock }}) est inferieur à la
+                                    quantité
+                                    demandée
                                     ({{ produit.1 }}).</b></u>
                             {% endif %}
                         </div>
@@ -43,21 +47,35 @@
                 {% endfor %}
                 <br/>
                 <br/>
-                {% if sous_stock %}
-                    {% if user_cart_final %}
-                        <button class="btn green disabled">passer commande</button>
+                <form action="{% url 'resumeCommande' %}" method="post">
+                    {% csrf_token %}
+                    <p>
+                        <label>
+                            <input type="checkbox" class="filled-in" name="envoie"/>
+                            <span>à retirer en magasin (pas de frais de port)</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" class="filled-in" name="panier"/>
+                            <span>Panier garni (5€)</span>
+                        </label>
+                    </p>
+                    {% if sous_stock %}
+                        {% if user_cart_final %}
+                            <input type="submit" class="btn green disabled" value="passer commande">
+                        {% endif %}
+                    {% else %}
+                        {% if user_cart_final %}
+                            <input type="submit" class="btn green" value="passer commande">
+                        {% endif %}
                     {% endif %}
-                {% else %}
-                    {% if user_cart_final %}
-                        <a href="{% url 'resumeCommande' %}">
-                            <button class="btn green">passer commande</button>
-                        </a>
-                    {% endif %}
-                {% endif %}
-                <button id="bouton_panier_reset" class="btn red">Reset panier</button>
-                <br/>
+                    <button id="bouton_panier_reset" class="btn red">Reset panier</button>
+                    <br/>
+                </form>
             </div>
         </div>
+        </form>
     </div>
 {% endblock %}
 

@@ -251,3 +251,7 @@ def BDD(request):
         except:
             print('fail')
     return HttpResponse(text)
+
+
+def mention(request):
+    return render(request, 'website/website_mention.html')

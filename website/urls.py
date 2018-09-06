@@ -23,5 +23,6 @@ urlpatterns = [
     path('deconnexion', views.deconnexion, name='website_deco'),
     path('login', views.connexion, name='website_login'),
     path('adresse', views.adressse, name='website_adresse'),
+    path('mentions', views.mention, name='website_mention')
     # path('BDD', views.BDD), # BDD import
 ]

@@ -23,16 +23,18 @@ def envoie(request):
     if form.is_valid():
         print(form.cleaned_data)
         is_all = request.POST.get("isAll")
+        message = request.POST.get("message")
         users = form.cleaned_data.get('users')
         if is_all == 'True':
-            users = User.objects.all()
+            users = User.objects.exclude(username='Admin')
     else:
         return redirect('/admin/sms')
     client = nexmo.Client(key=settings.NEXMO_API_KEY, secret=settings.NEXMO_API_SECRET)
-    client.send_message({
-        'from': settings.NEXMO_DEFAULT_FROM,
-        'to': '+33782387918',
-        'text': 'A text message sent using the Nexmo SMS API',
-    })
-
+    for user in users:
+        msg = client.send_message({
+            'from': settings.NEXMO_DEFAULT_FROM,
+            'to': '+33{}'.format(user.phone_number[1:]),
+            'text': message
+        })
+        print("retour= ", msg)
     return render(request, 'sms/sms_envoie.html', locals())

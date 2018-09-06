@@ -10,10 +10,14 @@
                                   id="allButton" value="True"/><span>Envoyer à tous</span></label>
                     <hr/>
                     <label><input type="radio" name="isAll"
-                                  id="notAllButton" value="False"/><span>Envoyer à certain</span></label>
+                                  id="notAllButton"
+                                  value="False"/><span>Envoyer à certain</span></label>
 
                     {% csrf_token %}
                     {{ form.as_p }}
+                    <label for="textarea1">Message</label>
+                    <textarea id="textarea1" class="materialize-textarea" name="message"></textarea>
+                    <br/>
                     <input type="submit" class="btn"/>
                 </form>
             </div>

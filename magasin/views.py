@@ -89,7 +89,16 @@ def resume_commande(request):
     tarification = FraisDePort.objects.get(poid_min__lte=poid, poid_max__gte=poid)
     commande = Commande()
     commande.montant = total
-    commande.envoie = True
+    if request.POST.get('envoie') == "on":
+        commande.envoie = False
+    else:
+        commande.envoie = True
+    if request.POST.get('panier') == "on":
+        commande.est_panier = True
+        commande.montant += 5
+        total += 5
+    else:
+        commande.est_panier = False
     commande.client = request.user
     commande.frais_port = tarification
     commande.save()
@@ -102,7 +111,8 @@ def resume_commande(request):
         contenu_commande.save()
     request.session['id_commande'] = commande.id
 
-    total += tarification.tarification
+    if commande.envoie:
+        total += tarification.tarification
     return render(request, 'magasin/magasin_resume_commande.html', locals())
 
 
@@ -116,9 +126,11 @@ def payement_commande(request):
         produit = Produit.objects.get(id=commande[0])
         total += commande[1] * produit.prix
         nom_commande += produit.nom + "; "
+        if commande.envoie:
+            total + frais_port
     paypal_dict = {
         'business': settings.PAYPAL_RECEIVER_EMAIL,
-        'amount': total + frais_port,
+        'amount': total,
         'item_name': nom_commande,
         'invoice': str(request.session['id_commande']),
         'currency_code': 'EUR',
