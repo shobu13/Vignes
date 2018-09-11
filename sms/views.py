@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, Http404
 
 import nexmo
+import xlrd
 
 from sms.forms import ListUser
 from user.models import User
@@ -38,3 +39,31 @@ def envoie(request):
         })
         print("retour= ", msg)
     return render(request, 'sms/sms_envoie.html', locals())
+
+
+def excel(request):
+    file_name = str(request.FILES['tableur'])
+    num_liste = []
+    message = request.POST.get('message')
+    with open(file_name, 'wb+') as destination:
+        for chunk in request.FILES['tableur'].chunks():
+            destination.write(chunk)
+    fichier = xlrd.open_workbook(file_name)
+    for sheet in fichier.sheets():
+        for number in sheet.col_values(2):
+            if number:
+                try:
+                    num_liste.append(str(int(number)))
+                except ValueError:
+                    pass
+    print(num_liste)
+    client = nexmo.Client(key=settings.NEXMO_API_KEY, secret=settings.NEXMO_API_SECRET)
+    for number in num_liste:
+        msg = client.send_message({
+            'from': settings.NEXMO_DEFAULT_FROM,
+            'to': '+33{}'.format(number),
+            'text': message
+        })
+        print("retour= ", msg)
+
+    raise Http404

@@ -20,4 +20,5 @@ from sms import views
 urlpatterns = [
     path('', views.home, name='sms_home'),
     path('sms_envoie', views.envoie, name='sms_envoie'),
+    path('sms_excel', views.excel, name='sms_excel'),
 ]

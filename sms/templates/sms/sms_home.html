@@ -20,6 +20,25 @@
                     <br/>
                     <input type="submit" class="btn"/>
                 </form>
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header">Tableur Excel
+                        </div>
+                        <div class="collapsible-body">
+                            <span>
+                            <form action="{% url 'sms_excel' %}" method="post"
+                                  enctype="multipart/form-data">
+                    {% csrf_token %}
+                                <label for="textarea1">Message</label>
+                    <textarea id="textarea1" class="materialize-textarea" name="message"></textarea>
+                    <input type="file" name="tableur"/>
+                    <input type="submit" class="btn red" value="Valider Tableur"/>
+                </form>
+                        </span>
+                        </div>
+                    </li>
+                </ul>
+
             </div>
         </div>
     </div>
